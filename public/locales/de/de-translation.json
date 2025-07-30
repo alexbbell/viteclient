@@ -1,0 +1,165 @@
+{
+    "morelink": "Mehr lesen",
+    "fullname": "Aleksei Beliaev",
+    "main": {
+        "greeting": "Hallo! ",
+        "beforename": "Ich bin ",
+        "name": "Aleksei Beliaev",
+        "position": "Full-Stack-Entwickler (TypeScript, JavaScript, React, C#, NodeJS (no)SQL)",
+        "titleAbout": "Über mich",
+        "description": "Ich arbeite als Full-Stack-Softwareentwickler und habe umfassende Erfahrung in der Erstellung und Pflege von IT-Systemen. Hauptsächlich verwende ich C#, JavaScript, Rest API und Rabbit Mq. Mit C# meine ich Net (.NetFramework, Net Core, EF Core, Nlog, NewtonSoft, OpenXML). JavaScript ist nicht nur eine native Sprache, sondern auch TypeScript und die React-Bibliothek. Ich habe auch mehrere einfache Tools mit NodeJS erstellt, sodass JavaScript nicht nur für das Frontend verwendet wird.",
+        "image": "/public/img/banner/abb.jpg",
+        "bio": "Ich arbeite als Softwareentwickler und möchte im Raum NRW - Mülheim, Essen, Duisburg, Düsseldorf - arbeiten.\n\nE-Mail: beliaeff@gmail.com\nTelefon: +972 585362546\nAdresse: Rehovot, 20293\n\nÜber mich: Ich habe angefangen, die Entwicklung in meiner High School zu lernen, es war das „Basic“. Und dann habe ich erkannt, dass ich Softwareentwickler werden möchte. Als Student habe ich viel Zeit damit verbracht, die Entwicklung zu lernen, und bald konnte ich meine erste Arbeit finden. Es war RBC (RosBusinessConsulting) - eines der besten Wirtschaftsmedien in Russland. Seitdem lerne ich immer neue Technologien, erweitere und verbessere meine Fähigkeiten, lese und höre IT-Publikationen. Ich bin seit fast 20 Jahren glücklich verheiratet und habe drei großartige Kinder. Der älteste hat ein großes Talent für Mathematik und Programmierung, er ist einer der stärksten Schüler in Moskau in diesen Fächern. Er gewinnt regelmäßig Preise bei verschiedenen Wettbewerben. Meine Tochter ist eine sehr kreative Person, die neben der Schule große Erfolge im Tanzen, Zeichnen, Design und anderen kreativen Bereichen erzielt hat. Der jüngste ist alle drei und er ist einfach der Liebling der ganzen Familie. Neben Familie und Arbeit nimmt der Sport einen bedeutenden Platz in meinem Leben ein. Ich liebe das Laufen (Joggen) und habe erfolgreich mehrere volle Marathons (42,2 km) absolviert. Ich mag auch Musik und Gartenarbeit. Ich liebe es zu reisen und mit neuen Menschen zu kommunizieren, ich finde leicht eine gemeinsame Sprache mit ihnen, wechsle gerne die Umgebung und öffne mich gerne neuen Dingen.",
+        "website": "https://alexey.beliaeff.ru/",
+        "resumedownload": "/public/Aleksei_Beliaev_CV_2022-09.pdf",
+        "social": [
+            {
+                "name": "facebook",
+                "url": "https://www.facebook.com/alexeybeliaeff/",
+                "className": "fa fa-facebook"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/alexbbell",
+                "className": "fa fa-github"
+            },
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/aleksei-beliaev/",
+                "className": "fa fa-linkedin"
+            },
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/alexeybeliaeff/",
+                "className": "fa fa-instagram"
+            },
+            {
+                "name": "skype",
+                "url": "https://join.skype.com/invite/gLM7w30Ao8Vj",
+                "className": "fa fa-skype"
+            }
+        ]
+    },
+    "menu": {
+        "position": "Fullstack-Entwickler",
+        "resume": "Lebenslauf",
+        "contacts": "Kontakte",
+        "sitemap": "Sitemap",
+        "home": "Startseite",
+        "experience": "Erfahrung",
+        "skills": "Fähigkeiten & Erfahrung",
+        "blogs": "Blogs",
+        "about": "Über mich",
+        "education": "Bildung",
+        "math": "das Spiel"
+    },
+    "skills": {
+        "title": "Fähigkeiten",
+        "content": [
+            {
+                "name": "Asp.Net, C#: MVC-Anwendungen, WebForms, Konsolenanwendungen",
+                "description": "Die Entwicklung von kleinen Tools, Teilen von Microservices und Monolith-Anwendungen für Net Framework und Net Core, die Verwendung von Erweiterungen wie EntityFramework, Dapper, Nlog, NewtonSoft, OpenXML und vielen anderen."
+            },
+            {
+                "name": "JavaScript und Bibliotheken (React und verbundene Bibliotheken, jQuery, NodeJS)",
+                "description": "Die Front-End-Entwicklung mit populären JS-Frameworks und Bibliotheken - React, Redux, Antd, Axios, Bootstrap, jQuery (meistens für alte Projekte). Ich verwende Webpack, um JavaScript- und TypeScript-Anwendungen zu bündeln."
+            },
+            {
+                "name": "XHTML, CSS, XML: tiefgreifende Kenntnisse von Formaten und Technologien",
+                "description": "Der moderne Einsatz von CSS und SCSS für Styles, Verwendung von Webpack zur Automatisierung der CSS-Kompilierung."
+            },
+            {
+                "name": "Microsoft SharePoint: Entwicklung von Webparts, Timer-Jobs, Integration mit externen Anwendungen",
+                "description": "Der gesamte Arbeitszyklus mit MS SharePoint (2010, 2019) - die Erstellung einer Farm, die Entwicklung von Webparts, Timerjobs und Konsolenanwendungen für den Export-Import von Daten, Integrationen mit externen Anwendungen, Office Online."
+            },
+            {
+                "name": "DevOps-Ingenieur",
+                "description": "Einrichtung der CI/CD-Prozesse mit Gitlab, Automatisierung der Erstellung von Umgebungen mit Terraform (AWS, YandexCloud) und Vagrant (VirtualBox)."
+            }
+        ]
+    },
+    "work": {
+        "title": "Arbeit",
+        "content": [
+            {
+                "company": "Rocketta GmbH",
+                "title": "Senior Softwareentwickler",
+                "years": "September 2015 - heute",
+                "description": "Die Anwendungsentwicklung für SharePoint 2019, SharePoint Online, WebAPI-Webservices, Anwendungen für Azure und RabbitMQ, die Entwicklung des Chatbots mit Semantic Kernel."
+            },
+            {
+                "company": "GPB, Finanzunternehmen",
+                "title": "Senior Full-Stack-Softwareentwickler",
+                "years": "September 2015 - Juni 2023",
+                "description": "Erfolgreiche Migration von SharePoint 2010 auf SharePoint 2019 - 25k+ aktive Benutzer, ~1Tb Content-Datenbanken. Entwicklung und Implementierung von Tools für die direkte Datenmigration von SharePoint 2010 auf 2019. Erfolgreiches Leiten eines kleinen Teams von Entwicklern. Erstellung mehrerer Anwendungen im Stack von React, C# (.Net) und MS SQL für interne Bedürfnisse."
+            },
+            {
+                "company": "GPB, Finanzunternehmen",
+                "title": "Full-Stack-SharePoint-Softwareentwickler",
+                "years": "Juli 2010 - September 2015",
+                "description": "Vollständige Unterstützung des Systems basierend auf Microsoft SharePoint. Zusammenarbeit mit Auftragnehmern, um verschiedene Lösungen anzubieten und dann verschiedene Lösungen zu entwickeln und zu implementieren. Integration verschiedener Funktionen und technischer Spezifikationen von Anwendungen, kontinuierliche Funktionalität des Portal-Systems, Entwicklung von SharePoint-Lösungen für interne Bedürfnisse. Entwicklung von Anwendungen (Asp.net, C#, MSSQL, SharePoint) mit Daten aus mehreren Datenbanken, AD, synchronen und asynchronen Austausch zwischen verschiedenen Datenquellen."
+            },
+            {
+                "company": "GPB, Finanzunternehmen",
+                "title": "Junior Softwareentwickler",
+                "years": "Juli 2008 - Juli 2010",
+                "description": "Entwicklung einfacher Anwendungen und Funktionen für interne Bedürfnisse des Unternehmens - Umfragen, Fotogalerie, Erstellung von Promo-Seiten. Einfache SQL-Abfragen und Verwendung in Webanwendungen."
+            }
+        ]
+    },
+    "education": {
+        "title": "Bildung",
+        "content": [
+            {
+                "school": "SkillBox",
+                "degree": "DevOps-Ingenieur. Grundlagen",
+                "graduated": "März 2023",
+                "description": "Die Erstellung von CI/CD-Prozessen, die Planung der Infrastruktur, Überwachung mit Gitlab, Terraform, Docker, Prometheus, Grafana und Loki."
+            },
+            {
+                "school": "OTUS",
+                "degree": "C#-Entwickler. Professional",
+                "graduated": "November 2022",
+                "description": "Fortgeschrittene C#-Entwicklung mit SQL & NoSQL, REST, SOLID, Reflection, Delegates, Async-Operationen."
+            },
+            {
+                "school": "Spezialist",
+                "degree": "Javascript: React & JSX",
+                "graduated": "Mai 2019",
+                "description": "Die Entwicklung von React."
+            },
+            {
+                "school": "Microsoft",
+                "degree": "SharePoint 2016: Entwicklung",
+                "graduated": "Februar 2018",
+                "description": "SharePoint 2016-Entwicklung - Webparts, Timer-Jobs, moderne Webparts."
+            },
+            {
+                "school": "Microsoft",
+                "degree": "SharePoint 2016: Administration",
+                "graduated": "Mai 2017",
+                "description": "Einrichtung einer SharePoint-Farm und deren Inbetriebnahme."
+            },
+            {
+                "school": "Moskauer Institut für Funktechnik, Elektronik und Automation",
+                "degree": "Master-Abschluss in Funktechnik",
+                "graduated": "April 2004",
+                "description": "Die Entwicklung von Funktechnik- und Kommunikationsumgebungen."
+            }
+        ]
+    },
+    "theGame": {
+        "chooseAnwer": "Antwort wählen",
+        "next": "Weiter",
+        "gameTitle": "Das Mathematikspiel für Ian",
+        "settings": "Einstellungen",
+        "action": "Aktion",
+        "addition": "Subtraktion",
+        "subtraction": "Subtraktion",
+        "multiplication": "Multiplikation",
+        "division": "Aufteilung",
+        "minValue": "von",
+        "maxValue": "bis",
+        "errorMinMaxText": "Der Wert von kann nicht größer sein als bis"
+    }
+}

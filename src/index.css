@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Euclid-Circular-Regular';
+  src: url('libs/EuclidCircularA-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family:'Euclid-Circular-Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+h3 {
+  color: #333;
+  font-family: 'Euclid-Circular-Bold';
+  font-weight: bold;
+  font-size: 14pt;
+  text-transform: uppercase
+}
+
+.carousel {
+  width: 100%;
+  color: #333;
+  text-align: center;
+  background: hsl(200, 9%, 87%);
+  padding: 20px 20px 45px 20px;
+
+  border-radius: 10px;
+}
+.testimonials {
+  background-color: #CCC;
+}
+.testimonial {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1;
+}
+.tImage {
+  padding-top: 15px;
+  min-width: 120px;
+  max-width: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: baseline;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.circular {
+  width: 100px; height: 100px;
+   overflow: hidden; border-radius: 50%; }
+.circular img { width: 100%; height: auto; }
+
+.tSpeech {
+  font-family: 'Euclid-Circular-Regular';
+  line-height: 1.3;
+  font-weight: normal;
+  -webkit-font-smoothing :antialiased;
+  padding: 10px;
+}
+.beruf {
+  max-width: 90%;
+  padding: 5px 0px;
+}
+
+.dots {
+  color: #000;
+}
+.dots li {
+  background-color: grey;
+}
+.slick-active button {
+  background: #00C6CF;
+}

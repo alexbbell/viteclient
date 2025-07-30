@@ -1,0 +1,30 @@
+.formRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.formRow div:nth-child(1) {
+    width: 150px;
+    text-align: right;
+    flex-shrink: 1;
+    margin-right: 10px;
+}
+.formRow div:nth-child(2) {
+    width: 100%;
+    text-align: left;
+    flex-shrink: 1;
+}
+.inputText {
+    width: 600px;
+    line-height: 1.3em;
+}
+.arrayItem {
+    padding: 10px;border: #666 1px solid;
+    margin: 10px;
+}
+
+.remove {
+    color: red;
+}

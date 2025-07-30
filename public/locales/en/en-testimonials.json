@@ -1,0 +1,28 @@
+{
+    "posts": [
+        {
+            "author": "Oleg Panin",
+            "position": "Deputy Head of the Department for Development of General Banking Systems",
+            "img": "panin_oleg_tn.jpg",
+            "text": "It's always a pleasure to be on the same team with Aleksei. It's equally enjoyable to solve work tasks and communicate in non-working hours together. He is a responsive professional with a broad outlook - from programming algorithms to team strategies in the Champions League finals :)"
+        },
+        {
+            "author": "Anna Stepanova",
+            "position": "Project Manager",
+            "img": "stepanova_anna_tn.jpg",
+            "text": "In 9 months, Aleksei and I launched a corporate portal from scratch for 29,000 employees. Aleksei led the technical part of the team, but not only motivated the guys and shared his expertise but also personally participated in all stages of product creation from architecture design to complex load testing of the new system. Therefore, the launch was on schedule and with enthusiasm."
+        },
+        {
+            "author": "Dmitry Furman",
+            "position": "Lead Developer",
+            "img": "furman_dmitrii_tn.jpg",
+            "text": "Aleksei is an excellent IT leader. He controls tasks, helps with difficulties, sets the right direction for development and growth. In addition, he monitors the emotional state of colleagues, preventing overwork and burnout!"
+        },
+        {
+            "author": "Boris Fedorov",
+            "position": "Deputy Chief of Corporate Architecture Management",
+            "img" : "fedorov_boris_tn.jpg",
+            "text": "Aleksei is a true professional in his field who values teamwork and collaboration. He never puts his personal ambitions above the collective. He possesses a vast array of professional skills and excellent communication abilities. Throughout all the years of working together, he has been dedicated to enhancing his qualifications, constantly studying and applying new skills in his work. One of his most important qualities is his focus on results and sticking to his word. All of Aleksei's colleagues have only positive memories of working with him and gratitude for the projects he has completed."
+        }
+    ]
+}

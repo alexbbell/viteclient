@@ -1,0 +1,242 @@
+.btnWrapper {
+    width: 200px; height: 50px;
+    display: block;
+  }
+
+  .btnWrapper a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    left: 150px;
+    transition: all .35s;
+  }
+
+  .btnWrapper a span{
+    position: relative;
+    z-index: 2;
+  }
+
+  .btnWrapper a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+
+  .btnWrapper a:hover{
+    color: #000;
+  }
+
+  .btnWrapper a:hover:after{
+    width: 100%;
+  }
+
+  .primerWrapper {
+    padding: 30pt 0pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex-wrap: wrap;
+    @media (max-width:540px) {
+      gap: 5px;
+      padding: 10pt 0pt;
+    }
+  }
+
+  .digit {
+      padding: 1pt ;
+      box-sizing: content-box;
+      width: auto;
+      height: 30vh;
+      min-width: 120px;
+      min-height: 170px;
+      text-align: center;
+      border-radius: 20px;
+      font-weight: normal;
+
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+      margin: auto;
+      padding: 0px 10px;
+      background: linear-gradient(-15deg, #f4f0ef, #ffe4db 55%);
+      border: #91bde2 6px solid;
+      color: #00dfc4;
+      font-size: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media (max-width:540px) {
+        border: #91bde2 3px solid;
+        border-radius: 10px;
+        font-size: 90px;
+        font-weight: normal;
+        min-width: 67px;
+        max-height: 130px;
+        min-height: 130px;
+      }
+
+  }
+
+  .mathActionWrapper {
+    max-width: 80px; max-height: 80px;
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 5pt 10pt; margin: 5pt 5pt;
+    border: 1px solid grey;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .answersWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-width: 350px;
+    flex-grow: 2;
+    @media (max-width:992px) {
+      width: 620px;
+    }
+
+    @media (max-width:640px) {
+      width: 330px;
+    }
+  }
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .answers >  div {
+    width: 120px; height: 120px;
+    font-size: 60px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .answersWrapper > div > div:nth-child(1) {
+    background-color: #ff8575;
+  }
+  .answersWrapper > div > div:nth-child(2) {
+    background-color: #75a5d5;
+  }
+  .answersWrapper > div > div:nth-child(3) {
+    background-color: #5a958f;
+  }
+  .answersWrapper > div > div:nth-child(4) {
+    background-color: #ff9f0e;
+  }
+  .answersWrapper > div > div:hover {
+    border: 1px solid grey;
+    background-color: #06121E;
+    color: #00dfc4;
+    cursor: pointer;
+  }
+
+  .answers > div.closedAnwer {
+    opacity: 0.5;
+    position: relative;
+  }
+  .answers > div.closedAnwer::after {
+    position: absolute; top: 22px; left: 27px;
+    content: url("data:image/svg+xml, %3Csvg%20height%3D%2264%22%20width%3D%2264%22%20style%3D%22overflow%3Avisible%3Benable-background%3Anew%200%200%2032%2032%22%20viewBox%3D%220%200%2032%2032%22%20%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%3E%3Cg%20id%3D%22Error_1_%22%3E%3Cg%20id%3D%22Error%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20id%3D%22BG%22%20r%3D%2216%22%20style%3D%22fill%3A%23D72828%3B%22%2F%3E%3Cpath%20d%3D%22M14.5,25h3v-3h-3V25z%20M14.5,6v13h3V6H14.5z%22%20id%3D%22Exclamatory_x5F_Sign%22%20style%3D%22fill%3A%23E6E6E6%3B%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    height: 60px;
+  }
+  .answersWrapper > div.titleAnswer {
+    font-size: 35px;
+    font-weight: lighter;
+    text-transform:uppercase;
+    color: rgb(2, 102, 140);
+    word-wrap: none;
+    padding: 0px 0px 20px 0px;
+    @media (max-width:300px) {
+      font-size: 25px;
+    }
+  }
+
+.breakhor {
+  flex-basis: 100%;
+  width: 10; height: 10;
+
+}
+
+.correctResult {
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 300px; height: 100px;
+  font-size: 7.4vw;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  visibility: hidden;
+}
+.correctResult > div {
+  border: #00dfc4 1px solid;
+  border-radius: 10px;
+  margin: 20px; padding: 20px;
+  background: rgb(255, 255, 255);
+  top: 10vw; left: 5vh;
+}
+
+.closedAnwer {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  background: linear-gradient(-15deg, #f4f0ef, #ffe4db 55%);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+}
+  div.errorAnswer {
+    animation: vertical-shaking 0.35s infinite;
+    color: red;
+  }
+
+  @keyframes vertical-shaking {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(5px) }
+    50% { transform: translateY(-5px) }
+    75% { transform: translateY(5px) }
+    100% { transform: translateY(0) }
+  }
+

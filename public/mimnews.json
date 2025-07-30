@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1726,
+    "date": "2025-05-07T06:42:19",
+    "status": "publish",
+    "title": "How to find the lines with the specific text in Linux console",
+    "excerpt": "<p>You can use AWK or grep or grep</p>\n",
+    "link": "https://markimarta.com/ubuntu/how-to-find-the-lines-with-the-specific-text-in-linux-console/"
+  },
+  {
+    "id": 1722,
+    "date": "2025-05-05T14:59:16",
+    "status": "publish",
+    "title": "Must have for any SFPX solution",
+    "excerpt": "<p>Here I will write down the steps for creating projects for SPFX solutions. The prerequisites &#8211; Node, Yo and spfx-fast-serve are already installed.</p>\n",
+    "link": "https://markimarta.com/sharepoint/must-have-for-any-sfpx-solution/"
+  },
+  {
+    "id": 1717,
+    "date": "2025-04-15T12:48:37",
+    "status": "publish",
+    "title": "Move multiple lines up and down with Notepad++",
+    "excerpt": "<p>Accidentally I found out, that Notepad++ allows to move multiple lines up and down without Copy-Cut / Insert? Use Ctrl + Shift + (arrow up | arrow down).</p>\n",
+    "link": "https://markimarta.com/windows/move-multiple-lines-with-notepad/"
+  },
+  {
+    "id": 1711,
+    "date": "2025-04-02T13:15:14",
+    "status": "publish",
+    "title": "Error 1053 while trying to start the service in .Net Core8",
+    "excerpt": "<p>An application that was developed by me as a service with Net Core 8 didn’t want to start working as a Windows service. The application was created in Visual studio 2022 with a “Worker service” template. If you just start the app, it works. But I had problems to start it as a Windows Service.</p>\n",
+    "link": "https://markimarta.com/c/error-1053-while-trying-to-start-the-service-in-net-core8/"
+  },
+  {
+    "id": 1708,
+    "date": "2025-03-29T16:00:17",
+    "status": "publish",
+    "title": "Learn and explore Azure Storage account for free with Azurite",
+    "excerpt": "<p>The Azurite open-source emulator provides a free local environment for testing your Azure Blob, Queue Storage, and Table Storage applications. When you&#8217;re satisfied with how your application is working locally, switch to using an Azure Storage account in the cloud. The emulator provides cross-platform support on Windows, Linux, and macOS.</p>\n",
+    "link": "https://markimarta.com/azure/learn-and-explore-azure-storage-account-for-free-with-azurite/"
+  },
+  {
+    "id": 1705,
+    "date": "2025-03-17T13:01:48",
+    "status": "publish",
+    "title": "Vite vs Create-react-app",
+    "excerpt": "<p>Today I talked to my colleague about the speed of Hot Reload when developing React applications. I told him that I tried launching from WSL and that everything updates faster. This is about pure React, not for SPFX. I was asked how I created a project and how it works for me. And it turns [&hellip;]</p>\n",
+    "link": "https://markimarta.com/js/vite-vs-create-react-app/"
+  },
+  {
+    "id": 1699,
+    "date": "2025-03-04T11:43:58",
+    "status": "publish",
+    "title": "Hotkeys to transform text to UPPERCASE or to LOWERCASE in Visual Studio and Visual Studio Code",
+    "excerpt": "<p>Transform text UPPERCASE or lowercase is a very common task for a developer. And when the text is not in the required case, you obviously don&#8217;t want to type it one more time. Luckily, there are the developers of Visual Studio who already thought about it.</p>\n",
+    "link": "https://markimarta.com/windows/hotkeys-to-transform-text-to-uppercase-or-to-lowercase-in-visual-studio-and-visual-studio-code/"
+  },
+  {
+    "id": 1696,
+    "date": "2025-02-28T12:01:40",
+    "status": "publish",
+    "title": "How to fix error WSL (12 - Relay) ERROR: CreateProcessParseCommon in Windows 11",
+    "excerpt": "<p>I knew that Linux is installed at my Windows Installation. And if I choose Ubuntu among the installed apps, I could use it. But not with WSL, then the error. It was the same as from command line, PowerShell. It also didn&#8217;t allow me to execute any Linux utils within &#8216;wsl -e &#8230; &#8216;</p>\n",
+    "link": "https://markimarta.com/windows/how-to-fix-error-wsl-12-relay-error-createprocessparsecommon-in-windows-11/"
+  },
+  {
+    "id": 1690,
+    "date": "2025-02-20T08:49:58",
+    "status": "publish",
+    "title": "My case of crashing the laptop with the connected external monitor",
+    "excerpt": "<p>I started to use my old laptop (2019year) for specific tasks. Usually, I plug the laptop into my 32inch display and work this way. But after 2-3 minutes of work my laptop hanged. The display was with a huge quantity of noise. But without external display it worked perfectly. There are 2 video adapters &#8211; [&hellip;]</p>\n",
+    "link": "https://markimarta.com/windows/my-case-of-crashing-the-laptop-with-the-connected-external-monitor/"
+  },
+  {
+    "id": 1677,
+    "date": "2025-02-09T21:40:21",
+    "status": "publish",
+    "title": "Fix error no such table: \"pragma_table_list\" in DBeaver on opening the tables of SQLite database",
+    "excerpt": "<p>Error with &#8216;pragma_table_list&#8217; is actual not only for DBeaver, but also for any driver for SQLite. This post is about DBeaver just because I was working with it, when I met the error. The case is like this: I created an SQLIte database with Microsoft.EntityFrameworkCore and then I wanted to open it in DBeaver. But [&hellip;]</p>\n",
+    "link": "https://markimarta.com/windows/fix-error-no-such-table-pragma_table_list-in-dbeaver-on-opening-the-tables-of-sqlite-database/"
+  }
+]
