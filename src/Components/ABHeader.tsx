@@ -1,5 +1,5 @@
 import React, { type JSX } from 'react'
-import { Row, Col, Layout } from 'antd'
+import {  Layout } from 'antd'
 import { useNavigate, NavLink, useParams } from 'react-router-dom'
 import LangSwitch from './LangSwitch'
 import styles from './../style/style.module.scss'
@@ -14,30 +14,27 @@ const ABHeader = (): JSX.Element => {
   const { lng } = useParams()
   const lang: string = (typeof lng === 'undefined') ? 'en' : lng
   const m = new Menu()
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
+
   const items = m.fetchMenUItems(['home', 'skills', 'blogs', 'about', 'gallery', 'math', 'services'])
   const navigate = useNavigate()
 
+  const logo:React.JSX.Element =  <div className={styles.logo} onClick={ () => { navigate(`./${lang}`) }}>
+        <div><h1 className={styles.bold}>{t('fullname')}</h1></div>
+        <div style={{whiteSpace: 'nowrap'}}><h2 className={styles.thin}>Fullstack developer</h2></div>
+            </div>
+
   return (
         <Header className={` ${styles.header}`}>
-            <Row>
-                <Col xs={0} md={11} xl={7} className={styles.logoleft}>
-                    <div className={styles.logo}
-     onClick={
-        () => {
-          navigate(`./${lang}`)
-        }
-    }
-                    >
-                        <h1 className={styles.bold}>{t('fullname')}</h1>
-                        <h2 className={styles.thin}>Fullstack developer</h2>
-                    </div>
-                </Col>
+          <div className={styles.hdrLeft}>{logo}</div>
 
-                <Col xs={24} md={12} xl={16} className={ styles.hdrleft }>
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'end' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'end' }}>
                     <LangSwitch query={lang} />
-                    
-                    <div className={styles.topMenu}>
+
+                    <button className={styles.menuToggle} onClick={toggleMenu}>☰ Menu</button>
+                          <nav style={{ position: 'relative'}}>
+            <div className={`${styles.topMenu} ${menuOpen ? styles.open : ''}`}>
                         <ul>
                         {
                             items.map((elm) => {
@@ -54,12 +51,9 @@ const ABHeader = (): JSX.Element => {
 
                         }
                         </ul>
-                    </div>
+                    </div></nav>
 
                     </div>
-                </Col>
-                <Col xs={0} md={1} xl={1}></Col>
-            </Row>
         </Header>
   )
 }

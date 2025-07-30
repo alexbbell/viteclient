@@ -13,17 +13,15 @@
 
 body, .body {
   background-color:$mainbg;
-  font-family: 'Euclid-Circular-Regular';
+  font-family: 'Euclid-Circular-Regular', sans-serif;
   color: $primary-color;
-  // user-select: none;
   font-weight: normal;
   font-style: normal;
   font-size: $mainSize;
-
 }
 
 body * {
-  font-family: 'Euclid-Circular-Regular';
+  font-family: 'Euclid-Circular-Regular', sans-serif;
 }
 
 .footer  {

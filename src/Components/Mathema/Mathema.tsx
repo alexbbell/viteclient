@@ -5,7 +5,7 @@ import styles from './../../style/style.module.scss'
 import mathstyles from './Mathema.module.css'
 import { useTranslation } from 'react-i18next'
 import { Alert, Button, Col, Input, Modal, Row, Select } from 'antd'
-import { useAppDispatch, useAppSelector } from '../../hooks'
+import { useAppDispatch, useAppSelector } from './../../hooks'
 import { setMathSettings } from '../../store/langSlice'
 
 const Mathema = (): JSX.Element => {
