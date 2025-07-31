@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, type JSX } from 'react'
 import { Simplemath } from '../../Middleware/mathfuncs'
 import { type IMathSettings, type IExample, AllMathActions, type MathActions } from './inttypes'
 import styles from './../../style/style.module.scss'
@@ -8,6 +8,12 @@ import { Alert, Button, Col, Input, Modal, Row, Select } from 'antd'
 import { useAppDispatch, useAppSelector } from './../../hooks'
 import { setMathSettings } from '../../store/langSlice'
 
+
+interface IMathOption {
+  value: string,
+  label: string,
+  disabled: boolean
+}
 const Mathema = (): JSX.Element => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
@@ -20,7 +26,6 @@ const Mathema = (): JSX.Element => {
   }
 
   const [myAnswers, setMyAnswers] = useState<number[]>([])
-
   const [example, setExample] = useState<IExample>(pr)
   const [nextExample, setNextExample] = useState<number>(0)
   const [errorAnswer, setErrorAnswer] = useState<boolean>(true)
@@ -33,14 +38,11 @@ const Mathema = (): JSX.Element => {
     document.title = `Aleksei Beliaev. Fullstack developer. ${t('theGame.gameTitle')}`
   }, [t('theGame.gameTitle')])
 
-  const mathActionOptions: any[] = []
-  // eslint-disable-next-line array-callback-return
+  const mathActionOptions: IMathOption[] = []
   AllMathActions.map(x => {
-    // mathActionOptions.push({ value: x, label: t(`theGame.${x}`), disabled: (x === 'multiplication' || x === 'division') })
     mathActionOptions.push({ value: x, label: t(`theGame.${x}`), disabled: false })
   })
-
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+ 
   const createExample = (matchAction: MathActions): void => {
     const pr: IExample = {
       dig1: mymaths.randomIntFromInterval(mathSettings.minValue, mathSettings.maxValue),
@@ -67,7 +69,6 @@ const Mathema = (): JSX.Element => {
         break
       case ('division'): {
         // overwrite values
-        // eslint-disable-next-line no-case-declarations
         while (pr.dig2 === 0) {
           pr.dig2 = mymaths.randomIntFromInterval(mathSettings.minValue, mathSettings.maxValue)
         }

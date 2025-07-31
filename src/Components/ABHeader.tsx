@@ -44,7 +44,7 @@ const ABHeader = (): JSX.Element => {
                         className={({ isActive }) => {
                           return isActive ? `${styles.activelink}` : ''
                         } }
-
+                        onClick={() => toggleMenu()}
                  >{t(`menu.${elm.label}`)}</NavLink></li>
                               )
                             })
