@@ -26,7 +26,7 @@ export const ConsultForm = (props: Props) => {
     }
 
     return (
-        <div>
+        <div style={{ border: '#000 1px solid'}}>
             <Form labelCol={{ span: 6 }}
                 wrapperCol={{ span: 17 }}
                 layout="horizontal">
