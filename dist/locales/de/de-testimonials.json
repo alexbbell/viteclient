@@ -1,0 +1,28 @@
+{
+    "posts": [
+        {
+            "author": "Oleg Panin",
+            "position": "Stellvertretender Leiter des Departments für die Entwicklung von Allgemeinen Bankensystemen",
+            "img": "panin_oleg_tn.jpg",
+            "text": "Es ist immer eine Freude, im selben Team wie Alexey zu sein. Es macht gleichermaßen Spaß, Arbeitsaufgaben zu lösen und in der Freizeit zusammen zu kommunizieren. Er ist ein aufgeschlossener Profi mit einem breiten Blickfeld - von Programmieralgorithmen bis hin zu Teamstrategien in den Champions-League-Finals :)"
+        },
+        {
+            "author": "Anna Stepanova",
+            "position": "Projektleiterin",
+            "img": "stepanova_anna_tn.jpg",
+            "text": "In 9 Monaten haben Alexey und ich ein Unternehmensportal von Grund auf für 29.000 Mitarbeiter gestartet. Alexey leitete den technischen Teil des Teams, motivierte nicht nur die Leute und teilte sein Fachwissen, sondern beteiligte sich auch persönlich an allen Phasen der Produktentwicklung, angefangen von der Architekturplanung bis hin zu komplexen Belastungstests des neuen Systems. Daher erfolgte der Start wie geplant und mit Begeisterung."
+        },
+        {
+            "author": "Dmitry Furman",
+            "position": "Leitender Entwickler",
+            "img": "stepanova_anna_tn.jpg",
+            "text": "Alexey ist ein ausgezeichneter IT-Leiter. Er kontrolliert Aufgaben, hilft bei Schwierigkeiten, gibt die richtige Richtung für Entwicklung und Wachstum vor. Darüber hinaus überwacht er den emotionalen Zustand der Kollegen, um Überarbeitung und Burnout zu verhindern!"
+        },
+        {
+            "author": "Boris Fedorov",
+            "position": "AbteilungsleiterStellvertretender Leiter für Unternehmensarchitektur",
+            "img" : "fedorov_boris_tn.jpg",
+            "text": "Aleksei ist ein echter Profi in seinem Bereich, der Teamarbeit und Zusammenarbeit schätzt. Er stellt seine persönlichen Ambitionen niemals über das Kollektiv. Er besitzt eine Vielzahl von beruflichen Fähigkeiten und ausgezeichnete Kommunikationsfähigkeiten. Während all der Jahre der Zusammenarbeit war er bestrebt, seine Qualifikationen zu verbessern, ständig neue Fähigkeiten zu erlernen und in seiner Arbeit anzuwenden. Eine seiner wichtigsten Eigenschaften ist seine Fokussierung auf Ergebnisse und das Einhalten seines Wortes. Alle Kollegen von Aleksei haben nur positive Erinnerungen an die Zusammenarbeit mit ihm und sind dankbar für die realisierten Projekte."
+        }
+    ]
+}

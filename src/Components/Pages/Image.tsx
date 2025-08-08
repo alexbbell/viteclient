@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, type JSX } from 'react'
 import PropTypes from 'prop-types'
 import { useAppSelector } from './../../hooks'
 
@@ -31,9 +31,13 @@ const Image = (props: any): JSX.Element => {
   // }
 
   return (
-        <>
-            <img src={image} className={className} ></img>
-        </>
+      <>
+      {    image !== undefined  ? <img src={image} className={className} /> : <></>
+      
+      }
+            
+      </>
+
   )
 }
 

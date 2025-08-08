@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect, type JSX } from 'react'
 import { Row, Col, Space, Tabs } from 'antd'
 import styles from './../../style/style.module.scss'
 import { useTranslation } from 'react-i18next'
@@ -6,7 +6,7 @@ import { type IStaticPage } from '../../interfaces'
 
 import type { TabsProps } from 'antd'
 
-interface ND {
+interface INameDescription {
   name: string
   description: string
 }
@@ -27,11 +27,11 @@ interface IEducation {
 
 const Skills = (props: IStaticPage): JSX.Element => {
   const { t } = useTranslation()
-  const skillsList: ND[] = t(`${props.query}.content`, { returnObjects: true })
+  useEffect(() => {
+    document.title = `Aleksei Beliaev. Fullstack developer. ${t('skills.title')}, ${t('work.title')}, ${t('education.title')}`
+  }, [])
+  const skillsList = t(`${props.query}.content`, { returnObjects: true }) as INameDescription[]
   const skillsContent: JSX.Element[] = skillsList.map(function (skill) {
-    useEffect(() => {
-      document.title = `Aleksei Beliaev. Fullstack developer. ${t('skills.title')}, ${t('work.title')}, ${t('education.title')}`
-    }, [skillsList])
     return <li key={skill.name}>
                     <h4>{skill.name }</h4>
                     <p>
@@ -40,19 +40,17 @@ const Skills = (props: IStaticPage): JSX.Element => {
                 </li>
   })
 
-  const workList: IWork[] = t('work.content', { returnObjects: true })
+  const workList = t('work.content', { returnObjects: true }) as IWork[]
   const workContent: JSX.Element[] = workList.map(function (wrk) {
     return <li key={wrk.years} className={styles.pb10}>
                 <h4 className={styles.uppercase}>{wrk.company}</h4>
                 <h5 className={`${styles.thin} ${styles.italic} ${styles.grey}`}>{wrk.years}</h5>
                 <h3>{wrk.title} </h3>
-                <p>
-                    {wrk.description}
-                </p>
+                <p dangerouslySetInnerHTML={{ __html: `${wrk.description}` }} />
             </li>
   })
 
-  const educationList: IEducation[] = t('education.content', { returnObjects: true })
+  const educationList = t('education.content', { returnObjects: true }) as IEducation[]
   const educationContent: JSX.Element[] = educationList.map(function (ed) {
     return <li key={ed.graduated} className={styles.pb10}>
 

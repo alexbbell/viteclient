@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react'
+import React, { useEffect, type JSX } from 'react'
 import {  Layout } from 'antd'
 import { useNavigate, NavLink, useParams } from 'react-router-dom'
 import LangSwitch from './LangSwitch'
@@ -20,6 +20,9 @@ const ABHeader = (): JSX.Element => {
   const items = m.fetchMenUItems(['home', 'skills', 'blogs', 'about', 'gallery', 'math', 'services'])
   const navigate = useNavigate()
 
+  useEffect( () => {
+    setMenuOpen(false)
+  }, [])
   const logo:React.JSX.Element =  <div className={styles.logo} onClick={ () => { navigate(`./${lang}`) }}>
         <div><h1 className={styles.bold}>{t('fullname')}</h1></div>
         <div style={{whiteSpace: 'nowrap'}}><h2 className={styles.thin}>Fullstack developer</h2></div>
@@ -40,7 +43,7 @@ const ABHeader = (): JSX.Element => {
                             items.map((elm) => {
                               return (
                  <li key={elm.url} >
-                    <NavLink to={`${lang}${elm.url.endsWith('/') ? elm.url.replace('/', '') : elm.url}/`}
+                    <NavLink to={`${lang}${elm.url.endsWith('/') ? elm.url.replace('/', '') : elm.url}`}
                         className={({ isActive }) => {
                           return isActive ? `${styles.activelink}` : ''
                         } }

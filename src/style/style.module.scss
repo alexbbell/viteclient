@@ -62,26 +62,26 @@ p {
 }
 
 h1, .h1 {
-  font-family: 'Euclid-Circular-Bold';
+  font-family: 'Euclid-Circular-Bold', sans-serif;
   font-weight: bold;
   font-size: 20pt;
 }
 
 h2, .h2 {
-  font-family: 'Euclid-Circular-Bold';
-  font-weight: bold;
+  font-family: 'Euclid-Circular-Bold', sans-serif;
+  font-weight: 500;
   font-size: 16pt;
 }
 
 h3, .h3 {
-  font-family: 'Euclid-Circular-Bold';
-  font-weight: bold;
+  font-family: 'Euclid-Circular-Bold', sans-serif;
+  font-weight: 500;
   font-size: 14pt;
 }
 
 h4, .h4 {
-  font-family: 'Euclid-Circular-Bold';
-  font-weight: bold;
+  font-family: 'Euclid-Circular-Bold', sans-serif;
+  font-weight: 500;
   font-size: 12pt;
 }
 
@@ -109,20 +109,20 @@ h4, .h4 {
 
 
 .bold {
-  font-family: 'Euclid-Circular-Bold';
+  font-family: 'Euclid-Circular-Bold', sans-serif;
   font-weight: bold;
   font-style: normal;
 }
 
 
 .italic {
-  font-family: 'Euclid-Circular-Italic';
+  font-family: 'Euclid-Circular-Italic', sans-serif;
   font-weight: normal;
   font-style: italic;
 }
 
 .thin {
-  font-family: 'Euclid-Circular-Regular';
+  font-family: 'Euclid-Circular-Regular', sans-serif;
   font-weight: normal;
 }
 

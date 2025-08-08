@@ -1,0 +1,1089 @@
+[
+    {
+        "id": 1157,
+        "date": "2023-01-26T10:34:25",
+        "date_gmt": "2023-01-26T10:34:25",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1157"
+        },
+        "modified": "2023-01-26T10:35:14",
+        "modified_gmt": "2023-01-26T10:35:14",
+        "slug": "vagrant-offline-installation",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/ubuntu\/vagrant-offline-installation\/",
+        "title": {
+            "rendered": "Vagrant offline installation"
+        },
+        "content": {
+            "rendered": "\n<p>Vagrant is a cool application for the automation of the development of the virtual machines. It allows to create a VM for VirtualBox in several seconds or minutes, and it's very cool. But rather other you want to use it offline, otherwise you can use AWS or something like that. So I will write down some notes how to use Vagrant images offline.<\/p>\n\n\n\n<!--more-->\n\n\n\n<p>To download a file you have to add version and provider in the URL. For example for downloading trusty64 you need its URL which is https:\/\/app.vagrantup.com\/ubuntu\/boxes\/trusty64\/<br>then you have to add version and provider afterwards, for our example the download URL would be.<\/p>\n\n\n\n<p><a href=\"https:\/\/app.vagrantup.com\/ubuntu\/boxes\/trusty64\/versions\/20180206.0.0\/providers\/virtualbox.box\">https:\/\/app.vagrantup.com\/ubuntu\/boxes\/trusty64\/versions\/20180206.0.0\/providers\/virtualbox.box<\/a><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p>Then you have to add it locally from your vagrant file.<\/p>\n\n\n\n<p>To add it locally to vagrant file use the following commands in console:<\/p>\n\n\n\n<p><em>vagrant box add foo-box \/path\/to\/vagrant-box.box<br>vagrant init foo-box<br>vagrant up<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p>And one more note about default password. According to the Vagrant documentation, there is usually <strong>a default password<\/strong> for the user <strong>vagrant<\/strong> which is <strong>vagrant<\/strong>. <\/p>\n\n\n\n<p>Have a good devops \ud83d\ude42<br><\/p>\n\n\n\n<p><\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Vagrant is a cool application for the automation of the development of the virtual machines. It allows to create a VM for VirtualBox in several seconds or minutes, and it&#8217;s very cool. But rather other you want to use it offline, otherwise you can use AWS or something like that. So I will write down [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 1158,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            81
+        ],
+        "tags": [
+            94,
+            101,
+            102
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1157"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1157"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1157\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1159,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1157\/revisions\/1159"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media\/1158"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1157"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1157"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1157"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1149,
+        "date": "2023-01-10T11:06:46",
+        "date_gmt": "2023-01-10T11:06:46",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1149"
+        },
+        "modified": "2023-01-11T17:57:18",
+        "modified_gmt": "2023-01-11T17:57:18",
+        "slug": "basic-command-for-docker",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/ubuntu\/basic-command-for-docker\/",
+        "title": {
+            "rendered": "Basic commands for Docker"
+        },
+        "content": {
+            "rendered": "\n<p>I will write some useful commands to work with Docker. If I use them often, I will remember them, otherwise I will remember them quickly if I read this post.<\/p>\n\n\n\n<!--more-->\n\n\n\n<p>Show the list of the docker images:<br><em>docker images<\/em><\/p>\n\n\n\n<p>Show the list of the containers:<\/p>\n\n\n\n<p><em>docker ps<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p>Execute the docker container:<br><em>docker exec -it c486e0dcca17<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p>if you add 'sh', you will go to docker container file system<br><em>docker exec -it c486e0dcca17 sh<\/em><\/p>\n\n\n\n<p>After that you go inside the container. If you enter 'ls', you can see the list of directories inside<\/p>\n\n\n\n<p><strong>Build docker from text files<\/strong><\/p>\n\n\n\n<p>You can download a docker file from github, so at first you have to build it:<\/p>\n\n\n\n<p>with SSH:<br><em>docker build - &lt; Dockerfile<\/em><\/p>\n\n\n\n<p>with Powershell on Windows, you can run:<\/p>\n\n\n\n<p><em>Get-Content Dockerfile | docker build -<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Remove docker container:<\/strong><br><em>docker rm feb5d9fea6a5<\/em><\/p>\n\n\n\n<p><strong>Remove docker image:<\/strong><br><em>docker rmi feb5d9fea6a5<\/em><\/p>\n\n\n\n<p><strong>To stop docker container:<\/strong><br><em>docker stop feb5d9fea6a5<\/em><\/p>\n\n\n\n<p>If you got 'permission denied' on stop, try this command:<br><em>sudo aa-remove-unknown<\/em><\/p>\n\n\n\n<p><\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>I will write some useful commands to work with Docker. If I use them often, I will remember them, otherwise I will remember them quickly if I read this post.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 1150,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            81
+        ],
+        "tags": [
+            94,
+            100,
+            27
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1149"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1149"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 2,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1149\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1154,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1149\/revisions\/1154"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media\/1150"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1149"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1149"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1149"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1147,
+        "date": "2023-01-03T15:47:03",
+        "date_gmt": "2023-01-03T15:47:03",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1147"
+        },
+        "modified": "2023-01-03T15:47:04",
+        "modified_gmt": "2023-01-03T15:47:04",
+        "slug": "vi-shortcuts",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/web-server\/vi-shortcuts\/",
+        "title": {
+            "rendered": "Vi shortcuts"
+        },
+        "content": {
+            "rendered": "\n<p>I am tired to look for Vi shortcuts, let the copy of this content stay here. Press Esc to start waiting for the command and after that enter the action.<\/p>\n\n\n\n<p><\/p>\n\n\n\n<ul>\n<li><code>$ vi &lt;filename&gt;<\/code>&nbsp;\u2014 Open or edit a file.<\/li>\n\n\n\n<li><code>i<\/code>&nbsp;\u2014 Switch to Insert mode.<\/li>\n\n\n\n<li><strong>Esc<\/strong>&nbsp;\u2014 Switch to Command mode.<\/li>\n\n\n\n<li><code>:w<\/code>&nbsp;\u2014 Save and continue editing.<\/li>\n\n\n\n<li><code>:wq<\/code>&nbsp;or&nbsp;<code>ZZ<\/code>&nbsp;\u2014 Save and quit\/exit vi.<\/li>\n\n\n\n<li><code>:q!<\/code>&nbsp;\u2014 Quit vi and do not save changes.<\/li>\n\n\n\n<li><code>yy<\/code>&nbsp;\u2014 Yank (copy) a line of text.<\/li>\n\n\n\n<li><code>p<\/code>&nbsp;\u2014 Paste a line of yanked text below the current line.<\/li>\n\n\n\n<li><code>o<\/code>&nbsp;\u2014 Open a new line under the current line.<\/li>\n\n\n\n<li><code>O<\/code>&nbsp;\u2014 Open a new line above the current line.<\/li>\n\n\n\n<li><code>A<\/code>&nbsp;\u2014 Append to the end of the line.<\/li>\n\n\n\n<li><code>a<\/code>&nbsp;\u2014 Append after the cursor\u2019s current position.<\/li>\n\n\n\n<li><code>I<\/code>&nbsp;\u2014 Insert text at the beginning of the current line.<\/li>\n\n\n\n<li><code>b<\/code>&nbsp;\u2014 Go to the beginning of the word.<\/li>\n\n\n\n<li><code>e<\/code>&nbsp;\u2014 Go to the end of the word.<\/li>\n\n\n\n<li><code>x<\/code>&nbsp;\u2014 Delete a single character.<\/li>\n\n\n\n<li><code>dd<\/code>&nbsp;\u2014 Delete an entire line.<\/li>\n\n\n\n<li><code>Xdd<\/code>&nbsp;\u2014 Delete X number of lines.<\/li>\n\n\n\n<li><code>Xyy<\/code>&nbsp;\u2014 Yank X number of lines.<\/li>\n\n\n\n<li><code>G<\/code>&nbsp;\u2014 Go to the last line in a file.<\/li>\n\n\n\n<li><code>XG<\/code>&nbsp;\u2014 Go to line X in a file.<\/li>\n\n\n\n<li><code>gg<\/code>&nbsp;\u2014 Go to the first line in a file.<\/li>\n\n\n\n<li><code>:num<\/code>&nbsp;\u2014 Display the current line\u2019s line number.<\/li>\n\n\n\n<li><code>h<\/code>&nbsp;\u2014 Move left one character.<\/li>\n\n\n\n<li><code>j<\/code>&nbsp;\u2014 Move down one line.<\/li>\n\n\n\n<li><code>k<\/code>&nbsp;\u2014 Move up one line.<\/li>\n\n\n\n<li><code>l<\/code>&nbsp;\u2014 Move right one character.<\/li>\n<\/ul>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>I am tired to look for Vi shortcuts, let the copy of this content stay here. Press Esc to start waiting for the command and after that enter the action.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 0,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            24
+        ],
+        "tags": [
+            97,
+            98,
+            27
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1147"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1147"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1147\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1148,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1147\/revisions\/1148"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1147"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1147"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1147"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1145,
+        "date": "2023-01-03T10:03:58",
+        "date_gmt": "2023-01-03T10:03:58",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1145"
+        },
+        "modified": "2023-01-03T10:03:59",
+        "modified_gmt": "2023-01-03T10:03:59",
+        "slug": "execute-linux-commands-at-windows-os-with-powershell",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/ubuntu\/execute-linux-commands-at-windows-os-with-powershell\/",
+        "title": {
+            "rendered": "Execute Linux commands at Windows OS with Powershell"
+        },
+        "content": {
+            "rendered": "\n<p>As it turned out, I can execeute linux scripts at my Windows PC with WSL installed with Powershell!<\/p>\n\n\n\n<p>Just write 'wsl -e ' and after that a command to execute.<\/p>\n\n\n\n<!--more-->\n\n\n\n<p>For example,<br><em>wsl -e mc<\/em><br>And you have executed midnight commander in windows powershell<\/p>\n\n\n\n<p>You can also execute bash scripts<br><em>wsl -e .\/var\/www\/script.sh<\/em><\/p>\n\n\n\n<p><\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>As it turned out, I can execeute linux scripts at my Windows PC with WSL installed with Powershell! Just write &#8216;wsl -e &#8216; and after that a command to execute.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 21,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            81
+        ],
+        "tags": [
+            97,
+            98,
+            5
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1145"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1145"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1145\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1146,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1145\/revisions\/1146"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media\/21"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1145"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1145"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1145"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1140,
+        "date": "2022-12-21T10:29:34",
+        "date_gmt": "2022-12-21T10:29:34",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1140"
+        },
+        "modified": "2022-12-21T10:29:35",
+        "modified_gmt": "2022-12-21T10:29:35",
+        "slug": "fix-gilab-runner-error-listen_address-not-defined-metrics-debug-endpoints-disabled-builds0",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/windows\/fix-gilab-runner-error-listen_address-not-defined-metrics-debug-endpoints-disabled-builds0\/",
+        "title": {
+            "rendered": "Fix Gilab runner error: listen_address not defined, metrics &amp; debug endpoints disabled builds=0"
+        },
+        "content": {
+            "rendered": "\n<p><\/p>\n\n\n<p>The error is:<\/p>\n<p>Configuration loaded builds=0<br \/>listen_address not defined, metrics &amp; debug endpoints disabled builds=0<br \/>[session_server].listen_address not defined, session endpoints disabled builds=0<br \/>In gitlab runners allor \u201cRun untagged jobs: Indicates whether this runner can pick jobs without tags\u201d, set the checkbox correspondingly.<\/p>\n<p><!--more--><\/p>\n<p>To fix it you should set the checkbox \"Run untagged jobs\" in Gitlab CI\/CD settings.<\/p>\n<p><img decoding=\"async\" loading=\"lazy\" width=\"1030\" height=\"543\" class=\"wp-image-1141\" src=\"http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-1.png\" srcset=\"http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-1.png 1030w, http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-1-300x158.png 300w, http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-1-1024x540.png 1024w, http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-1-768x405.png 768w\" sizes=\"(max-width: 1030px) 100vw, 1030px\" \/><\/p>\n<p>But after executing the pipeline I have got the error:<\/p>\n<p>ERROR: Job failed (system failure): prepare environment: failed to start process: exec: \"pwsh\": executable file not found in %PATH%. Check https:\/\/docs.gitlab.com\/runner\/shells\/index.html#shell-profile-loading for more information<\/p>\n<p><img decoding=\"async\" loading=\"lazy\" width=\"1198\" height=\"266\" class=\"wp-image-1142\" src=\"http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-2.png\" srcset=\"http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-2.png 1198w, http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-2-300x67.png 300w, http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-2-1024x227.png 1024w, http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/word-image-1140-2-768x171.png 768w\" sizes=\"(max-width: 1198px) 100vw, 1198px\" \/><\/p>\n\n\n<p>The problem is connected with Windows &amp; Powershell.<\/p>\n\n\n\n<p>To register gitlab-runner with PowerShell you use the command like this:<\/p>\n\n\n\n<p>.\/gitlab-runner.exe register --url https:\/\/gitlab.url.com\/ --registration-token $REGISTRATION_TOKEN<\/p>\n\n\n\n<p>After that config.toml is created.<\/p>\n\n\n\n<p>If you choose \"shell\", the strings are:<\/p>\n\n\n\n<p><em>executor = \"shell\"<br>shell = \"pwsh\"<\/em><\/p>\n\n\n\n<p>'pwsh' is a name for the new version of PowerShell, a lot of users with Windows 10 have previous version . So did I.  You should modify strings in config.toml to:<\/p>\n\n\n\n<p><em>executor = \"shell\"<br>shell = \"powershell\"<\/em><\/p>\n\n\n\n<p>After that gitlab-runner started to work.<\/p>\n\n\n\n<p><\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>The error is: Configuration loaded builds=0listen_address not defined, metrics &amp; debug endpoints disabled builds=0[session_server].listen_address not defined, session endpoints disabled builds=0In gitlab runners allor \u201cRun untagged jobs: Indicates whether this runner can pick jobs without tags\u201d, set the checkbox correspondingly.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 0,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            7
+        ],
+        "tags": [
+            94,
+            99,
+            5
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1140"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1140"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1140\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1143,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1140\/revisions\/1143"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1140"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1140"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1140"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1137,
+        "date": "2022-12-06T07:33:14",
+        "date_gmt": "2022-12-06T07:33:14",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1137"
+        },
+        "modified": "2022-12-06T07:33:15",
+        "modified_gmt": "2022-12-06T07:33:15",
+        "slug": "remove-apache2-from-ubuntu-step-by-step-from-bash",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/ubuntu\/remove-apache2-from-ubuntu-step-by-step-from-bash\/",
+        "title": {
+            "rendered": "Remove apache2 from Ubuntu, step by step from bash"
+        },
+        "content": {
+            "rendered": "\n<p>The short manual how to remove Apache 2 from Ubuntu with bash Linux command line. 4 steps. I advice you to execute all the commands with sudo.<\/p>\n\n\n\n<!--more-->\n\n\n\n<p><strong>Step 1<\/strong>. Stop the service<br><em>sudo service apache2 stop<\/em><\/p>\n\n\n\n<p><strong>Step 2<\/strong>. Uninstall apache2 services<br><em>sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common<\/em><br><em>sudo apt-get autoremove<\/em><\/p>\n\n\n\n<p><strong>Step 3<\/strong>. Check where apache2 was installed<br><em>whereis apache2<\/em><\/p>\n\n\n\n<p><strong>Step 4<\/strong>. Apache2 by default is installed in \/etc\/apache2, so you should remove this directory:<br><em>sudo rm -rf \/etc\/apache2<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>The short manual how to remove Apache 2 from Ubuntu with bash Linux command line. 4 steps. I advice you to execute all the commands with sudo.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 0,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            81
+        ],
+        "tags": [
+            96,
+            97,
+            98
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1137"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1137"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1137\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1138,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1137\/revisions\/1138"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1137"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1137"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1137"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1134,
+        "date": "2022-12-01T15:49:14",
+        "date_gmt": "2022-12-01T15:49:14",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1134"
+        },
+        "modified": "2022-12-01T15:49:57",
+        "modified_gmt": "2022-12-01T15:49:57",
+        "slug": "sharepoint-and-field-called-state",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/sharepoint\/sharepoint-and-field-called-state\/",
+        "title": {
+            "rendered": "SharePoint and field called \"state\""
+        },
+        "content": {
+            "rendered": "\n<p>Many times I told myself not to work with SharePoint, but it's forever with me \ud83d\ude42<br>My colleague asked to help him with a problem with modern lists. There some simple fields, without lookups. But there's an error in displaying items. I spent about an hour to determine the problem - created a copy of the list, removed all items, added items with only 1 filled field. It worked in classic view, but not in modern.<\/p>\n\n\n\n<!--more-->\n\n\n\n<p><br>As it turned out, the problem was in the field called \"state\". If you add a field with this name, modern view falls with error. I think the reason is connected with React code for SharePoint, but I didn't want to check it.<br>The result. Don't call the SharePoint fields \"state\" \ud83d\ude42 I just renamed it to \"MyState\" and it's ok.<\/p>\n\n\n\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-full\"><a href=\"http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/image.png\" rel=\"lightbox[1134]\"><img decoding=\"async\" loading=\"lazy\" width=\"307\" height=\"151\" src=\"http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/image.png\" alt=\"\" class=\"wp-image-1135\" srcset=\"http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/image.png 307w, http:\/\/markimarta.com\/wp-content\/uploads\/2022\/12\/image-300x148.png 300w\" sizes=\"(max-width: 307px) 100vw, 307px\" \/><\/a><figcaption>SharePoint list fields<\/figcaption><\/figure><\/div>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Many times I told myself not to work with SharePoint, but it&#8217;s forever with me \ud83d\ude42My colleague asked to help him with a problem with modern lists. There some simple fields, without lookups. But there&#8217;s an error in displaying items. I spent about an hour to determine the problem &#8211; created a copy of the [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 770,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            4
+        ],
+        "tags": [
+            50,
+            3,
+            2
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1134"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1134"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1134\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1136,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1134\/revisions\/1136"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media\/770"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1134"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1134"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1134"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1130,
+        "date": "2022-11-30T14:06:55",
+        "date_gmt": "2022-11-30T14:06:55",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1130"
+        },
+        "modified": "2022-11-30T14:06:56",
+        "modified_gmt": "2022-11-30T14:06:56",
+        "slug": "get-all-child-folders-with-powershell",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/windows\/get-all-child-folders-with-powershell\/",
+        "title": {
+            "rendered": "Get all child folders with PowerShell"
+        },
+        "content": {
+            "rendered": "\n<p>The commandlet 'Get-ChildItem' will give you all the default information about the folders inside. By default they are: Mode, LastWriteTime, Length (for files) and Name.<\/p>\n\n\n\n<p><em>Get-ChildItem c:\\Path<\/em><\/p>\n\n\n\n<!--more-->\n\n\n\n<p>If you want to achieve only the names, you should use the command like this:<\/p>\n\n\n\n<p><em>Get-ChildItem -Directory | Select-Object Name<\/em><\/p>\n\n\n\n<p>To store the data to a file, use something like this:<\/p>\n\n\n\n<p><em>Get-ChildItem -Directory | Select-Object Name > result.txt<\/em><\/p>\n\n\n\n<p><\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>The commandlet &#8216;Get-ChildItem&#8217; will give you all the default information about the folders inside. By default they are: Mode, LastWriteTime, Length (for files) and Name. Get-ChildItem c:\\Path<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 0,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            7
+        ],
+        "tags": [
+            5
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1130"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1130"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1130\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1131,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1130\/revisions\/1131"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1130"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1130"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1130"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1127,
+        "date": "2022-11-18T09:44:28",
+        "date_gmt": "2022-11-18T09:44:28",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1127"
+        },
+        "modified": "2022-11-18T09:44:29",
+        "modified_gmt": "2022-11-18T09:44:29",
+        "slug": "create-list-item-and-add-data-to-sharepoint-2019-lists-via-rest-c",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/sharepoint\/create-list-item-and-add-data-to-sharepoint-2019-lists-via-rest-c\/",
+        "title": {
+            "rendered": "Create list item and add data to SharePoint 2019 lists via REST C#"
+        },
+        "content": {
+            "rendered": "\n<p>Once I tried to make the application to migrate a custom data source from SharePoint 2010 to SharePoint 2019 on-premise. To make it easier, I decided to make to separate solutions \u2013 the first one to export the data from SharePoint 2010 from the list to JSON and attachments to local folder(CSOM for SharePoint 2010 sucks) and the utility to import data to SharePoint 2019 via REST.<\/p>\n\n\n\n<!--more-->\n\n\n\n<p>I know how to achieve access token for authorization and how to use it. But I don\u2019t understand why the manual how to make add-insert requests can be so poor. In spite of the fact that the there are many tutorials and examples, none of them has the information about one step which follows to the error \"Bad Request 400\" on execution.<\/p>\n\n\n\n<p>Approximately 5 hours I could see only this error on execution.<\/p>\n\n\n\n<p>The problem was in 1 byte, 1 char.<\/p>\n\n\n\n<p>So, the information which should be added to the new list item looks like this:<\/p>\n\n\n\n<pre class=\"wp-block-code\"><code>   var itemPayload = new\r\n      {\r\n          __metadata = new { type = \"SP.Data.TestListItem\" },\r\n          Title = \"Test string value\"\r\n      };\r\n<\/code><\/pre>\n\n\n\n<p>where &nbsp;\"SP.Data.\" \u2013 const, \"Test\" \u2013 the title of the list, \"ListItem\" means you create a List Item.<\/p>\n\n\n\n<p>In my case the list was called in only lower case \u2018test\u2019 and I used it as it is:<\/p>\n\n\n\n<pre class=\"wp-block-code\"><code>          __metadata = new { type = \"SP.Data.testListItem\" },<\/code><\/pre>\n\n\n\n<p>But! It was an error and when I modified the char \u2018t\u2019 to \u2018T\u2019 everything started to work successfully.<\/p>\n\n\n\n<p><\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Once I tried to make the application to migrate a custom data source from SharePoint 2010 to SharePoint 2019 on-premise. To make it easier, I decided to make to separate solutions \u2013 the first one to export the data from SharePoint 2010 from the list to JSON and attachments to local folder(CSOM for SharePoint 2010 [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 770,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            4
+        ],
+        "tags": [
+            13,
+            50,
+            2
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1127"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1127"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1127\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1128,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1127\/revisions\/1128"
+                }
+            ],
+            "wp:featuredmedia": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media\/770"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1127"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1127"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1127"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1124,
+        "date": "2022-11-05T06:24:20",
+        "date_gmt": "2022-11-05T06:24:20",
+        "guid": {
+            "rendered": "http:\/\/markimarta.com\/?p=1124"
+        },
+        "modified": "2022-11-05T06:24:22",
+        "modified_gmt": "2022-11-05T06:24:22",
+        "slug": "git-how-to-add-external-repository-to-your-project",
+        "status": "publish",
+        "type": "post",
+        "link": "http:\/\/markimarta.com\/web-server\/git-how-to-add-external-repository-to-your-project\/",
+        "title": {
+            "rendered": "Git. How to add external repository to your project"
+        },
+        "content": {
+            "rendered": "\n<p>If you work with external developers and you often have to get the code from them, it's not very good to transfer it with dropbox or something like that. You want to achieve it, view changes, make tests and build it. It's why CI\/CD is made for. At first you should add external repository to your project and to automate the process of getting new builds. Here's how to do it.<\/p>\n\n\n\n<!--more-->\n\n\n\n<p><strong>Step 1.<\/strong> Clone the existing git. If it already exists, skip this step and make step 2<br><em>git clone https:\/\/gitlab.com\/test_poject_4\/myproject.git<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Step 2.<\/strong> Go to the projectdirectory<br><em>cd .\/myproject <\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Step 3.<\/strong> Add remote repository and name it.<br><em>git remote add out https:\/\/github.com\/heroku\/12factor<\/em><br>In this example the remote repository is called 'out'<\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Step 4.<\/strong> Receive all the commits from the remote repository<br><em>git fetch out<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Step 5.<\/strong> In your reposiriy you should create the special fork for external repository. If you work with external developers, you can call it 'developer' and set with wich remote branch it should be connected.<br><em>git branch developer out\/master<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Step 6.<\/strong> Switch to the brach you have just created<br><em>git checkout developer<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Step 7.<\/strong> Check if you branch is up to date or update it<br><em>git pull<\/em><\/p>\n\n\n\n<p><\/p>\n\n\n\n<p><strong>Step 8.<\/strong> Add the code from external developers (repository) to the corresponding branch<br><em>git push -u origin -o merge_request.create<\/em><\/p>\n\n\n\n<p>The key \"-o merge_request.create\" is to create the merge request in Git<\/p>\n\n\n\n<p><\/p>\n\n\n\n<p>You can also create a script to automate the updating of the developer branch from external repository. The code is like this:<br>c<em>d .\/myproject<br>git checkout developer<br>git pull<br>git push -u origin -o merge_request.create<\/em><\/p>\n\n\n\n<p>It you use Windows, you can make '.bet' file and add it to the task scheduler. It you use Linux, create '.sh' file and add it to crontab.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>If you work with external developers and you often have to get the code from them, it&#8217;s not very good to transfer it with dropbox or something like that. You want to achieve it, view changes, make tests and build it. It&#8217;s why CI\/CD is made for. At first you should add external repository to [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 0,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [
+            24
+        ],
+        "tags": [
+            94,
+            95
+        ],
+        "_links": {
+            "self": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1124"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "about": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/types\/post"
+                }
+            ],
+            "author": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/users\/1"
+                }
+            ],
+            "replies": [
+                {
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/comments?post=1124"
+                }
+            ],
+            "version-history": [
+                {
+                    "count": 1,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1124\/revisions"
+                }
+            ],
+            "predecessor-version": [
+                {
+                    "id": 1125,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/posts\/1124\/revisions\/1125"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/media?parent=1124"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/categories?post=1124"
+                },
+                {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/markimarta.com\/wp-json\/wp\/v2\/tags?post=1124"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]

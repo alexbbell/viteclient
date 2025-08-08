@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, type JSX } from 'react'
 import { type Skill } from './BLLangMaster'
 import formstyles from './LangMaster.module.scss'
 

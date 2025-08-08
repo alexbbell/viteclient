@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect, type JSX } from 'react'
 import parse from 'html-react-parser'
 import { dateToDDmmYYYY } from '../../Middleware/Helpers'
 import Image from './Image'
@@ -20,13 +20,17 @@ interface IWpAnonsExcerpt {
   rendered: string
 }
 
+interface ITitle {
+  title: string, 
+  rendered : string,
+}
 interface WPItem {
   id: number
   featured_media: number | null
-  title: any
-  link: any
-  date: any
-  anons: any
+  title: ITitle,
+  link:  string,
+  date:  string,
+  anons:  string,
   excerpt: IWpAnonsExcerpt
 }
 export default function Blog (): JSX.Element {
@@ -61,7 +65,7 @@ export default function Blog (): JSX.Element {
       return myimages.push({
         postId: img.id,
         imageId: img.featured_media,
-        title: img.title.rendered,
+        title: img.title?.rendered,
         link: img.link,
         date: dateToDDmmYYYY(img.date),
         anons: parse(img.excerpt.rendered)

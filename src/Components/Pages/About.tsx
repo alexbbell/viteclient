@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, type JSX } from 'react'
 
 import { Row, Col, Space, Modal } from 'antd'
 import styles from './../../style/style.module.scss'

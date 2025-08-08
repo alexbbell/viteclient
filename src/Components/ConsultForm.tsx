@@ -2,10 +2,6 @@
 import { Button, Form, Input } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import * as React from 'react';
-type Props = {
-    
-};
-
 interface IConsultForm {
     email: string, 
     thename: string, 
@@ -16,30 +12,36 @@ const defaultConsultForm: IConsultForm = {
     thename: '',
     question: ''
 }
-export const ConsultForm = (props: Props) => {
+export const ConsultForm = () => {
     const [formFields, setFormFields] = React.useState<IConsultForm>(defaultConsultForm)
     
-    function populateForm(field: string, event: React.ChangeEvent<HTMLInputElement>): void {
-        const newFormFields = {...formFields}
-        newFormFields.thename = event.currentTarget.value
-        setFormFields(newFormFields)
+    function populateForm(field: keyof IConsultForm, event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
+        setFormFields(prev => ({
+                ...prev,
+                [field]: event.currentTarget.value
+            }));
     }
 
     return (
         <div style={{ border: '#000 1px solid'}}>
-            <Form labelCol={{ span: 6 }}
+            <Form labelCol={{ span: 7 }}
                 wrapperCol={{ span: 17 }}
                 layout="horizontal">
                 <Form.Item label="Your name">
 
                     <Input placeholder="Your name" value={formFields.thename} 
-                    onChange={ (event: React.ChangeEvent<HTMLInputElement>) =>  populateForm('title', event)} /></Form.Item>
+                        onChange={ (event: React.ChangeEvent<HTMLInputElement>) =>  populateForm('thename', event)} 
+                    /></Form.Item>
                 <Form.Item label='Your email'>
-                    <Input placeholder="Your email" value={formFields.email} />
+                    <Input placeholder="Your email" value={formFields.email}  
+                        onChange={ (event: React.ChangeEvent<HTMLInputElement>) =>  populateForm('email', event)} 
+                    />
                 </Form.Item>
                 <Form.Item label='Your question'>
                     <TextArea placeholder='Write here what you want to discuss, your questions'
                         value={formFields.question}
+                        
+                        onChange={(event) => populateForm('question', event)}
                         rows={4} cols={50} />
                 </Form.Item>
                 <Form.Item>

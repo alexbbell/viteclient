@@ -40,7 +40,7 @@ const Testimonials = (lng: Props): React.JSX.Element => {
   autoplay autoplaySpeed={4000} fade={true} pauseOnHover pauseOnFocus pauseOnDotsHover
   className='carousel'>
 
-{testimonials.posts.map((x, index) => {
+{testimonials.posts.map((x) => {
   return (
   <div key={x.author} className='testimonial'>
         <div className='tImage'>

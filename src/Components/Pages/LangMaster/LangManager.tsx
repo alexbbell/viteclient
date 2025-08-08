@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, type JSX } from 'react'
 import { Row, Col, Space, Input, type CollapseProps, Collapse, Button, Popconfirm, message } from 'antd'
 import styles from './../../../style/style.module.scss'
 import formstyles from './LangMaster.module.scss'
@@ -129,7 +129,7 @@ const LangManager = (): JSX.Element => {
     )
   }
 
-  const jsxLangComponent = (alldata: ISiteObjects): JSX.Element => (
+  const jsxLangComponent = (): JSX.Element => (
     <div>
       <>{jsxInputText('fullname')}</>
       <>{jsxInputText('resume')}</>
@@ -170,7 +170,7 @@ const LangManager = (): JSX.Element => {
     </div>
   )
 
-  const jsxWork = (alldata: ISiteObjects): JSX.Element => <>
+  const jsxWork = (): JSX.Element => <>
     <h1 key='h1edu'>Work</h1>
     <div onClick={ () => {
       const t = content
@@ -191,7 +191,7 @@ const LangManager = (): JSX.Element => {
 <Popconfirm
     title="Delete the task"
     description="Are you sure to delete this task?"
-  onConfirm={ (e) => {
+  onConfirm={ () => {
     const newWorks = content
     newWorks.work.content.splice(index, 1)
     setContent({ ...newWorks })
@@ -238,7 +238,7 @@ const LangManager = (): JSX.Element => {
     })}
   </>
 
-  const jsxEducation = (alldata: ISiteObjects): JSX.Element => {
+  const jsxEducation = (): JSX.Element => {
     return <>
     <h1 key='h1edu'>Education</h1>
     <div onClick={ () => {
@@ -288,7 +288,7 @@ const LangManager = (): JSX.Element => {
   </>
   }
 
-  const jsxSocial = (alldata: ISiteObjects): JSX.Element => {
+  const jsxSocial = (): JSX.Element => {
     return <>
     <h1 key='h1soc'>Social</h1>
     <div onClick={ () => {
@@ -332,17 +332,17 @@ const LangManager = (): JSX.Element => {
   </>
   }
 
-  const GetCollapseProps = (lang: string): CollapseProps['items'] => {
+  const GetCollapseProps = (): CollapseProps['items'] => {
     const items: CollapseProps['items'] = [
       {
         key: 'cp1',
         label: 'Main',
-        children: <>{jsxLangComponent(content)}</>
+        children: <>{jsxLangComponent()}</>
       },
       {
         key: 'cp4',
         label: 'Work',
-        children: <>{jsxWork(content)}</>
+        children: <>{jsxWork()}</>
       },
       {
         key: 'cp2',
@@ -354,12 +354,12 @@ const LangManager = (): JSX.Element => {
         key: 'cp3',
         label: 'Education',
         // children: <EducationEditor data={education} fnc={reloadEdu} />
-        children: <>{jsxEducation(content)}</>
+        children: <>{jsxEducation()}</>
       },
       {
         key: 'cp5',
         label: 'Social',
-        children: <>{jsxSocial(content)}</>
+        children: <>{jsxSocial()}</>
       }
 
     ]
@@ -393,7 +393,7 @@ const LangManager = (): JSX.Element => {
       <>
       {content.errorText}
         <h1>Content Editor</h1>
-        <Collapse items={GetCollapseProps('ru')} defaultActiveKey={['cp4']} />
+        <Collapse items={GetCollapseProps()} defaultActiveKey={['cp4']} />
 
         {
           (bearerToken !== undefined && bearerToken.accessToken !== '') && (

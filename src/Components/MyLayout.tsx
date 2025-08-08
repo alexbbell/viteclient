@@ -1,4 +1,4 @@
-import React, { Suspense, type JSX } from 'react'
+import { Suspense, type JSX } from 'react'
 import { Layout, Divider } from 'antd'
 import styles from './../style/style.module.scss'
 import { Outlet } from 'react-router-dom'

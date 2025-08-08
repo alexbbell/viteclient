@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, type JSX } from 'react'
 
 const LangSelector = (props: any): JSX.Element => {
   const [switchEditorLang, setSwitchEditorLang] = useState('en')

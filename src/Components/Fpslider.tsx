@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type JSX } from 'react'
 
 interface Props {
   title: string
@@ -38,8 +38,8 @@ const Fpslider = (title: Props): JSX.Element => {
             return (
               <div key={`test${index}`} style={{ height: '20px', margin: '2px 4px', border: 'green 1px solid' }}
               draggable
-              onDragStart={ (e) => { dragItem.current = index } }
-              onDragEnter={ (e) => { dragOverItem.current = index } }
+              onDragStart={ () => { dragItem.current = index } }
+              onDragEnter={ () => { dragOverItem.current = index } }
               onDragEnd={ handleSort }
               onDragOver={ (e) => { e.preventDefault() }}
 

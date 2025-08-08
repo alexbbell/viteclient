@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react'
+import { type JSX } from 'react'
 import { Row, Col } from 'antd'
 import { NavLink, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

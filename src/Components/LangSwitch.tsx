@@ -1,4 +1,4 @@
-import React, { useEffect, type JSX } from 'react'
+import { useEffect, type JSX } from 'react'
 import styles from './../style/style.module.scss'
 import { NavLink } from 'react-router-dom'
 import { type IStaticPage } from './../interfaces'

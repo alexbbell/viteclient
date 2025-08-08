@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, type JSX } from 'react'
 
-import { Row, Col, Space, Modal } from 'antd'
+import { Row, Col, Space } from 'antd'
 import styles from './../../style/style.module.scss'
 import { useTranslation } from 'react-i18next'
 import Login from './Login/Login'
@@ -22,13 +22,7 @@ const Auth = (): JSX.Element => {
     document.title = `Aleksei Beliaev. Fullstack developer. ${t('main.titleAbout')}`
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   }, [t('main.titleAbout')])
-  const aboutTextArray = t('main.about').split(/\n/g)
 
-  const aboutText = aboutTextArray.map(function (text, index) {
-    return <p key={`p${index}`}>
-            {text}
-          </p>
-  })
   return (
 <>
 <Row className={`${styles.pb40} ${styles.pt40}`}>

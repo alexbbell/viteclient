@@ -1,4 +1,4 @@
-import React, { } from 'react'
+import { type JSX } from 'react'
 import LangManager from './LangManager'
 import Login from '../Login/Login'
 import { useAppDispatch } from './../../../hooks'

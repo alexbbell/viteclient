@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect, type JSX } from 'react'
 
 import { Row, Col, Divider } from 'antd'
 import { useNavigate, NavLink, useParams } from 'react-router-dom'

@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type JSX } from 'react'
 import { type IClockParams, type IPoint, type IWatch } from '../../interfaces'
 
 const AbbAnalogClock = (props: IClockParams): JSX.Element => {

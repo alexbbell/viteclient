@@ -1,4 +1,4 @@
-import React, { type FormEvent, useState } from 'react'
+import { type FormEvent, type JSX, useState } from 'react'
 import { authUrl } from '../../../config'
 import { type ILoginData } from '../LangMaster/BLLangMaster'
 import { saveUserToken } from './../../../store/langSlice'

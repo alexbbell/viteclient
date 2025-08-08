@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, type JSX } from 'react'
 import { type IStaticPage, type INewsAnons } from './../interfaces'
 import styles from './../style/style.module.scss'
 import { pubDir } from './../config'
@@ -18,7 +18,7 @@ const NewsLoader = (props: IStaticPage): JSX.Element => {
   }, [lang])
   const newscontent: JSX.Element = <>
   {
-    newsaons.map((x: INewsAnons, index: number) => {
+    newsaons.map((x: INewsAnons, ) => {
       return (
         <div key={x.title} className={styles.newsItem} >
           <h1><a href={x.link}>{x.title}</a></h1>

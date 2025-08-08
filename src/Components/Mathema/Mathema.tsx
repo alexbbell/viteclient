@@ -1,4 +1,4 @@
-import React, { useEffect, useState, type JSX } from 'react'
+import { useEffect, useState, type JSX } from 'react'
 import { Simplemath } from '../../Middleware/mathfuncs'
 import { type IMathSettings, type IExample, AllMathActions, type MathActions } from './inttypes'
 import styles from './../../style/style.module.scss'
