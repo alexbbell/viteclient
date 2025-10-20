@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { type ITestimonials } from '../interfaces'
 import { Carousel } from 'antd'
-import { pubDir } from '../config'
 import styles from './../style/style.module.scss'
+import { settings } from '../config'
 // import styles from './../style/style.module.scss'
 
 interface Props {
@@ -14,7 +14,7 @@ const Testimonials = (lng: Props): React.JSX.Element => {
   // const lang: string = (typeof lng === 'undefined') ? 'en' : lng
   const [testimonials, setTestimonials] = useState<ITestimonials>({ posts: [{ author: '', img: '', text: '' }] })
   const LoadText = async (): Promise<void> => {
-    const fUrl = `${pubDir}locales/${lang}/${lang}-testimonials.json`
+    const fUrl = `${settings.pubDir}locales/${lang}/${lang}-testimonials.json`
     void fetch(fUrl)
       .then(async (response) => {
         return await response.json()

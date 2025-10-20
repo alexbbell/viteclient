@@ -3,6 +3,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 I use this site as a platform for the experiments and the feture creations.
 
+Show sys env in VITE APP
+                    REACT_APP_NAME: {import.meta.env.VITE_REACT_APP_NAME}
+                    <br />
+                    REACT_APP_API_URL: {import.meta.env.VITE_REACT_APP_API_URL}
+                    <br />
+                    BaseURL: {settings.baseUrl}
 
 ## News:
 

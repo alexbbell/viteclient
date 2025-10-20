@@ -23,10 +23,6 @@ const LangManager = (): JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     bearerToken = JSON.parse(lsToken)
   }
-  // const tokenApi: ITokenApiModel = useAppSelector(state => state.lang.userToken)
-  // console.log({ tokenApi })
-  // const refreshToken: string | null = useAppSelector(state => state.lang.userToken)
-
   const switchLangEdit = (lang: string): void => {
     setSelectedLang(lang)
   }
@@ -68,29 +64,29 @@ const LangManager = (): JSX.Element => {
   const jsxInputText = (fieldName: 'address' | 'beforename' | 'bio' | 'description' | 'email' | 'fullname' | 'greeting' | 'image' | 'name' | 'phone' | 'position' | 'resumedownload' | 'social' | 'titleAbout' | 'website'
   | 'resume' | 'contacts' | 'sitemap' | 'home' | 'experience' | 'skills' | 'blogs' | 'about' | 'education'): JSX.Element => {
     let cValue = ''
-    if (fieldName === 'address') cValue = content.main.address
-    if (fieldName === 'beforename') cValue = content.main.beforename
-    if (fieldName === 'bio') cValue = content.main.bio
+    if (fieldName === 'address') cValue = content.main?.address
+    if (fieldName === 'beforename') cValue = content.main?.beforename
+    if (fieldName === 'bio') cValue = content.main?.bio
     if (fieldName === 'description') cValue = content.main.description
-    if (fieldName === 'email') cValue = content.main.email
+    if (fieldName === 'email') cValue = content.main?.email
     if (fieldName === 'fullname') cValue = content.fullname
     if (fieldName === 'greeting') cValue = content.main.greeting
-    if (fieldName === 'image') cValue = content.main.image
-    if (fieldName === 'name') cValue = content.main.name
-    if (fieldName === 'phone') cValue = content.main.phone
+    if (fieldName === 'image') cValue = content.main?.image
+    if (fieldName === 'name') cValue = content.main?.name
+    if (fieldName === 'phone') cValue = content.main?.phone
     if (fieldName === 'position') cValue = content.main.position
     if (fieldName === 'resumedownload') cValue = content.main.resumedownload
     if (fieldName === 'website') cValue = content.main.website
     if (fieldName === 'titleAbout') cValue = content.main.titleAbout
-    if (fieldName === 'resume') cValue = content.menu.resume
-    if (fieldName === 'contacts') cValue = content.menu.contacts
-    if (fieldName === 'sitemap') cValue = content.menu.sitemap
-    if (fieldName === 'home') cValue = content.menu.home
-    if (fieldName === 'experience') cValue = content.menu.experience
-    if (fieldName === 'skills') cValue = content.menu.skills
-    if (fieldName === 'blogs') cValue = content.menu.blogs
-    if (fieldName === 'about') cValue = content.menu.about
-    if (fieldName === 'education') cValue = content.menu.education
+    if (fieldName === 'resume') cValue = content.menu?.resume
+    if (fieldName === 'contacts') cValue = content.menu?.contacts
+    if (fieldName === 'sitemap') cValue = content.menu?.sitemap
+    if (fieldName === 'home') cValue = content.menu?.home
+    if (fieldName === 'experience') cValue = content.menu?.experience
+    if (fieldName === 'skills') cValue = content.menu?.skills
+    if (fieldName === 'blogs') cValue = content.menu?.blogs
+    if (fieldName === 'about') cValue = content.menu?.about
+    if (fieldName === 'education') cValue = content.menu?.education
 
     return (
       <div className={formstyles.formRow}>
@@ -152,7 +148,7 @@ const LangManager = (): JSX.Element => {
       <>{jsxInputText('phone')}</>
       <div key='description'>
         <label>description at the 1st page</label>
-        <TextArea value={`${content.main.description}`} aria-label='description' rows={6}
+        <TextArea value={`${content.main?.description}`} aria-label='description' rows={6}
           onChange={(evt: React.ChangeEvent<HTMLTextAreaElement>) => {
             const t = content
             t.main.description = evt.currentTarget.value

@@ -1,13 +1,13 @@
 import { useEffect, useState, type JSX } from 'react'
 import { type IStaticPage, type INewsAnons } from './../interfaces'
 import styles from './../style/style.module.scss'
-import { pubDir } from './../config'
+import { settings } from '../config'
 
 const NewsLoader = (props: IStaticPage): JSX.Element => {
   const [newsaons, setNewAnons] = useState<INewsAnons[]>([])
   // const setActive = ({ isActive }) => isActive ? 'active-link' : ''
   const LoadNews = async (lang: string): Promise<void> => {
-    const newsFile = (lang === 'ru') ? `${pubDir}mimrunews.json` : `${pubDir}mimnews.json`
+    const newsFile = (lang === 'ru') ? `${settings.pubDir}mimrunews.json` : `${settings.pubDir}mimnews.json`
     const newsdata = await fetch(newsFile)
     const json: INewsAnons[] = await newsdata.json()
     setNewAnons(json)

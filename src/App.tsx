@@ -6,6 +6,7 @@ import { Homepage } from './Components/Pages/Homepage'
 
 import { lazy } from 'react'
 import { Services } from './Components/Pages/Services/Services'
+import { Admin } from './Components/Pages/Admin/Admin'
 
 const Auth = lazy(async () => await import ('./Components/Pages/Auth'))
 const About = lazy(async () => await import('./Components/Pages/About'))
@@ -21,7 +22,7 @@ const App = (): React.JSX.Element => {
 
     <Routes>
       <Route path="/" element={<MyLayout />}>
-        <Route path=":lng" element={<Homepage />} />
+        <Route path=":lng?/" element={<Homepage />} />
         <Route path="/auth/" element={<Auth />}></Route>
         <Route path="/:lng/blogs" element={<Blog />} />
         <Route path="/:lng/services" element={<Services />} />
@@ -30,6 +31,8 @@ const App = (): React.JSX.Element => {
         <Route path="/:lng/skills" element={<Skills query="skills" />} />
         <Route path="/:lng/lngmngr" element={<LangMaster />} />
         <Route path="/:lng/math" element={<Mathema />} />
+        <Route path="/:lng/connectmysite" element={<Admin />} />
+        
                  {/* Redirect invalid langs to /en */}
           {/* <Route path=":lng" element={<Navigate to="/en" replace />} /> */}
 

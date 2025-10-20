@@ -12,6 +12,8 @@
 # production
 /build
 
+/dist
+
 # misc
 .DS_Store
 .env.local
@@ -27,3 +29,19 @@ yarn-error.log*
 .env.production
 certdev.pem
 keydev.pem
+*.,o
+
+*.pfx
+*.snk
+*.pem
+*.key
+certs/
+*.cer
+*.crt
+*.p12
+*.jks
+
+# Tool/state folders
+.azure/
+.pnp/
+.vscode/settings.json

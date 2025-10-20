@@ -55,31 +55,31 @@
         "blogs": "Blogs",
         "about": "About",
         "education": "Education",
-        "math": "the game"
+        "math": "the game",
+        "services": "Dienstleistungen"
     },
     "skills": {
         "title": "Skills",
         "content": [
             {
-                "name": ".Net + C#: MVC Applications, REST API, Console Applications, Background services, WebForms",
-                "description": "Experienced in designing and developing small tools, microservices, and monolithic applications using .NET Framework and .NET Core. Skilled in integrating Entity Framework, Dapper, NLog, Newtonsoft.Json, OpenXML, and other extensions to deliver efficient, maintainable solutions."
+                "name": "Asp.Net, C#: MVC applications, WebForms, Console applications",
+                "description": "The development of the small tools, the parts of microservices and the monolith applications for Net Framework and Net Core, the usage of the extensions EntityFramework, Dapper, Nlog, NewtonSoft, OpenXML and many others. "
             },
             {
-                "name": "TypeScript, JavaScript (React, Node.js, Playwright, jQuery)",
-                "description": "Proficient in modern front-end development with frameworks and libraries including React, Redux, Ant Design, Axios, Bootstrap, and jQuery (for legacy projects). Experienced in using Webpack to bundle and optimize JavaScript and TypeScript applications for performance and scalability.  Skilled in automating routine test operations and end-to-end testing workflows using Playwright.м"
+                "name": "JavaScript and libraries (React and connected libraries, jQuery, NodeJS)",
+                "description": "The front-end development with popular JS frameworks and libraries - React, Redux, Antd, Axios, Bootstrap, jQuery (mostly for old projects). I use webpack to bundle JavaScript and TypeScript applications."
             },
             {
-                "name": "Web Standards: HTML5, CSS3, SCSS, XML",
-                "description": "Strong knowledge of semantic HTML, responsive CSS/SCSS, and XML data formats. Experienced in applying modern styling techniques, automated builds, and optimizations via Webpack."
-
+                "name": "XHTML, CSS, XML: deep knowledge of formats and technologies",
+                "description": "The modern usage of CSS and SCSS for styles, use webpack to automize the CSS compilation."
             },
             {
-                "name": "Microsoft SharePoint Development",
-                "description": "Extensive experience with SharePoint 2010–2019, covering full-cycle solutions: farm creation, development of custom web parts, timer jobs, and console applications for data import/export. Skilled in integrating SharePoint with external systems, APIs, and Office Online."
+                "name": "Microsoft SharePoint: development webparts, timer-jobs integration with external applications",
+                "description": "The full cycle of work with MS SharePoint (2010, 2019) - the creating a farm, the development of webparts, timerjobs and console applications for the export-import of data, integrations with external applications, Office online."
             },
             {
-                "name": "DevOps & Automation",
-                "description": "Hands-on experience in setting up CI/CD pipelines with GitLab and Azure, provisioning environments with Terraform (Azure, Yandex Cloud), and creating reproducible development setups using Vagrant and VirtualBox. "
+                "name": "Devops engineer",
+                "description": "Setting up the CI/CD processes with Gitlab, the automation of the creating environments with Terraform (AWS, YandexCloud) and Vagrant (VirtualBox). "
             }
         ]
     },
@@ -89,26 +89,26 @@
             {
                 "company": "Rocketta GmbH",
                 "title": "Senior Software Developer",
-                "years": "September 2023 - Present",
-                "description": "<ul><li>Lead development of enterprise solutions for SharePoint 2019, SharePoint Online, and custom WebAPI services.</li><li>Built cloud-integrated applications for Azure and RabbitMQ, ensuring high scalability and performance.</li><li>Developed an AI-powered chatbot using Semantic Kernel for internal automation and user interaction.</li><li>Collaborated with cross-functional teams to design secure, maintainable, and performance-optimized applications.</li></ul>"
+                "years": "September 2015 - Present",
+                "description": "The application development for SharePoint 2019, SharePoint Online, WebAPI web services, applications for Azure and RabbitMQ, the development of the chat bot with Sematic Kernel\n\n"
             },
             {
-                "company": "GazPromBank, financial company",
+                "company": "GPB, financial company",
                 "title": "Senior Full-stack Software Developer",
                 "years": "September 2015 - June 2023",
-                "description": "<ul><li>Provided full lifecycle support for the Microsoft SharePoint-based enterprise portal.</li><li>Integrated features and technical specifications to meet evolving business needs.</li><li>Developed ASP.NET & C# solutions for data exchange between multiple databases and Active Directory, supporting both synchronous and asynchronous operations.</li><li>Improved system performance, security, and maintainability through architectural enhancements.</li></ul>"
+                "description": "I successfully completed migration from SharePoint 2010 to SharePoint 2019 - 25k+ active users, ~1Tb content databases. I developed and implemented tools for direct data migration from SharePoint 2010 to 2019. Successfully led a small team of developers. Created a number of applications in stack of React, C# (.Net) and MS SQL for internal needs."
             },
             {
-                "company": "GazPromBank, financial company",
+                "company": "GPB, financial company",
                 "title": "Full-stack SharePoint Software developer",
                 "years": "July 2010 - September 2015",
-                "description": "<ul><li>Provided full lifecycle support for the Microsoft SharePoint-based enterprise portal.</li><li>Integrated features and technical specifications to meet evolving business needs.</li><li>Developed ASP.NET & C# solutions for data exchange between multiple databases and Active Directory, supporting both synchronous and asynchronous operations.</li><li>Improved system performance, security, and maintainability through architectural enhancements.</li></ul>"
+                "description": "Full support of the system based on Microsoft SharePoint. Collaborated with contractors to offer and then develop and implement different solutions. Integrated various features and technical specifications of applications, continuous functionality of the Portal system, developed SharePoint solutions for internal needs. Developed applications (Asp.net, C#, MSSQL, SharePoint) with data from several databases, AD, synchronous and asynchronous exchanges between different data sources."
             },
             {
-                "company": "GazPromBank, financial company",
+                "company": "GPB, financial company",
                 "title": "Junior software developer",
                 "years": "July 2008 - July 2010",
-                "description": "<ul><li>Developed simple yet effective internal applications and modules, including poll systems, photo galleries, and promotional pages.</li><li>Wrote SQL queries and built small-scale web applications to support company operations.</li><li>Gained foundational experience in .NET development, web technologies, and database integration.</li></ul>"
+                "description": "Development of simple applications and functions for internal needs of the company - polls, photogallery, making promo-pages. Simple SQL requests and usage in web-applications"
             }
         ]
     },

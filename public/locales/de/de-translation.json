@@ -4,13 +4,15 @@
     "main": {
         "greeting": "Hallo! ",
         "beforename": "Ich bin ",
-        "name": "Aleksei Beliaev",
-        "position": "Full-Stack-Entwickler (TypeScript, JavaScript, React, C#, NodeJS (no)SQL)",
+        "name": "Aleksei Beliaev",  
+        "position": "Full-Stack-Entwickler (TypeScript, JavaScript, React, C#, SharePoint, (no)SQL, NodeJS)",
         "titleAbout": "Über mich",
         "description": "Ich arbeite als Full-Stack-Softwareentwickler und habe umfassende Erfahrung in der Erstellung und Pflege von IT-Systemen. Hauptsächlich verwende ich C#, JavaScript, Rest API und Rabbit Mq. Mit C# meine ich Net (.NetFramework, Net Core, EF Core, Nlog, NewtonSoft, OpenXML). JavaScript ist nicht nur eine native Sprache, sondern auch TypeScript und die React-Bibliothek. Ich habe auch mehrere einfache Tools mit NodeJS erstellt, sodass JavaScript nicht nur für das Frontend verwendet wird.",
         "image": "/public/img/banner/abb.jpg",
         "bio": "Ich arbeite als Softwareentwickler und möchte im Raum NRW - Mülheim, Essen, Duisburg, Düsseldorf - arbeiten.\n\nE-Mail: beliaeff@gmail.com\nTelefon: +972 585362546\nAdresse: Rehovot, 20293\n\nÜber mich: Ich habe angefangen, die Entwicklung in meiner High School zu lernen, es war das „Basic“. Und dann habe ich erkannt, dass ich Softwareentwickler werden möchte. Als Student habe ich viel Zeit damit verbracht, die Entwicklung zu lernen, und bald konnte ich meine erste Arbeit finden. Es war RBC (RosBusinessConsulting) - eines der besten Wirtschaftsmedien in Russland. Seitdem lerne ich immer neue Technologien, erweitere und verbessere meine Fähigkeiten, lese und höre IT-Publikationen. Ich bin seit fast 20 Jahren glücklich verheiratet und habe drei großartige Kinder. Der älteste hat ein großes Talent für Mathematik und Programmierung, er ist einer der stärksten Schüler in Moskau in diesen Fächern. Er gewinnt regelmäßig Preise bei verschiedenen Wettbewerben. Meine Tochter ist eine sehr kreative Person, die neben der Schule große Erfolge im Tanzen, Zeichnen, Design und anderen kreativen Bereichen erzielt hat. Der jüngste ist alle drei und er ist einfach der Liebling der ganzen Familie. Neben Familie und Arbeit nimmt der Sport einen bedeutenden Platz in meinem Leben ein. Ich liebe das Laufen (Joggen) und habe erfolgreich mehrere volle Marathons (42,2 km) absolviert. Ich mag auch Musik und Gartenarbeit. Ich liebe es zu reisen und mit neuen Menschen zu kommunizieren, ich finde leicht eine gemeinsame Sprache mit ihnen, wechsle gerne die Umgebung und öffne mich gerne neuen Dingen.",
         "website": "https://alexey.beliaeff.ru/",
+        "about": "Ich habe bereits in der Schule mit der Softwareentwicklung begonnen, damals mit „Basic“. Schon damals habe ich erkannt, dass ich Softwareentwickler werden möchte. Während meines Studiums habe ich viel Zeit ins Programmieren investiert und konnte bald meine erste Arbeitsstelle finden. Es war bei RBC (RosBusinessConsulting) – einem der führenden Wirtschaftsportale in Russland. Seit dieser Zeit lerne ich ständig neue Technologien, erweitere und verbessere meine Fähigkeiten und lese bzw. höre regelmäßig IT-Publikationen.\n Ich bin seit fast 20 Jahren glücklich verheiratet, wir haben drei wunderbare Kinder. Der Älteste hat ein großes Talent für Mathematik und Programmierung, er gehört in diesen Fächern zu den stärksten Schülern in Moskau und gewinnt regelmäßig Preise bei verschiedenen Wettbewerben. Meine Tochter ist eine sehr kreative Person, die neben der Schule große Erfolge im Tanzen, Zeichnen, Design und anderen kreativen Bereichen erzielt hat. Der Jüngste ist drei Jahre alt und einfach der Liebling der ganzen Familie.\n Neben Familie und Arbeit nimmt der Sport einen wichtigen Platz in meinem Leben ein. Ich laufe gerne (Jogging) und habe bereits mehrere komplette Marathons (42,2 km) erfolgreich absolviert. Außerdem mag ich Musik und Gartenarbeit. Ich reise gerne und treffe neue Menschen, finde leicht eine gemeinsame Sprache mit ihnen, passe mich schnell an neue Umgebungen an und bin offen für Neues mit großer Freude.",
+
         "resumedownload": "/public/Aleksei_Beliaev_CV_2022-09.pdf",
         "social": [
             {
@@ -51,6 +53,7 @@
         "blogs": "Blogs",
         "about": "Über mich",
         "education": "Bildung",
+        "services": "Dienstleistungen",
         "math": "das Spiel"
     },
     "skills": {
@@ -84,7 +87,7 @@
             {
                 "company": "Rocketta GmbH",
                 "title": "Senior Softwareentwickler",
-                "years": "September 2015 - heute",
+                "years": "Juni 2023 - heute",
                 "description": "Die Anwendungsentwicklung für SharePoint 2019, SharePoint Online, WebAPI-Webservices, Anwendungen für Azure und RabbitMQ, die Entwicklung des Chatbots mit Semantic Kernel."
             },
             {

@@ -1,5 +1,5 @@
 import { type FormEvent, type JSX, useState } from 'react'
-import { authUrl } from '../../../config'
+import { settings } from '../../../config'
 import { type ILoginData } from '../LangMaster/BLLangMaster'
 import { saveUserToken } from './../../../store/langSlice'
 import axios from 'axios'
@@ -14,7 +14,7 @@ export default function Login (): JSX.Element {
   const [errorAuth, setErrorAuth] = useState('')
   const dispatch = useAppDispatch()
   async function loginUser (): Promise<void> {
-    axios.post(authUrl, credentials,
+    axios.post(`${settings.apiUrl}Auth` , credentials,
       {
         headers: {
           'Access-Control-Allow-Origin': '*',
@@ -30,8 +30,11 @@ export default function Login (): JSX.Element {
           dispatch(saveUserToken({ accessToken: res.data }))
           setTokenAuth(res.data)
           setErrorAuth('')
-          console.log('ok redirect')
-          navigate('/en/lngmngr/', { replace: true })
+          if (window.history.state && window.history.state.idx > 0) {
+            navigate(-1);
+          } else {
+            navigate(window.history.state.idx, { replace: true });
+          }
         }
       })
       .catch((error) => {

@@ -22,7 +22,8 @@ export const Services: React.FC = () => {
       <Col xs={20} md={16} lg={10}>
       <h1>Services</h1>
 
-        <p>Are you looking for a job abroad? </p>
+        <p>Find Your Path Abroad with Confidence </p>
+        <p>I help professionals prepare for relocation and job search abroad, based on my own real experience of moving and working in Germany.</p>
         <ConsultForm />
       </Col>
       <Col xs={1} md={0} lg={1}></Col>

@@ -5,17 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-remote": "vite --mode production",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+   "dotnetStart": "powershell -Command \"$env:ASPNETCORE_URLS='http://0.0.0.0:5000;https://0.0.0.0:5001'; cd 'D:\\Projects\\AbbContentEditor\\AbbContentEditor\\bin\\Release\\net8.0\\publish'; dotnet AbbContentEditor.dll\""
   },
   "dependencies": {
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
     "@fortawesome/free-regular-svg-icons": "^7.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.3",
     "@reduxjs/toolkit": "^2.8.2",
+    "@tanstack/react-query": "^5.90.2",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
@@ -39,7 +43,8 @@
     "react-router-dom": "^7.7.1",
     "sass": "^1.89.2",
     "usehooks-ts": "^3.1.1",
-    "web-vitals": "^5.0.3"
+    "web-vitals": "^5.0.3",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

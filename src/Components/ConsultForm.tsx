@@ -1,20 +1,25 @@
 // @flow 
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, message  } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import * as React from 'react';
-interface IConsultForm {
+import { settings } from '../config';
+export interface IConsultForm {
     email: string, 
     thename: string, 
+    subject: string,
     question: string,
 }
 const defaultConsultForm: IConsultForm = {
-    email: '',
-    thename: '',
+    email: 'no@mail.ru',
+    thename: 'Aleksei',
+    subject: 'Anfrage',
     question: ''
 }
 export const ConsultForm = () => {
     const [formFields, setFormFields] = React.useState<IConsultForm>(defaultConsultForm)
-    
+    const [btnDisabled, setBtnDisabled] = React.useState(false)
+    const startedAtRef = React.useRef<number>(0)
+    const [messageSent, setMessageSent] = React.useState(false)
     function populateForm(field: keyof IConsultForm, event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
         setFormFields(prev => ({
                 ...prev,
@@ -22,8 +27,55 @@ export const ConsultForm = () => {
             }));
     }
 
+
+    async function handleSubmit() {
+        console.log({ formFields });
+        const timeAfterLoad = Date.now() - startedAtRef.current;
+        console.log({ timeAfterLoad });
+
+        if (timeAfterLoad < 5000) {
+            alert('Too fast');
+            return;
+        }
+
+        setBtnDisabled(true);
+
+        try {
+            const response = await fetch(`${settings.apiUrl}SiteRequests`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formFields),
+            });
+
+            if (!response.ok) {
+                const res = await response.text();
+                message.error(res || 'Failed to send your message.');
+                setBtnDisabled(false);
+                return; // 🚫 stop here, don’t set messageSent
+            }
+
+            message.success('Your message was sent successfully!');
+            setFormFields(defaultConsultForm);
+            setMessageSent(true); // ✅ only when successful
+        } catch (error) {
+            console.error(error);
+            message.error(`Failed to send: ${error}`);
+        } finally {
+            setBtnDisabled(false);
+        }
+    }
+  React.useEffect( () => {
+    startedAtRef.current = Date.now()
+  }, [])
+
     return (
-        <div style={{ border: '#000 1px solid'}}>
+        <div>
+
+{
+    !messageSent ?
+      
             <Form labelCol={{ span: 7 }}
                 wrapperCol={{ span: 17 }}
                 layout="horizontal">
@@ -37,6 +89,11 @@ export const ConsultForm = () => {
                         onChange={ (event: React.ChangeEvent<HTMLInputElement>) =>  populateForm('email', event)} 
                     />
                 </Form.Item>
+                <Form.Item label='Subject'>
+                    <Input placeholder="Subject" value={formFields.subject}  
+                        onChange={ (event: React.ChangeEvent<HTMLInputElement>) =>  populateForm('subject', event)} 
+                    />
+                </Form.Item>
                 <Form.Item label='Your question'>
                     <TextArea placeholder='Write here what you want to discuss, your questions'
                         value={formFields.question}
@@ -45,9 +102,18 @@ export const ConsultForm = () => {
                         rows={4} cols={50} />
                 </Form.Item>
                 <Form.Item>
-                    <Button type="primary">Submit</Button>
+                    <Button type="primary"
+                        loading={btnDisabled} 
+                        onClick={ handleSubmit}>Submit</Button>
                 </Form.Item>
             </Form>
+            : 
+            <>
+            <h1>Your message has been sent</h1>
+            <Button onClick={() => setMessageSent(false)} >Close</Button>
+            </>
+            }
+
         </div>
     );
 };
