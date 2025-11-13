@@ -3,18 +3,8 @@ import { Button, Form, Input, message  } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import * as React from 'react';
 import { settings } from '../config';
-export interface IConsultForm {
-    email: string, 
-    thename: string, 
-    subject: string,
-    question: string,
-}
-const defaultConsultForm: IConsultForm = {
-    email: 'no@mail.ru',
-    thename: 'Aleksei',
-    subject: 'Anfrage',
-    question: ''
-}
+import { defaultConsultForm, type IConsultForm } from '../interfaces';
+
 export const ConsultForm = () => {
     const [formFields, setFormFields] = React.useState<IConsultForm>(defaultConsultForm)
     const [btnDisabled, setBtnDisabled] = React.useState(false)
@@ -81,8 +71,8 @@ export const ConsultForm = () => {
                 layout="horizontal">
                 <Form.Item label="Your name">
 
-                    <Input placeholder="Your name" value={formFields.thename} 
-                        onChange={ (event: React.ChangeEvent<HTMLInputElement>) =>  populateForm('thename', event)} 
+                    <Input placeholder="Your name" value={formFields.theName} 
+                        onChange={ (event: React.ChangeEvent<HTMLInputElement>) =>  populateForm('theName', event)} 
                     /></Form.Item>
                 <Form.Item label='Your email'>
                     <Input placeholder="Your email" value={formFields.email}  
@@ -101,7 +91,10 @@ export const ConsultForm = () => {
                         onChange={(event) => populateForm('question', event)}
                         rows={4} cols={50} />
                 </Form.Item>
-                <Form.Item>
+<Form.Item
+  wrapperCol={{ offset: 7, span: 17 }}  // same as wrapperCol in your form
+  style={{ textAlign: 'right' }}
+>
                     <Button type="primary"
                         loading={btnDisabled} 
                         onClick={ handleSubmit}>Submit</Button>

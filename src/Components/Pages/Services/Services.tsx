@@ -20,10 +20,12 @@ export const Services: React.FC = () => {
     <Row className={`${styles.pt40} ${styles.pb40} `}>
       <Col xs={1} md={1} lg={2}></Col>
       <Col xs={20} md={16} lg={10}>
-      <h1>Services</h1>
+      <h1>Contacts</h1>
 
-        <p>Find Your Path Abroad with Confidence </p>
-        <p>I help professionals prepare for relocation and job search abroad, based on my own real experience of moving and working in Germany.</p>
+        <p>Have a question or something to share?</p>
+        <p>Or probably we can cooperate with you?</p>
+        <p> Just fill out the form below — I’ll take a look and reply with my feedback soon!</p>
+        {/* <p>I help professionals prepare for relocation and job search abroad, based on my own real experience of moving and working in Germany.</p> */}
         <ConsultForm />
       </Col>
       <Col xs={1} md={0} lg={1}></Col>

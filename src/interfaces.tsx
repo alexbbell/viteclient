@@ -1,3 +1,5 @@
+
+
 export interface IStaticPage {
   query: string
   title?: string
@@ -36,4 +38,40 @@ export interface ITestimonial {
 
 export interface ITestimonials {
   posts: ITestimonial[]
+}
+
+
+export interface IConsultFormDto extends IConsultForm {
+    id: number;
+    theName: string;
+    created: Date;
+    status: string;
+}
+
+export type PaginatedResponse = {
+    items: IConsultFormDto[],
+    totalCount: number
+};
+
+export const defaultIConsultFormDto: IConsultFormDto = {
+    id: 0,
+    theName: '',
+    created: new Date(),
+    status: '',
+    email: '',
+    subject: '',
+    question: ''
+}
+
+export interface IConsultForm {
+    email: string, 
+    theName: string,
+    subject: string,
+    question: string,
+}
+export const defaultConsultForm: IConsultForm = {
+    email: 'no@mail.ru',
+    theName: 'No Name',
+    subject: 'Anfrage',
+    question: ''
 }

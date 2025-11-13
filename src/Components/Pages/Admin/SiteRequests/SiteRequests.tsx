@@ -2,23 +2,10 @@
 import * as React from 'react';
 import { useQuery } from "@tanstack/react-query";
 import { settings } from '../../../../config';
-import type { IConsultForm } from '../../../ConsultForm';
-import { Modal, Table, type TableProps } from 'antd';
-import { Link } from 'react-router-dom';
+import { Button, Modal, Table, type TableProps } from 'antd';
+import { SiteRequestModal } from './SiteRequestModal';
+import type { IConsultFormDto, PaginatedResponse } from '../../../../interfaces';
 
-
-
-export interface IConsultFormDto extends IConsultForm {
-    id: number;
-    theName: string;
-    created: Date;
-    status: string;
-}
-
-type PaginatedResponse = {
-    items: IConsultFormDto[],
-    totalCount: number
-};
 
 
 
@@ -34,7 +21,9 @@ export const SiteRequests = () => {
     const [open, setOpen] = React.useState<boolean>(false)
     const [modalText, setModalText] = React.useState('Content of the modal');
     const [confirmLoading, setConfirmLoading] = React.useState(false);
+    const [selectedRequestId, setSelectedRequestId] = React.useState<number>(0);
 
+    const [showDeleteDialog, setShowDeleteDialog] = React.useState<boolean>(false);
     const fetchRecords = async (_page = 0): Promise<PaginatedResponse> => {
         try {
             const res = await fetch(`${settings.apiUrl}SiteRequests/getitems/?page=${_page}`, {
@@ -72,14 +61,16 @@ export const SiteRequests = () => {
     { title: 'Title', 'dataIndex': 'status', 'key': 'theName' },
     {
         title: 'Action', 'dataIndex': 'id',
-        render: (id: string) => {
+        render: (id: number) => {
             return <button onClick={ () => {
-               setOpen(true)
-            }}>Process</button>
+                setSelectedRequestId(id)
+                setOpen(true)
+               
+            }}>Process {id}</button>
         }
     }
 ]
-    const { isPending, isError, error, data, isFetching } = useQuery({
+    const { isPending, isError, error, data, isFetching, refetch } = useQuery({
         queryKey: ["posts", page],
         queryFn: () => fetchRecords(page),
         // placeholderData: keepPreviousData
@@ -99,6 +90,45 @@ export const SiteRequests = () => {
             setOpen(false);
         };
 
+    const deleteItem = async (id:number) => {
+        setModalText(`Are you sure want to delete the item ...${id}`);
+     }
+
+    const DeleteDialog = ():React.JSX.Element => {
+        return (
+            <div>
+                <Button onClick={ ()=> {
+                    setSelectedRequestId(0)
+                    setOpen(false)
+                } }>Cancel</Button>
+                <Button onClick={ ()=> deleteItem(selectedRequestId) }>Delete</Button>
+            </div>  
+        )
+    }
+
+    const confirmDelete = async (id:number) => {
+        try {
+            const res = await fetch(`${settings.apiUrl}SiteRequests/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Content-Type': 'application/json'
+                },
+            });
+
+            if (!res.ok) {
+                throw new Error(`Request failed with status ${res.status}`);
+            }
+            setShowDeleteDialog(false);
+             await refetch();
+
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setShowDeleteDialog(false);
+            setOpen(false);
+        }
+    }
 
     if (isPending) return <p>Pending...</p>;
     if (isFetching) return <p>Fetching...</p>;
@@ -135,11 +165,39 @@ export const SiteRequests = () => {
             {isFetching ? <span> Loading...</span> : null}
             
 
-                        <Modal open={open} 
+            <Modal open={open} 
                 onOk={handleOk}
                 confirmLoading={confirmLoading}
-                onCancel={handleCancel}>
-                    Tesxt {modalText}
+                onCancel={handleCancel}
+                  footer={(_, { OkBtn, CancelBtn }) => (
+    <>
+      {showDeleteDialog ? (
+        // ---------- DELETE DIALOG FOOTER ----------
+        <>
+          <Button danger onClick={() => confirmDelete(selectedRequestId)}>
+            Confirm delete
+          </Button>
+          <CancelBtn />
+        </>
+      ) : (
+        // ---------- NORMAL FOOTER ----------
+        <>
+          {selectedRequestId > 0 && (
+            <Button danger onClick={() => setShowDeleteDialog(true)}>
+              Delete
+            </Button>
+          )}
+          <CancelBtn />
+          <OkBtn />
+        </>
+      )}
+    </>
+  )}
+
+                >
+                    {modalText}
+                    <SiteRequestModal id={selectedRequestId} />
+                    <DeleteDialog />
                 </Modal>
         </div>
     );
