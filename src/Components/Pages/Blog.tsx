@@ -5,6 +5,7 @@ import Image from './Image'
 import { Row, Col, Divider, Pagination } from 'antd'
 import styles from './../../style/style.module.scss'
 import { useParams } from 'react-router-dom'
+import { settings } from '../../config'
 
 interface blogItem {
   postId: number
@@ -21,19 +22,19 @@ interface IWpAnonsExcerpt {
 }
 
 interface ITitle {
-  title: string, 
-  rendered : string,
+  title: string,
+  rendered: string,
 }
 interface WPItem {
   id: number
   featured_media: number | null
   title: ITitle,
-  link:  string,
-  date:  string,
-  anons:  string,
+  link: string,
+  date: string,
+  anons: string,
   excerpt: IWpAnonsExcerpt
 }
-export default function Blog (): JSX.Element {
+export default function Blog(): JSX.Element {
   // const lang = useAppSelector(state => state.lang.lang)
   const { lng } = useParams()
   const lang: string = (typeof lng === 'undefined') ? 'en' : lng
@@ -48,7 +49,7 @@ export default function Blog (): JSX.Element {
     let data
     let json: WPItem[] = []
 
-    if (process.env.NODE_ENV === 'development') {
+    if (settings.mode === 'development') {
       data = await fetch('/posts.json')
       json = await data.json()
       setTotalPosts(239)
@@ -56,9 +57,9 @@ export default function Blog (): JSX.Element {
       data = await fetch(`${blogUrl}/wp-json/wp/v2/posts?page=${currentPage}&per_page=${perPage}&order=desc`)
       json = await data.json()
       setTotalPosts(data?.headers?.get('x-wp-total') !== null ? 10 : 0)
+      const t = data.headers.get('x-wp-total')?.toString()
+      setTotalPosts(Number(t))
     }
-    const t = data.headers.get('x-wp-total')?.toString()
-    setTotalPosts(Number(t))
 
     const myimages: any = []
     json.map(img => {
@@ -76,20 +77,19 @@ export default function Blog (): JSX.Element {
   }
 
   useEffect(() => {
-    const fetchData = (): void => {
-      void LoadPosts()
+    const fetchData = async (): Promise<void> => {
+      await void LoadPosts()
       setOperationResult(true)
       document.title = 'Aleksei Beliaev. Fullstack developer. Personal blogs'
     }
     fetchData()
   }, [operationResult, currentPage, perPage, lang])
-  // }, [operationResult, currentPage, perPage, lang])
 
   const RenderPosts = (): JSX.Element => {
     if (items.length > 0) {
       return (
 
-                <Anonspost items={items} />
+        <Anonspost items={items} />
 
       )
     } else return <div><div className={styles.ldsCircle}><div></div></div></div>
@@ -98,35 +98,35 @@ export default function Blog (): JSX.Element {
   const Anonspost = (props: any): JSX.Element => {
     const items = props.items
     return (
-            <>
-            {/* <h1>{process.env.NODE_ENV}</h1> */}
-            {items.map((item: blogItem, index: number) => {
-              return (
-                        <div key={`anons${item.postId}${index}`} >
+      <>
+        {/* <h1>{process.env.NODE_ENV}</h1> */}
+        {items.map((item: blogItem, index: number) => {
+          return (
+            <div key={`anons${item.postId}${index}`} >
 
-                        <div className={`${styles.newsitem} ${styles.newsitem} ${styles.pt10} ${styles.pb10}`}>
-                                {item.imageId !== 0 && (
-                                    <div className={styles.newsImage}>
-                                        <Image media={item.imageId} className={styles.radius} />
-                                    </div>
-                                )}
-                                <div className={styles.newsContent}>
-                            <h2 >{item.title}</h2>
+              <div className={`${styles.newsitem} ${styles.newsitem} ${styles.pt10} ${styles.pb10}`}>
+                {item.imageId !== 0 && (
+                  <div className={styles.newsImage}>
+                    <Image media={item.imageId} className={styles.radius} />
+                  </div>
+                )}
+                <div className={styles.newsContent}>
+                  <h2 >{item.title}</h2>
 
-                                <span><i>Date: {item.date}</i></span>
-                                {item.anons}
-                                <a href={item.link}>More</a>
+                  <span><i>Date: {item.date}</i></span>
+                  {item.anons}
+                  <a href={item.link}>More</a>
 
-                            </div>
-                        </div>
-                        <Divider ></Divider>
-                        </div>
+                </div>
+              </div>
+              <Divider ></Divider>
+            </div>
 
-              )
-            })
-            }
+          )
+        })
+        }
 
-            </>
+      </>
     )
   }
   const onChange = (page: number, items: number): void => {
@@ -137,27 +137,28 @@ export default function Blog (): JSX.Element {
 
   return (
 
-        <>
-            <Row className={`${styles.pt40} ${styles.pb40}`}>
-                <Col xs={0} md={1} lg={2}></Col>
-                <Col xs={24} md={15} lg={15}>
+    <>
+      <Row className={`${styles.pt40} ${styles.pb40}`}>
+        <Col xs={0} md={1} lg={2}></Col>
+        <Col xs={24} md={15} lg={15}>
 
-                    <h1>Posts from my blog</h1>
+          <h1>Posts from my blog</h1>
 
-                    <RenderPosts />
-                </Col>
-                <Col xs={0} md={1} lg={2}></Col>
-            </Row>
-            <Row className={`${styles.pt10} ${styles.pb10}`}>
-            <Col xs={0} md={1} lg={2}></Col>
-            <Col xs={24} md={15} lg={15}>
+          <RenderPosts />
+        </Col>
+        <Col xs={0} md={1} lg={2}></Col>
+      </Row>
+      <Row className={`${styles.pt10} ${styles.pb10}`}>
+        <Col xs={0} md={1} lg={2}></Col>
+        <Col xs={24} md={15} lg={15}>
 
-            <Pagination defaultCurrent={currentPage + 1 } total={totalPosts} onChange={onChange} pageSizeOptions={[10, 20, 40]} />
-            <br />
-            </Col>
-            <Col xs={0} md={1} lg={2}></Col>
-            </Row>
+          <Pagination defaultCurrent={currentPage + 1}
+            total={+totalPosts} onChange={onChange} pageSizeOptions={[10, 20, 40]} />
+          <br />
+        </Col>
+        <Col xs={0} md={1} lg={2}></Col>
+      </Row>
 
-        </>
+    </>
   )
 }

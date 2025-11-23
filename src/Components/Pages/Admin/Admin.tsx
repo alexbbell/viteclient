@@ -4,13 +4,15 @@ import React from 'react';
 import { SiteRequests } from './SiteRequests/SiteRequests';
 import Login from '../Login/Login';
 import type { ITokenApiModel } from '../LangMaster/BLLangMaster';
-import { saveUserToken } from '../../../store/langSlice';
-import { useAppDispatch } from '../../../hooks';
+import { useLangStore } from '../../../zstore';
+// import { saveUserToken } from '../../../store/langSlice';
+// import { useAppDispatch } from '../../../hooks';
 
 
 export const Admin = () => {
-  const dispatch = useAppDispatch()
   const [tokens, setTokens] = React.useState<ITokenApiModel>( );
+  const setUserToken = useLangStore(s => s.setUserToken)!;
+
   React.useEffect( () => {
     const lsTokens: string | null = localStorage.getItem('userToken')
     let tkns: ITokenApiModel = {}
@@ -41,7 +43,7 @@ const queryClient = new QueryClient({
             <>            
             <button style={{ position: 'absolute', right: '30px' }} onClick={() => {
                     localStorage.removeItem( 'userToken')
-                          dispatch(saveUserToken({ accessToken: '' }))
+                          setUserToken({ accessToken: '' })
                           setTokens({})
 
                         }}>Logout</button>

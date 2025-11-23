@@ -5,8 +5,9 @@ import styles from './../../style/style.module.scss'
 import mathstyles from './Mathema.module.css'
 import { useTranslation } from 'react-i18next'
 import { Alert, Button, Col, Input, Modal, Row, Select } from 'antd'
-import { useAppDispatch, useAppSelector } from './../../hooks'
-import { setMathSettings } from '../../store/langSlice'
+// import { useAppDispatch } from './../../hooks'
+import { useLangStore } from '../../zstore'
+// import { setMathSettings } from '../../store/langSlice'
 
 
 interface IMathOption {
@@ -16,9 +17,10 @@ interface IMathOption {
 }
 const Mathema = (): JSX.Element => {
   const { t } = useTranslation()
-  const dispatch = useAppDispatch()
   const mymaths = new Simplemath()
-  const mathSettings: IMathSettings = useAppSelector(state => state.lang.mathSettings)
+  const mathSettings = useLangStore(s => s.msettings) // ← subscribe to zustand
+  const setMathSettings = useLangStore(s => s.setMathSettings)
+  // const mathSettings: IMathSettings = useAppSelector(state => state.lang.mathSettings)
 
   const pr: IExample = {
     dig1: mymaths.randomIntFromInterval(mathSettings.minValue, mathSettings.maxValue),
@@ -33,6 +35,8 @@ const Mathema = (): JSX.Element => {
   const [settingsOpened, setSettingsOpened] = useState<boolean>(false)
   const [isAlertVisibe, setIsAlertVisibe] = useState<string>('none')
   const [localMathSettings, setLocalMathSettings] = useState<IMathSettings>(mathSettings)
+
+  
 
   useEffect(() => {
     document.title = `Aleksei Beliaev. Fullstack developer. ${t('theGame.gameTitle')}`
@@ -199,7 +203,7 @@ const Mathema = (): JSX.Element => {
             open={settingsOpened}
             onCancel={ () => { setSettingsOpened(false) }}
             onOk={ () => {
-              dispatch(setMathSettings(localMathSettings))
+              setMathSettings(localMathSettings)
               setSettingsOpened(false)
               createExample(mathSettings.mathAction)
               setNextExample(nextExample + 1)

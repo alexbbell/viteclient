@@ -1,10 +1,11 @@
 import { useEffect, useState, type JSX } from 'react'
 import PropTypes from 'prop-types'
-import { useAppSelector } from './../../hooks'
+
+import { useLangStore } from '../../zstore'
 
 const Image = (props: any): JSX.Element => {
   const [image, setImage] = useState()
-  const lang = useAppSelector(state => state.lang.lang)
+  const lang = useLangStore(s => s.selectedLang)
 
   const className = (props?.className !== null) ? props.className : ''
 

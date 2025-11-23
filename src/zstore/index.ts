@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { langs } from '../consts';
+import type { ITokenApiModel } from '../Components/Pages/LangMaster/BLLangMaster';
+import type { IMathSettings } from '../Components/Mathema/inttypes';
 
 
 interface LangState {
@@ -8,6 +10,11 @@ interface LangState {
   addLang: (user: string) => void;
   switchLang: (lng: string) => void;
   // updateLang: (id: number, value: string) => void
+  msettings: IMathSettings;
+  setMathSettings: (settings: IMathSettings) => void;
+      
+  userToken: ITokenApiModel
+  setUserToken?: (tokenModel: ITokenApiModel) => void;
 }
 
 
@@ -15,6 +22,8 @@ interface LangState {
 export const useLangStore = create<LangState>((set) => ({
   langs: langs,
   selectedLang : localStorage.getItem('lang') ?? 'en',
+  msettings: { minValue: 0, maxValue: 10, mathAction: 'addition' } satisfies IMathSettings,
+  userToken: localStorage.getItem('userToken') ?? { accessToken: '' } satisfies ITokenApiModel,
 
   addLang: (lang) => set((state) => ({ langs: [...state.langs, lang] })),
   switchLang: (lang) => {
@@ -24,15 +33,26 @@ export const useLangStore = create<LangState>((set) => ({
       selectedLang: langs[selectedLangIdx]
     }))
   },
-//  updateLang: (id, value) =>
-//     set((state) => ({
-//       langs: state.langs.map((u) =>
-//         u.id === id ? { ...u, title: value } : u
-//       ),
-//       // keep selectedLang in sync if it’s the one being updated
-//       selectedLang:
-//         state.selectedLang.id === id
-//           ? { ...state.selectedLang, title: value }
-//           : state.selectedLang,
-//     })),
-}));
+
+  setMathSettings: (msettings) =>  {
+    set(() => ({
+      msettings: {
+          mathAction: msettings.mathAction,
+          maxValue: msettings.maxValue,
+          minValue: msettings.minValue
+        }
+      
+    } ))
+  },
+  
+  setUserToken : (tokenModel:ITokenApiModel) =>  {
+    set( () => ({
+      userToken: {
+        accessToken: tokenModel.accessToken === undefined ? '' : tokenModel.accessToken
+        // refreshToken: action.payload.refreshToken === undefined ? '' : action.payload.refreshToken
+      }
+
+    })
+    ) 
+  }
+}))

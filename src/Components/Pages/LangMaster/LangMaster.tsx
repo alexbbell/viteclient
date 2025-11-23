@@ -1,19 +1,19 @@
 import { type JSX } from 'react'
 import LangManager from './LangManager'
 import Login from '../Login/Login'
-import { useAppDispatch } from './../../../hooks'
+import { useLangStore } from '../../../zstore'
 import { useLocalStorage } from 'usehooks-ts'
-import { saveUserToken } from './../../../store/langSlice'
+
 import styles from './../../../style/style.module.scss'
 import { Col, Row } from 'antd'
 import { type ITokenApiModel } from './BLLangMaster'
 
 const LangMaster = (): JSX.Element => {
-  const dispatch = useAppDispatch()
+  
   // let tokenApi: ITokenApiModel = useAppSelector(state => state.lang.userToken)
   let tokenApi: ITokenApiModel = { accessToken: '' }
   const [, setTokenAuth] = useLocalStorage('userToken', tokenApi)
-
+  const setUserToken = useLangStore(s => s.setUserToken)!
   const lsUserToken: string | null = localStorage.getItem('userToken')
 
   if (lsUserToken !== null) {
@@ -21,7 +21,7 @@ const LangMaster = (): JSX.Element => {
   }
   if (tokenApi.accessToken === undefined) {
     if (tokenApi === null || tokenApi.accessToken === '') tokenApi = { accessToken: '' }
-    dispatch(saveUserToken(tokenApi))
+    setUserToken(tokenApi)
   }
 
   return (
@@ -36,7 +36,7 @@ const LangMaster = (): JSX.Element => {
 
           <>
             <div style={{ position: 'absolute', right: '30px' }} onClick={() => {
-              dispatch(saveUserToken({ accessToken: '' }))
+              setUserToken({ accessToken: '' })
               setTokenAuth({})
             }}>Logout</div>
 

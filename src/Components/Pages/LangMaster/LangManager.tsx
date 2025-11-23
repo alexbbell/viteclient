@@ -33,7 +33,8 @@ import {
 import { GetLangContent, updateSkills } from './ApiRequests'
 import LangSelector from './LangSelector'
 import SkillsEditor from './SkillsEditor'
-import { useAppSelector } from './../../../hooks'
+import { useLangStore } from '../../../zstore'
+
 
 type FieldName =
   | 'address'
@@ -62,7 +63,8 @@ type FieldName =
   | 'education'
 
 const LangManager = (): JSX.Element => {
-  const selectedGlobalLang = useAppSelector(state => state.lang.lang)
+  
+  const selectedGlobalLang = useLangStore(state => state.selectedLang)
 
   //const [selectedLang, setSelectedLang] = useState(selectedGlobalLang)
   const selectedLang = selectedGlobalLang

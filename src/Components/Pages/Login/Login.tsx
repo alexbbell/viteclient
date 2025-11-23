@@ -1,18 +1,18 @@
 import { type FormEvent, type JSX, useState } from 'react'
 import { settings } from '../../../config'
 import { type ILoginData } from '../LangMaster/BLLangMaster'
-import { saveUserToken } from './../../../store/langSlice'
 import axios from 'axios'
-import { useAppDispatch } from '../../../hooks'
+import { useLangStore } from '../../../zstore'
 import { useLocalStorage } from 'usehooks-ts'
 import { useNavigate } from 'react-router-dom'
 
 export default function Login (): JSX.Element {
   const navigate = useNavigate()
+  const setUserToken = useLangStore(s => s.setUserToken)!
   const [credentials, setCredentials] = useState<ILoginData>({ username: '', password: '' })
   const [, setTokenAuth] = useLocalStorage('userToken', '')
   const [errorAuth, setErrorAuth] = useState('')
-  const dispatch = useAppDispatch()
+  
   async function loginUser (): Promise<void> {
     axios.post(`${settings.apiUrl}Auth` , credentials,
       {
@@ -27,7 +27,7 @@ export default function Login (): JSX.Element {
           setErrorAuth(`Failed to login  ${res.data?.status as string}`)
         } else {
           console.log('res.data', res.data)
-          dispatch(saveUserToken({ accessToken: res.data }))
+          setUserToken({ accessToken: res.data })
           setTokenAuth(res.data)
           setErrorAuth('')
           if (window.history.state && window.history.state.idx > 0) {
@@ -39,7 +39,7 @@ export default function Login (): JSX.Element {
       })
       .catch((error) => {
         console.error(error)
-        dispatch(saveUserToken({ accessToken: '' }))
+        setUserToken({ accessToken: '' })
         setTokenAuth('')
         setErrorAuth(`Login failed,   ${error.message as string}`)
       })
