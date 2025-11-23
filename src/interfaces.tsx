@@ -1,3 +1,116 @@
+export interface SiteContent {
+  morelink: string;
+  fullname: string;
+  main: MainContent;
+  menu: MenuContent;
+  skills: SkillsSection;
+  work: WorkSection;
+  education: EducationSection;
+  theGame: GameSection;
+}
+
+/* -------------------- MAIN -------------------- */
+
+export interface MainContent {
+  greeting: string;
+  beforename: string;
+  name: string;
+  position: string;
+  titleAbout: string;
+  description: string;
+  image: string;
+  bio: string;
+  email: string;
+  phone: string;
+  address: string;
+  about: string;
+  website: string;
+  resumedownload: string;
+  social: SocialLink[];
+}
+
+export interface SocialLink {
+  name: string;
+  url: string;
+  className: string;
+}
+
+/* -------------------- MENU -------------------- */
+
+export interface MenuContent {
+  position: string;
+  resume: string;
+  contacts: string;
+  sitemap: string;
+  home: string;
+  experience: string;
+  skills: string;
+  blogs: string;
+  about: string;
+  education: string;
+  math: string;
+  services: string;
+}
+
+/* -------------------- SKILLS -------------------- */
+
+export interface SkillsSection {
+  title: string;
+  content: SkillItem[];
+}
+
+export interface SkillItem {
+  name: string;
+  description: string;
+}
+
+/* -------------------- WORK -------------------- */
+
+export interface WorkSection {
+  title: string;
+  content: WorkItem[];
+}
+
+export interface WorkItem {
+  company: string;
+  title: string;
+  years: string;
+  description: string;
+}
+
+/* -------------------- EDUCATION -------------------- */
+
+export interface EducationSection {
+  title: string;
+  content: EducationItem[];
+}
+
+export interface EducationItem {
+  school: string;
+  degree: string;
+  graduated: string;
+  description: string;
+}
+
+/* -------------------- GAME SECTION -------------------- */
+
+export interface GameSection {
+  chooseAnwer: string;
+  next: string;
+  gameTitle: string;
+  settings: string;
+  action: string;
+  addition: string;
+  subtraction: string;
+  multiplication: string;
+  division: string;
+  minValue: string;
+  maxValue: string;
+  errorMinMaxText: string;
+}
+
+
+
 
 
 export interface IStaticPage {
@@ -46,6 +159,7 @@ export interface IConsultFormDto extends IConsultForm {
     theName: string;
     created: Date;
     status: string;
+    question: string;
 }
 
 export type PaginatedResponse = {
@@ -69,9 +183,14 @@ export interface IConsultForm {
     subject: string,
     question: string,
 }
-export const defaultConsultForm: IConsultForm = {
+export const defaultConsultForm: IConsultForm = (process.env.NODE_ENV === 'development') ? {
     email: 'no@mail.ru',
     theName: 'No Name',
     subject: 'Anfrage',
+    question: ''
+} : {
+    email: '',
+    theName: '',
+    subject: '',
     question: ''
 }

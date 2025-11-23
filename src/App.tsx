@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import * as React from 'react'
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { MyLayout } from './Components/MyLayout'
 import { Homepage } from './Components/Pages/Homepage'

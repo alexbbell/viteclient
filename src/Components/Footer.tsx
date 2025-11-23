@@ -42,7 +42,6 @@ const ABFooter = (): JSX.Element => {
                            to={`/${lang}/${elm.url}/`.replaceAll(/\/+/g, '/')}>{t(`menu.${elm.label}`)}</NavLink></li>
                       )
                     })
-
                 }
             </ul>
         </Col>
@@ -50,7 +49,6 @@ const ABFooter = (): JSX.Element => {
             <h3>{t('menu.contacts')}</h3>
 
             <ul className={styles.cleanList}>
-
                 <li key={'mail1'}><FontAwesomeIcon icon={faEnvelope} />&nbsp; beliaeff@gmail.com</li>
                 <li key={'phone1'}><FontAwesomeIcon icon={faPhone} /> +49 157 38936214<br />(mobile, WhatsApp)</li>
                 <li key={'whats1'}><FontAwesomeIcon icon={faPhone} /> +7 9261803635 <br />(mobile, WhatsApp)</li>
@@ -59,8 +57,7 @@ const ABFooter = (): JSX.Element => {
         </Col>
         <Col xs={11} md={5} lg={5}>
             <h3>{t('menu.resume')}</h3>
-
-            <FontAwesomeIcon icon={faFilePdf} className='icon-high' /> &nbsp;<a href="/public/Aleksei_Beliaev_Software_developer.pdf">{t('menu.resume')}</a>
+            <FontAwesomeIcon icon={faFilePdf} className='icon-high' /> &nbsp;<a href="/Aleksei_Beliaev_Software_developer.pdf">{t('menu.resume')}</a>
         </Col>
         <Col xs={11} md={5} lg={5}>
             <h3>{t('menu.blogs')}</h3>

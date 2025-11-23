@@ -1,6 +1,6 @@
 import { useState, type JSX } from 'react'
 
-const LangSelector = (props: any): JSX.Element => {
+const LangSelector = (): JSX.Element => {
   const [switchEditorLang, setSwitchEditorLang] = useState('en')
 
   const langs: string[] = ['ru', 'en', 'de', 'he']
@@ -11,7 +11,6 @@ const LangSelector = (props: any): JSX.Element => {
           return <div key={`langs${el}`}
           onClick={ () => {
             setSwitchEditorLang(el)
-            props.data(el)
           }}
           style={{ width: '40px', fontWeight: (el === switchEditorLang) ? 'bold' : 'normal' }}
           >{el}</div>

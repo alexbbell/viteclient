@@ -22,6 +22,7 @@ const Testimonials = (lng: Props): React.JSX.Element => {
         setTestimonials({ ...data })
       }).catch((error) => {
         console.error('Error fetching data:', error)
+        
       })
   }
   useEffect(() => {

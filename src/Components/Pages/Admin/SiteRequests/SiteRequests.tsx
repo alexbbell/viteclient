@@ -1,5 +1,5 @@
 // @flow 
-import * as React from 'react';
+import React from 'react';
 import { useQuery } from "@tanstack/react-query";
 import { settings } from '../../../../config';
 import { Button, Modal, Table, type TableProps } from 'antd';
@@ -140,8 +140,7 @@ export const SiteRequests = () => {
 
 
             <h2>SiteRequests</h2>
-{String(isPending) }
-{String(isFetching) }
+
             {!isPending && !isFetching && !isError && data.totalCount > 0 &&
 
 

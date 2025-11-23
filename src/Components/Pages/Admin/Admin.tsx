@@ -1,6 +1,6 @@
 // @flow 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import * as React from 'react';
+import React from 'react';
 import { SiteRequests } from './SiteRequests/SiteRequests';
 import Login from '../Login/Login';
 import type { ITokenApiModel } from '../LangMaster/BLLangMaster';

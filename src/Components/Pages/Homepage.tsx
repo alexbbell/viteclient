@@ -7,19 +7,18 @@ import { useTranslation, Trans } from 'react-i18next'
 import Newsloader from './../NewsLoader'
 import AbbAnalogClock from './AbbAnaligClock'
 import Testimonials from '../Testimonials'
-// import { siteLang } from '../../config'
 import { useLangStore } from '../../zstore'
 
 export const Homepage = (): JSX.Element => {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
+  
   const lang = useLangStore(s => s.selectedLang) // ← subscribe to zustand
   
-
   useEffect(() => {
     document.title = 'Aleksei Beliaev. Fullstack developer. Personal site'
     void i18n.changeLanguage(lang)
-  }, [i18n.language])
+  }, [i18n, i18n.language, lang])
   return (
     <>
       <Row className={styles.pb40}>

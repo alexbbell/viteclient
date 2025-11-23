@@ -1,6 +1,6 @@
 // @flow
 import { Col, Row } from 'antd'
-import * as React from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './../../../style/style.module.scss'
 import { ConsultForm } from '../../ConsultForm'

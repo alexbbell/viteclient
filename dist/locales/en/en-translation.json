@@ -13,7 +13,7 @@
         "email": "beliaeff@gmail.com",
         "phone": "+972 585362546",
         "address": "Rehovot, 20293",
-        "about": "I started to learn the development since my high school, it was the “Basic”. And then I realized that I want to be a software developer. When I was a student, I spent a lot of time to learn the development and soon I could find my first work. It was RBC (RosBusinessConsulting) – one of the best economic media in Russia. Since that time I always learn new technologies, add and improve my skills, read and listen to IT publics.\n I have been happily married for almost 20 years, we have three great children. The elder one has a big talent in mathematics and programming, he is one of the strongest schoolchildren in Moscow in these subjects. He regularly wins prizes at various competitions. My daughter is a very creative person who, in addition to school, has achieved great success in dancing, drawing, design and other creative fields. The youngest is all three and he is just a favorite of the whole family. \n In addition to family and work, sports occupies a significant place in my life. I am fond of running (jogging) and have successfully completed several full marathons (42.2km). I also like music and gardening. I love to travel and communicate with new people, I easily find a common language with them, easily change the environment and open up to new things with pleasure.",
+        "about": "I started to learn the development since my high school, it was the “Basic”. And then I realized that I want to be a software developer. When I was a student, I spent a lot of time to learn the development and soon I could find my first work. It was RBC (RosBusinessConsulting) – one of the best economic media in Russia. Since that time I always learn new technologies, add and improve my skills, read and listen to IT publics.\n I have been happily married for almost 20 years, we have three great children. Our eldest has exceptional talent in mathematics and programming—he was among the strongest school students in Moscow in these subjects and regularly won prizes at various competitions. He is now studying at the Studienkolleg in Karlsruhe and want to study in KIT. My daughter is a very creative person who, in addition to school, has achieved great success in dancing, drawing, design and other creative fields. The youngest is all five and he is just a favorite of the whole family. \n In addition to family and work, sports occupies a significant place in my life. I am fond of running (jogging) and have successfully completed several full marathons (42.2km). I also like music and gardening. I love to travel and communicate with new people, I easily find a common language with them, easily change the environment and open up to new things with pleasure.",
         "website": "https://alexey.beliaeff.ru/",
         "resumedownload": "/public/Aleksei_Beliaev_CV_2022-09.pdf",
         "social": [
@@ -56,7 +56,7 @@
         "about": "About",
         "education": "Education",
         "math": "the game",
-        "services": "Dienstleistungen"
+        "services": "Services"
     },
     "skills": {
         "title": "Skills",

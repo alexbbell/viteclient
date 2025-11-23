@@ -241,20 +241,20 @@ a.more:visited {
 }
 
 .skills {
-  background-image: url('../img/skills_off.png');
+  background-image: url('/img/skills_off.png');
   cursor: pointer;
 
   &:hover {
-    background-image: url('../img/skills_on.png');
+    background-image: url('/img/skills_on.png');
   }
 }
 
 .education {
-  background-image: url('../img/education_off.png');
+  background-image: url('/img/education_off.png');
   cursor: pointer;
 
   &:hover {
-    background-image: url('../img/education_on.png');
+    background-image: url('/img/education_on.png');
   }
 }
 

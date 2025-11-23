@@ -1,5 +1,5 @@
 // @flow 
-import * as React from 'react';
+import React from 'react';
 import { settings } from '../../../../config';
 import { defaultIConsultFormDto, type IConsultFormDto } from '../../../../interfaces';
 type Props = {
@@ -52,7 +52,9 @@ export const SiteRequestModal = (props: Props) => {
             <br />
             Question: {requestData.question}
             <br />
-            Text: { (requestData.created) ? requestData.created.toString() : '' }
+            Text:  {requestData.question}
+            <br />
+            Date: { (requestData.created) ? requestData.created.toString() : '' }
         </div>
     );
 };

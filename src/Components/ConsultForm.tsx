@@ -1,7 +1,7 @@
 // @flow 
 import { Button, Form, Input, message  } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
-import * as React from 'react';
+import React from 'react';
 import { settings } from '../config';
 import { defaultConsultForm, type IConsultForm } from '../interfaces';
 
@@ -23,7 +23,7 @@ export const ConsultForm = () => {
         const timeAfterLoad = Date.now() - startedAtRef.current;
         console.log({ timeAfterLoad });
 
-        if (timeAfterLoad < 5000) {
+        if (timeAfterLoad < 1000) {
             alert('Too fast');
             return;
         }

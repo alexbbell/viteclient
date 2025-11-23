@@ -12,11 +12,12 @@ void i18n.use(HttpBackend)
   .init({
     backend: {
       loadPath:
-            process.env.NODE_ENV !== 'production'
+            import.meta.env.NODE_ENV !== 'production'
               ? '/locales/{{lng}}/{{lng}}-{{ns}}.json'
-              : ' /public/locales/{{lng}}/{{lng}}-{{ns}}.json'
+              : ' /locales/{{lng}}/{{lng}}-{{ns}}.json'
     },
     debug: false,
+    supportedLngs: ['en', 'de', 'ru', 'he'],
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false // not needed for react as it escapes by default
