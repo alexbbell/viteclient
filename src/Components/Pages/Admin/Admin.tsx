@@ -9,7 +9,7 @@ import { useLangStore } from '../../../zstore';
 // import { useAppDispatch } from '../../../hooks';
 
 
-export const Admin = () => {
+ const Admin = () => {
   const [tokens, setTokens] = React.useState<ITokenApiModel>( );
   const setUserToken = useLangStore(s => s.setUserToken)!;
 
@@ -56,3 +56,5 @@ const queryClient = new QueryClient({
         </div>
     );
 };
+
+export default Admin;

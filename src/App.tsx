@@ -4,8 +4,8 @@ import { MyLayout } from './Components/MyLayout'
 import { Homepage } from './Components/Pages/Homepage'
 
 import { lazy } from 'react'
-import { Services } from './Components/Pages/Services/Services'
-import { Admin } from './Components/Pages/Admin/Admin'
+// import { Services } from './Components/Pages/Services/Services'
+// import { Admin } from './Components/Pages/Admin/Admin'
 
 const Auth = lazy(async () => await import ('./Components/Pages/Auth'))
 const About = lazy(async () => await import('./Components/Pages/About'))
@@ -13,6 +13,8 @@ const Skills = lazy(async () => await import ('./Components/Pages/Skills'))
 const Blog = lazy(async () => await import ('./Components/Pages/Blog'))
 const LangMaster = lazy(async () => await import ('./Components/Pages/LangMaster/LangMaster'))
 const Mathema = lazy(async () => await import ('./Components/Mathema/Mathema'))
+const Admin = lazy(async () => await import ('./Components/Pages/Admin/Admin'))
+const Services = lazy(async () => await import ('./Components/Pages/Services/Services'))
 
 const App = (): React.JSX.Element => {
 

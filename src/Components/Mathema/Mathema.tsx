@@ -40,7 +40,7 @@ const Mathema = (): JSX.Element => {
 
   useEffect(() => {
     document.title = `Aleksei Beliaev. Fullstack developer. ${t('theGame.gameTitle')}`
-  }, [t('theGame.gameTitle')])
+  }, [t])
 
   const mathActionOptions: IMathOption[] = []
   AllMathActions.map(x => {
