@@ -35,17 +35,17 @@ const LangSwitch = (props: IStaticPage): JSX.Element => {
 
     <ul>
         {
-            langs.map((lang, i) => {
+            langs.map((lang) => {
               return (
                   <li key={lang}><span >
-                      &nbsp;<NavLink to={`/${lang}/`} 
+                      <NavLink to={`/${lang}/`} 
                         onClick={ () => {
                           // switchLang(lang)
                           changeLanguage(lang)
                         }}
                         className={lang === siteLang ? `${styles.lng}  ${styles.selected}` : `${styles.lng}`}
                       >{lang.toUpperCase()}</NavLink>
-                      { (typeof langs[i + 1] !== 'undefined') ? ' | ' : '' }
+                      
                   </span></li>
               )
             })

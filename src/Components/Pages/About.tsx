@@ -28,6 +28,18 @@ const About = (): JSX.Element => {
 <>
 <Row className={`${styles.pb40} ${styles.pt40}`}>
     <Col xs={1} md={1} lg={2}></Col>
+    <Col xs={22}>
+
+    <div style={{ display: 'flex', flexDirection: 'row'}}>
+        <div style={{ alignContent: 'center', flexGrow: 52 }}>
+            <img className={styles.image} src='/img/abb-family-sm.jpg' onClick={ShowModal} />
+        </div>
+        <div style={{  flexGrow: 1}}>
+           <h1>{t('main.titleAbout')}</h1>
+    {aboutText}</div>
+</div>
+    </Col>
+
 
     <Col xs={22} md={11} lg={7}>
         <p style={{ alignContent: 'center' }}>

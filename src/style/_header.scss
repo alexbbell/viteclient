@@ -36,21 +36,25 @@
 .logo h2 {
   display: block;
   padding: 0px;
+  white-space: nowrap;
   line-height: normal;
   margin: 0px;
-  font-size: 31px;
+  font-size: 22pt;
 }
 
 .logo h2 {
   color: $nonActiveLinkColor;
-  font-size: 28px;
+  font-size: 18pt;
+  white-space: nowrap;
 }
+
 
 
 
 //Language control start
 .langCtrl {
   padding-bottom: 10px;
+  padding-right: 10px;
   justify-content: flex-end;
 }
 
@@ -66,13 +70,22 @@
 .langCtrl ul li {
   list-style-type: none;
   flex-shrink: 0;
-  padding: 0px 5px;
-  border-left: grey 0px solid;
+  padding: 0px 9px;
+  margin: 0px;
+  border-left: grey 2px solid;
+}
+.langCtrl ul li:first-child {
+  border-left: none;
 }
 
 .langCtrl .selected {
   font-weight: bold;
 }
+.langCtrl ul li:last-child {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
 
 //Language control end
 
@@ -109,16 +122,26 @@
   font-size: 1.5rem;
   align-items: flex-start;
   cursor: pointer;
-  margin-bottom: 10px;
+  padding-bottom: 1px;
   border: none;
 }
 
+.menuToggle button {
+  border: none;
+  background: none;
+}
 /* Mobile Responsive Layout */
 @media (max-width: 900px) {
+
+  .menuWrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+  }
   .menuToggle {
     display: block;
-    min-width: 200px;
-
+    
+    align-items: flex-end;
   }
 
   .topMenu ul {
@@ -127,7 +150,7 @@
     align-items: flex-start;
     flex-wrap: nowrap;
     display: none;
-    left: 0px; 
+    right: 0px; 
   }
 
   .topMenu.open ul {
@@ -138,19 +161,36 @@
   .topMenu ul li {
     width: 100%;
     text-align: left;
-    padding: 1px 8px;
+    padding: 1px 8px 0px 8px;
   }
   .logo {
       margin-left: 0px;
   }
 }
 
+@media (max-width: 230px) {  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 450px) {
+  .logo h1 {
+    font-size: 24px;
+  }
+  .logo h2 {
+    font-size: 20px;
+  }
+}
 @media (max-width: 330px) {
-    .hdrleft {
+  .hdrleft {
       display: none;
   }
   .logo {
     display: none;
+  }
+  h1.bold {
+    font-size: 24px;
   }
 }
 

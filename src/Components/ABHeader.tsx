@@ -24,7 +24,7 @@ const ABHeader = (): JSX.Element => {
   }, [])
   const logo: React.JSX.Element = <div className={styles.logo} onClick={() => { navigate(`./${siteLang}`) }}>
     <div><h1 className={styles.bold}>{t('fullname')}</h1></div>
-    <div style={{ whiteSpace: 'nowrap' }}><h2 className={styles.thin}>Fullstack developer</h2></div>
+    <div><h2 className={styles.thin}>Fullstack developer</h2></div>
   </div>
 
   return (
@@ -34,28 +34,31 @@ const ABHeader = (): JSX.Element => {
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'end' }}>
         <LangSwitch query={siteLang} />
 
+        <div style={{ alignItems: 'end' }} >
 
-        <button className={styles.menuToggle} onClick={toggleMenu}>☰ Menu</button>
-        <nav style={{ position: 'relative' }}>
-          <div className={`${styles.topMenu} ${menuOpen ? styles.open : ''}`}>
-            <ul>
-              {
-                items.map((elm) => {
-                  return (
-                    <li key={elm.url} >
-                      <NavLink to={`${siteLang}${elm.url.endsWith('/') ? elm.url.replace('/', '') : elm.url}`}
-                        className={({ isActive }) => {
-                          return isActive ? `${styles.activelink}` : ''
-                        }}
-                        onClick={() => toggleMenu()}
-                      >{t(`menu.${elm.label}`)}</NavLink></li>
-                  )
-                })
+          <div className={styles.menuWrapper}>
+            <div className={styles.menuToggle}>
+              <button onClick={toggleMenu}>Menu ☰</button></div></div>
+          <nav style={{ position: 'relative' }}>
+            <div className={`${styles.topMenu} ${menuOpen ? styles.open : ''}`}>
+              <ul>
+                {
+                  items.map((elm) => {
+                    return (
+                      <li key={elm.url} >
+                        <NavLink to={`${siteLang}${elm.url.endsWith('/') ? elm.url.replace('/', '') : elm.url}`}
+                          className={({ isActive }) => {
+                            return isActive ? `${styles.activelink}` : ''
+                          }}
+                          onClick={() => toggleMenu()}
+                        >{t(`menu.${elm.label}`)}</NavLink></li>
+                    )
+                  })
 
-              }
-            </ul>
-          </div></nav>
-
+                }
+              </ul>
+            </div></nav>
+        </div>
       </div>
     </Header>
   )
