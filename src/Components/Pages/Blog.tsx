@@ -98,13 +98,13 @@ export default function Blog(): JSX.Element {
   const Anonspost = (props: any): JSX.Element => {
     const items = props.items
     return (
-      <>
+      <div className={styles.newsContainer}>
         {/* <h1>{process.env.NODE_ENV}</h1> */}
         {items.map((item: blogItem, index: number) => {
           return (
-            <div key={`anons${item.postId}${index}`} >
+            <div key={`anons${item.postId}${index}`} className={styles.newsItem} >
 
-              <div className={`${styles.newsitem} ${styles.newsitem} ${styles.pt10} ${styles.pb10}`}>
+              <div className={`  ${styles.pt10} ${styles.pb10}`}>
                 {item.imageId !== 0 && (
                   <div className={styles.newsImage}>
                     <Image media={item.imageId} className={styles.radius} />
@@ -126,7 +126,7 @@ export default function Blog(): JSX.Element {
         })
         }
 
-      </>
+      </div>
     )
   }
   const onChange = (page: number, items: number): void => {
@@ -139,18 +139,18 @@ export default function Blog(): JSX.Element {
 
     <>
       <Row className={`${styles.pt40} ${styles.pb40}`}>
-        <Col xs={0} md={1} lg={2}></Col>
-        <Col xs={24} md={15} lg={15}>
+        <Col xs={0} md={1} lg={1}></Col>
+        <Col xs={22} md={20} lg={22} >
 
           <h1>Posts from my blog</h1>
 
           <RenderPosts />
         </Col>
-        <Col xs={0} md={1} lg={2}></Col>
+        <Col xs={0} md={1} lg={1}></Col>
       </Row>
       <Row className={`${styles.pt10} ${styles.pb10}`}>
-        <Col xs={0} md={1} lg={2}></Col>
-        <Col xs={24} md={15} lg={15}>
+        <Col xs={0} md={1} lg={1}></Col>
+        <Col xs={24} md={20} lg={20} >
 
           <Pagination defaultCurrent={currentPage + 1}
             total={+totalPosts} onChange={onChange} pageSizeOptions={[10, 20, 40]} />

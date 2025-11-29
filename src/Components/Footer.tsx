@@ -30,7 +30,7 @@ const ABFooter = (): JSX.Element => {
   return (
         <Footer className={styles.footer}>
     <Row justify="space-around">
-        <Col xs={11} md={5} lg={5}>
+        <Col xs={22} sm={11} md={5} lg={5}>
             <h3>{t('menu.sitemap')}</h3>
             <ul className={styles.cleanList}>
                 {
@@ -45,7 +45,7 @@ const ABFooter = (): JSX.Element => {
                 }
             </ul>
         </Col>
-        <Col xs={11} md={5} lg={5}>
+        <Col xs={22} sm={11} md={5} lg={5}>
             <h3>{t('menu.contacts')}</h3>
 
             <ul className={styles.cleanList}>
@@ -55,11 +55,13 @@ const ABFooter = (): JSX.Element => {
             </ul>
 
         </Col>
-        <Col xs={11} md={5} lg={5}>
+        <Col xs={22} sm={11} md={5} lg={5}>
             <h3>{t('menu.resume')}</h3>
-            <FontAwesomeIcon icon={faFilePdf} className='icon-high' /> &nbsp;<a href="/Aleksei_Beliaev_Software_developer.pdf">{t('menu.resume')}</a>
+            <ul className={styles.cleanList}>
+                <FontAwesomeIcon icon={faFilePdf} className='icon-high' /> &nbsp;<a href="/Aleksei_Beliaev_Software_developer.pdf">{t('menu.resume')}</a>
+            </ul>
         </Col>
-        <Col xs={11} md={5} lg={5}>
+        <Col xs={22} sm={11} md={5} lg={5}>
             <h3>{t('menu.blogs')}</h3>
             <ul className={styles.cleanList}>
 

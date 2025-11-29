@@ -24,7 +24,7 @@ const NewsLoader = (props: IStaticPage): JSX.Element => {
           <h1><a href={x.link}>{x.title}</a></h1>
           <span className={styles.newsdate}>{x.date.toString().substring(0, 10).replaceAll('-', '.')}</span>
           <span dangerouslySetInnerHTML={{ __html: `${x.excerpt}` }}></span>
-          <a href={x.link} target='blank'>{ (lang === 'ru' ? `Читать про '${x.title}'` : `Read about '${x.title}'`) }</a>
+          <a href={x.link} target='blank'>{ (lang === 'ru' ? `Читать про '${x.title}'` : `Read the post '${x.title}'`) }</a>
           <br />
         </div>
       )
@@ -36,7 +36,7 @@ const NewsLoader = (props: IStaticPage): JSX.Element => {
   return (
  <>
           <h2 className={`${styles.h3} ${styles.uppercase}`}>{ (lang === 'ru') ? 'Новое из блога' : 'News from blog' }</h2>
-          <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+          <div className={styles.newsContainer} >
           {newscontent}
           </div>
 

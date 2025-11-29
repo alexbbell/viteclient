@@ -1,5 +1,4 @@
 import React, { useEffect, type JSX } from 'react'
-import { Layout } from 'antd'
 import { useNavigate, NavLink } from 'react-router-dom'
 import LangSwitch from './LangSwitch'
 import styles from './../style/style.module.scss'
@@ -7,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import Menu from '../Middleware/Menu'
 import { siteLang } from '../config'
 
-const { Header } = Layout
+
 
 const ABHeader = (): JSX.Element => {
   // const { t, i18n } = useTranslation()
@@ -28,7 +27,7 @@ const ABHeader = (): JSX.Element => {
   </div>
 
   return (
-    <Header className={` ${styles.header}`}>
+    <div className={` ${styles.header}`}>
       <div className={styles.hdrLeft}>{logo}</div>
 
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'end' }}>
@@ -60,7 +59,7 @@ const ABHeader = (): JSX.Element => {
             </div></nav>
         </div>
       </div>
-    </Header>
+    </div>
   )
 }
 

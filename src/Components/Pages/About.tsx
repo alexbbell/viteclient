@@ -16,6 +16,7 @@ const About = (): JSX.Element => {
   }
   useEffect(() => {
     document.title = `Aleksei Beliaev. Fullstack developer. ${t('main.titleAbout')}`
+
   }, [t('main.titleAbout')])
   const aboutTextArray = t('main.about').split(/\n/g)
   const aboutText = aboutTextArray.map(function (text, index) {
@@ -30,41 +31,33 @@ const About = (): JSX.Element => {
     <Col xs={1} md={1} lg={2}></Col>
     <Col xs={22}>
 
-    <div style={{ display: 'flex', flexDirection: 'row'}}>
-        <div style={{ alignContent: 'center', flexGrow: 52 }}>
-            <img className={styles.image} src='/img/abb-family-sm.jpg' onClick={ShowModal} />
-        </div>
-        <div style={{  flexGrow: 1}}>
-           <h1>{t('main.titleAbout')}</h1>
-    {aboutText}</div>
+<div className={styles.aboutContainer}>
+  <div className={styles.imageBlock}>
+    <img
+      className={styles.image}
+      src="/img/abb-family-sm.jpg"
+      onClick={ShowModal}
+    />
+  </div>
+
+  <div className={styles.textBlock}>
+    <h1>{t('main.titleAbout')}</h1>
+    {aboutText}
+  </div>
 </div>
     </Col>
 
 
-    <Col xs={22} md={11} lg={7}>
-        <p style={{ alignContent: 'center' }}>
-            <img className={styles.image} src='/img/abb-family-sm.jpg' onClick={ShowModal} />
-        </p>
-    </Col>
-    <Col xs={1} md={0} lg={1}></Col>
 
-<Col xs={1} md={1} lg={1}></Col>
 
-<Col xs={22} md={8} lg={12}>
 
-    <h1>{t('main.titleAbout')}</h1>
-    {aboutText}
+    </Row>
 
-</Col>
-                <Col xs={1} md={1} lg={2}></Col>
                 <Modal open={isModalOpen} onOk={CloseModal} onCancel={CloseModal} width={700} centered={true}>
                     <div style={{ width: '600px', height: 'auto', boxShadow: '4px 4px 15px 0px rgba(85,181,151,0.75)' }}>
                         <img src='/img/abb-family.jpg' width={600} ></img>
                     </div>
                 </Modal>
-
-    </Row>
-
     <Space></Space>
 
 </>

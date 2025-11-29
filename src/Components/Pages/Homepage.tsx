@@ -22,13 +22,13 @@ export const Homepage = (): JSX.Element => {
   return (
     <>
       <Row className={styles.pb40}>
-        <Col xs={14} md={15} lg={9} style={{ textAlign: 'center' }}>
+        <Col xs={24} md={12} lg={9} style={{ textAlign: 'center' }}>
           <div className={styles.trackingInExpand}>
             <img src='/img/abbfp.jpg' className={styles.image}
               alt={`${t('main.beforename')} ${t('main.name')}`} />
           </div>
         </Col>
-        <Col xs={24} md={9} lg={13} className={styles.about}>
+        <Col xs={24} md={12} lg={13} className={styles.about}>
           <h3><Trans i18nKey="main.greeting" /></h3>
 
           <h1 className={styles.trackingInExpand}>{t('main.beforename')} {t('main.name')}</h1>
@@ -68,10 +68,13 @@ export const Homepage = (): JSX.Element => {
             <NavLink to="" className={`${styles.h3} ${styles.uppercase}`}>{t('menu.skills')}</NavLink>
           </div>
         </Col>
-        <Divider plain={true} className={`${styles.line} ${styles.pb40}`}></Divider>
+      </Row>
 
-        <Col xs={1} md={3} lg={4}></Col>
-        <Col xs={23} md={18} lg={16}>
+        <Divider plain={true} className={`${styles.line} ${styles.pb40}`}></Divider>
+      <Row className={`${styles.pb40}`} >
+
+        <Col xs={0} md={3} lg={4}></Col>
+        <Col xs={24} md={18} lg={16}>
           <Testimonials lang={lang} />
         </Col>
         <Col xs={0} md={3} lg={4}></Col>
@@ -81,6 +84,7 @@ export const Homepage = (): JSX.Element => {
       <Row>
         <Col xs={1} md={1} lg={1}></Col>
         <Col xs={22} md={22} lg={22}>
+
           <Newsloader query={lang} />
         </Col>
       </Row>

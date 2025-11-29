@@ -34,9 +34,11 @@ h3 {
   text-align: center;
   background: hsl(200, 9%, 87%);
   padding: 20px 20px 45px 20px;
-
   border-radius: 10px;
 }
+
+
+
 .testimonials {
   background-color: #CCC;
 }
@@ -58,6 +60,12 @@ h3 {
   justify-items: baseline;
   justify-content: center;
   line-height: 1.2;
+}
+
+@media (max-width: 500px) {
+  .testimonial {
+    flex-direction: column;
+  }
 }
 
 .circular {
