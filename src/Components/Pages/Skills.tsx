@@ -1,7 +1,7 @@
 import { useEffect, type JSX } from 'react'
 import { Row, Col, Space, Tabs } from 'antd'
 import styles from './../../style/style.module.scss'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 import { type IStaticPage } from '../../interfaces'
 
 import type { TabsProps } from 'antd'
@@ -30,13 +30,11 @@ const Skills = (props: IStaticPage): JSX.Element => {
   useEffect(() => {
     document.title = `Aleksei Beliaev. Fullstack developer. ${t('skills.title')}, ${t('work.title')}, ${t('education.title')}`
   }, [])
-  const skillsList = t(`${props.query}.content`, { returnObjects: true }) as INameDescription[]
+  const skillsList = t(`${props.query}.content`, { returnObjects: true,    interpolation: { escapeValue: false } }) as INameDescription[]
   const skillsContent: JSX.Element[] = skillsList.map(function (skill) {
     return <li key={skill.name}>
                     <h4>{skill.name }</h4>
-                    <p>
-                    {skill.description }
-                    </p>
+                    <p  dangerouslySetInnerHTML={{ __html: skill.description }}  />
                 </li>
   })
 
@@ -94,4 +92,6 @@ const Skills = (props: IStaticPage): JSX.Element => {
 </>
   )
 }
+
 export default Skills
+

@@ -62,24 +62,21 @@
         "title": "Skills",
         "content": [
             {
-                "name": "Asp.Net, C#: MVC applications, WebForms, Console applications",
-                "description": "The development of the small tools, the parts of microservices and the monolith applications for Net Framework and Net Core, the usage of the extensions EntityFramework, Dapper, Nlog, NewtonSoft, OpenXML and many others. "
+                "name": "Asp.Net, C#",
+                "description": "<ul><li>Development of MVC applications, WebForms, and console applications</li><li>Designed, developed, and maintained a wide range of systems — from monolithic applications to modular, microservice-based architectures</li><li>Worked with both .NET Framework and .NET Core / .NET</li><li>Key projects include:<ul><li>Apartment reservation system for a real estate company</li><li>Internal CRM system for logistics and operational management</li</li></ul></ul>"
             },
             {
-                "name": "JavaScript and libraries (React and connected libraries, jQuery, NodeJS)",
-                "description": "The front-end development with popular JS frameworks and libraries - React, Redux, Antd, Axios, Bootstrap, jQuery (mostly for old projects). I use webpack to bundle JavaScript and TypeScript applications."
+                "name": "TypeScript / JavaScript",
+                "description": "<ul><li>Front-end development with React and related technologies</li><li>Extensive experience with libraries and tools such as Material UI (MUI), Fluent UI, Redux, Zustand, Ant Design, Axios</li><li>Technologies primarily used for SharePoint solutions, as well as:<ul><li>Custom SharePoint applications</li><li>Single-page applications (SPA) built with React and Next.js</li></ul></li><li>Notable projects:<ul><li>Approval workflow system using SharePoint as data storage and Azure applications for background processing</li><li>Phonebook application for SharePoint, using Azure Entra ID as the employee data source</li><li>Buy-and-sell board for SharePoint Online</li></ul></ul>"
             },
+            
             {
-                "name": "XHTML, CSS, XML: deep knowledge of formats and technologies",
-                "description": "The modern usage of CSS and SCSS for styles, use webpack to automize the CSS compilation."
-            },
-            {
-                "name": "Microsoft SharePoint: development webparts, timer-jobs integration with external applications",
-                "description": "The full cycle of work with MS SharePoint (2010, 2019) - the creating a farm, the development of webparts, timerjobs and console applications for the export-import of data, integrations with external applications, Office online."
+                "name": "Microsoft SharePoint",
+                "description": "<ul><li>Development of SharePoint web parts, timer jobs, and integrations with external systems</li><li>Full lifecycle experience with Microsoft SharePoint 2019, including:<ul><li>SharePoint farm setup and administration</li><li>Development of web parts, timer jobs, and console applications for data export and import (on-premises and online)</li><li>Integration with external applications, databases, and Office Online (on-premises)</li></ul></li><li>Created and maintained a large number of applications for both end users and security/audit departments in SharePoint 2019 on-premises and SharePoint Online</li><li>(Trying to describe all of it briefly would result in a TL;DR 🙂)</li></ul>"
             },
             {
                 "name": "Devops engineer",
-                "description": "Setting up the CI/CD processes with Gitlab, the automation of the creating environments with Terraform (AWS, YandexCloud) and Vagrant (VirtualBox). "
+                "description": "<ul><li>Setup and maintenance of CI/CD pipelines using Azure DevOps, GitLab, and PowerShell</li><li>Automated infrastructure provisioning and environment creation using:<ul><li>Terraform (Azure, Yandex Cloud)</li><li>Vagrant (VirtualBox)</li></ul></ul>"
             }
         ]
     },

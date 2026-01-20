@@ -7,6 +7,7 @@ const NewsLoader = (props: IStaticPage): JSX.Element => {
   const [newsaons, setNewAnons] = useState<INewsAnons[]>([])
   // const setActive = ({ isActive }) => isActive ? 'active-link' : ''
   const LoadNews = async (lang: string): Promise<void> => {
+    console.log('settings', settings)
     const newsFile = (lang === 'ru') ? `${settings.pubDir}mimrunews.json` : `${settings.pubDir}mimnews.json`
     const newsdata = await fetch(newsFile)
     const json: INewsAnons[] = await newsdata.json()

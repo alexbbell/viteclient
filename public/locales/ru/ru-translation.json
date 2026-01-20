@@ -77,26 +77,22 @@
         "title": "Навыки",
         "content": [
             {
-                "name": "Разработка приложений на языке C#:  Net.Framework 3.5, 4.5, .Net Core 3, 5, 6. Типы приложений - WebForms, WebAPI, Console applications",
-                "description": "Разработка утилит, модулей микросервисной архитектуры и блоков монолитных решений для фреймворков Net Framework and Net Core с использованием EntityFramework, Dapper, Nlog, NewtonSoft, OpenXM и многих других."
+            "name": "ASP.NET, C#",
+            "description": "<ul><li>Разработка MVC-приложений, WebForms и консольных приложений</li><li>Проектирование, разработка и поддержка широкого спектра систем — от монолитных приложений до модульных микросервисных архитектур</li><li>Работа с .NET Framework и .NET Core / .NET</li><li>Ключевые проекты:<ul><li>Система бронирования квартир для компании в сфере недвижимости</li><li>Внутренняя CRM-система для логистики и операционного управления</li></ul></li></ul>"
             },
             {
-                "name": "JavaScript. Разработка интерфейсов и SPA с библиотеками  React, jQuery; бэк-энд на NodeJS",
-                "description": "Разработка клиентских интерфейсов на Javascript с использованием библиотек React, Redux, Antd, Axios, Bootstrap, jQuery. Использую Webpack для сборки решений"
+            "name": "TypeScript / JavaScript",
+            "description": "<ul><li>Фронтенд-разработка с использованием React и связанных технологий</li><li>Обширный опыт работы с библиотеками и инструментами: Material UI (MUI), Fluent UI, Redux, Zustand, Ant Design, Axios</li><li>Технологии в основном использовались для решений на базе SharePoint, а также для:<ul><li>Пользовательских приложений SharePoint</li><li>Одностраничных приложений (SPA), разработанных на React и Next.js</li></ul></li><li>Значимые проекты:<ul><li>Система согласования процессов с использованием SharePoint в качестве хранилища данных и Azure-приложений для фоновой обработки</li><li>Телефонный справочник для SharePoint с использованием Azure Entra ID в качестве источника данных сотрудников</li><li>Доска объявлений купли-продажи для SharePoint Online</li></ul></li></ul>"
             },
             {
-                "name": "XHTML, CSS, XML: без этого никуда, но много что отдал на откуп фреймворкам типа MUI, Bootstrap, ANTD",
-                "description": "Современные подходы к созданию стилей с классическим CSS и SCSS,  использование Webpack для компиляции в CSS."
+            "name": "Microsoft SharePoint",
+            "description": "<ul><li>Разработка веб-частей SharePoint, таймерных заданий и интеграций с внешними системами</li><li>Полный цикл работы с Microsoft SharePoint 2019, включая:<ul><li>Развертывание и администрирование ферм SharePoint</li><li>Разработку веб-частей, таймерных заданий и консольных приложений для экспорта и импорта данных (on-premises и online)</li><li>Интеграцию с внешними приложениями, базами данных и Office Online (on-premises)</li></ul></li><li>Создание и поддержка большого количества приложений как для конечных пользователей, так и для подразделений безопасности и аудита в SharePoint 2019 on-premises и SharePoint Online</li><li>(Попытка кратко описать весь опыт неизбежно приведёт к TL;DR 🙂)</li></ul>"
             },
             {
-                "name": "Microsoft SharePoint",
-                "description": "Полный цикл работы с SharePoint (2010, 2019) -развертывание фермы серверов, разработка веб-частей, таймер-джобов и консольных приложений для импорта-экспорта данных, интеграции со сторонними базами и сервисами"
-            },
-            {
-                "name": "Devops",
-                "description": "Настройка процессов непрерывных интеграции и деплоя CI / CD с помощью Gitlab, планирование и развертывание инфраструктуры с помощью Terraform (AWS, YandexCloud) и Vagrant (VirtualBox)."
+            "name": "DevOps Engineer",
+            "description": "<ul><li>Настройка и поддержка CI/CD-процессов с использованием Azure DevOps, GitLab и PowerShell</li><li>Автоматизация развертывания инфраструктуры и окружений с помощью:<ul><li>Terraform (Azure, Yandex Cloud)</li><li>Vagrant (VirtualBox)</li></ul></li></ul>"
             }
-        ]
+       ]
     },
     "work": {
         "title": "Работа",

@@ -26,7 +26,7 @@ const App = (): React.JSX.Element => {
         <Route path=":lng?/" element={<Homepage />} />
         <Route path="/auth/" element={<Auth />}></Route>
         <Route path="/:lng/blogs" element={<Blog />} />
-        <Route path="/:lng/services" element={<Services />} />
+        <Route path="/:lng/contacts" element={<Services />} />
         <Route path="/:lng/about" element={<About />} />
         <Route path="/:lng/experience" element={<Skills query="work" />} />
         <Route path="/:lng/skills" element={<Skills query="skills" />} />

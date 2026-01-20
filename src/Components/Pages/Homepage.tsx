@@ -1,6 +1,6 @@
 import { useEffect, type JSX } from 'react'
 
-import { Row, Col, Divider } from 'antd'
+import { Row, Col, Divider, Button } from 'antd'
 import { useNavigate, NavLink } from 'react-router-dom'
 import styles from './../../style/style.module.scss'
 import { useTranslation, Trans } from 'react-i18next'
@@ -37,7 +37,15 @@ export const Homepage = (): JSX.Element => {
           <p>
             <NavLink to={`/${i18n.language}/about/`} className={styles.more}>{t('morelink')}...</NavLink>
           </p>
-
+          <Button  type="default" shape='round'
+            href="/Aleksei_Beliaev_Software_developer.pdf"
+            target="_blank"
+            rel="noreferrer" > Download CV</Button> &nbsp;
+          <Button type="default" shape='round'
+            href={`/${lang}/contacts`}
+            target="_blank"
+            rel="noreferrer" >Book a call / Send request</Button>
+          
         </Col>
       </Row>
 

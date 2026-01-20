@@ -1,13 +1,13 @@
 import { type JSX } from 'react'
 import { Row, Col } from 'antd'
-import { NavLink, useParams } from 'react-router-dom'
+import { Link, NavLink, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons'
 import { faBlog } from '@fortawesome/free-solid-svg-icons';
 
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope,  faFileSignature} from '@fortawesome/free-solid-svg-icons';
 
 import { faGithub, faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons'
 
@@ -52,6 +52,7 @@ const ABFooter = (): JSX.Element => {
                 <li key={'mail1'}><FontAwesomeIcon icon={faEnvelope} />&nbsp; beliaeff@gmail.com</li>
                 <li key={'phone1'}><FontAwesomeIcon icon={faPhone} /> +49 157 38936214<br />(mobile, WhatsApp)</li>
                 <li key={'whats1'}><FontAwesomeIcon icon={faPhone} /> +7 9261803635 <br />(mobile, WhatsApp)</li>
+                <li key={'whats1'}><FontAwesomeIcon icon={faFileSignature} /> <Link to={`/${lang}/contacts`} >Send request</Link></li>
             </ul>
 
         </Col>

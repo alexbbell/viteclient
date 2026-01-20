@@ -15,7 +15,7 @@ const ABHeader = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
-  const items = m.fetchMenUItems(['home', 'skills', 'blogs', 'about', 'gallery', 'math', 'services'])
+  const items = m.fetchMenUItems(['home', 'skills', 'blogs', 'about', 'gallery', 'math', 'contacts'])
   const navigate = useNavigate()
 
   useEffect(() => {
