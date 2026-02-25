@@ -1,7 +1,7 @@
 import { useEffect, type JSX } from 'react'
 import { Row, Col, Space, Tabs } from 'antd'
 import styles from './../../style/style.module.scss'
-import { Trans, useTranslation } from 'react-i18next'
+import {  useTranslation } from 'react-i18next'
 import { type IStaticPage } from '../../interfaces'
 
 import type { TabsProps } from 'antd'

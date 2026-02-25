@@ -127,6 +127,12 @@
         "title": "Образование",
         "content": [
             {
+                "school": "Azure Fundamentals (AZ-900)",
+                "degree": "Microsoft Certified",
+                "graduated": "Февраль 2026",
+                "description": "Базовые знания о концепциях облачных технологий, основных службах Azure, а также функциях и инструментах управления и администрирования Azure."
+            },
+            {
                 "school": "SkillBox",
                 "degree": "DevOps engineer. Основы",
                 "graduated": "March 2023",

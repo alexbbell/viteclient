@@ -56,7 +56,8 @@
         "about": "About",
         "education": "Education",
         "math": "the game",
-        "services": "Services"
+        "services": "Services",
+        "registration" : "Registration"
     },
     "skills": {
         "title": "Skills",
@@ -112,6 +113,12 @@
     "education": {
         "title": "Education",
         "content": [
+            {
+                "school": "Azure Fundamentals (AZ-900)",
+                "degree": "Microsoft Certified",
+                "graduated": "February 2026",
+                "description": "Foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance features and tools"
+            },
             {
                 "school": "SkillBox",
                 "degree": "DevOps engineer. Basics",

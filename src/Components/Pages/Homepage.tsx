@@ -40,7 +40,7 @@ export const Homepage = (): JSX.Element => {
           <Button  type="default" shape='round'
             href="/Aleksei_Beliaev_Software_developer.pdf"
             target="_blank"
-            rel="noreferrer" > Download CV</Button> &nbsp;
+            rel="noreferrer" >Download CV</Button> &nbsp;
           <Button type="default" shape='round'
             href={`/${lang}/contacts`}
             target="_blank"

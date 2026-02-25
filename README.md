@@ -11,6 +11,8 @@ Show sys env in VITE APP
                     BaseURL: {settings.baseUrl}
 
 ## News:
+### 20 January 2026
+Updated skills description
 
 ### 15 April 2024
 Added reviews from my ex-colleagues

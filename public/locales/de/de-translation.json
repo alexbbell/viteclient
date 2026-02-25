@@ -110,6 +110,12 @@
         "title": "Bildung",
         "content": [
             {
+                "school": "Azure Fundamentals (AZ-900)",
+                "degree": "Microsoft-zertifiziert",
+                "graduated": "Februar 2026",
+                "description": "Grundlegende Kenntnisse über Cloud-Konzepte, zentrale Azure-Dienste sowie Azure-Verwaltungs- und Governance-Funktionen und -Tools"
+            },
+            {
                 "school": "SkillBox",
                 "degree": "DevOps-Ingenieur. Grundlagen",
                 "graduated": "März 2023",

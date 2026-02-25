@@ -75,26 +75,22 @@
     },
     "skills": {
         "title": "כישורים",
-        "content": [
+       "content": [
             {
-                "name": "Asp.Net, C#: MVC applications, WebForms, Console applications",
-                "description": "The development of the small tools, the parts of microservices and the monolith applications for Net Framework and Net Core, the usage of the extensions EntityFramework, Dapper, Nlog, NewtonSoft, OpenXML and many others. "
+            "name": "ASP.NET, C#",
+            "description": "<ul><li>פיתוח אפליקציות MVC, WebForms ואפליקציות קונסול</li><li>תכנון, פיתוח ותחזוקה של מגוון רחב של מערכות – החל ממערכות מונוליתיות ועד לארכיטקטורות מודולריות מבוססות מיקרו-שירותים</li><li>עבודה עם .NET Framework ועם .NET Core / .NET</li><li>פרויקטים מרכזיים:<ul><li>מערכת להזמנת דירות עבור חברת נדל\"ן</li><li>מערכת CRM פנימית לניהול לוגיסטי ותפעולי</li></ul></li></ul>"
             },
             {
-                "name": "JavaScript and libraries (React and connected libraries, jQuery, NodeJS)",
-                "description": "The front-end development with popular JS frameworks and libraries - React, Redux, Antd, Axios, Bootstrap, jQuery (mostly for old projects). I use webpack to bundle JavaScript and TypeScript applications."
+            "name": "TypeScript / JavaScript",
+            "description": "<ul><li>פיתוח צד-לקוח באמצעות React וטכנולוגיות נלוות</li><li>ניסיון רחב עם ספריות וכלים כגון Material UI (MUI), Fluent UI, Redux, Zustand, Ant Design, Axios</li><li>הטכנולוגיות שימשו בעיקר לפתרונות SharePoint וכן עבור:<ul><li>אפליקציות SharePoint מותאמות אישית</li><li>אפליקציות SPA שפותחו עם React ו-Next.js</li></ul></li><li>פרויקטים בולטים:<ul><li>מערכת תהליכי אישור עם SharePoint כמאגר נתונים ואפליקציות Azure לעיבוד ברקע</li><li>אפליקציית ספר טלפונים ל-SharePoint, עם Azure Entra ID כמקור נתוני עובדים</li><li>לוח קנייה ומכירה עבור SharePoint Online</li></ul></li></ul>"
             },
             {
-                "name": "XHTML, CSS, XML: deep knowledge of formats and technologies",
-                "description": "The modern usage of CSS and SCSS for styles, use webpack to automize the CSS compilation."
+            "name": "Microsoft SharePoint",
+            "description": "<ul><li>פיתוח Web Parts ל-SharePoint, עבודות מתוזמנות (Timer Jobs) ואינטגרציות עם מערכות חיצוניות</li><li>ניסיון מלא לאורך מחזור החיים עם Microsoft SharePoint 2019, כולל:<ul><li>הקמה וניהול של חוות SharePoint</li><li>פיתוח Web Parts, Timer Jobs ואפליקציות קונסול לייבוא וייצוא נתונים (On-Premises ו-Online)</li><li>אינטגרציה עם אפליקציות חיצוניות, בסיסי נתונים ו-Office Online (On-Premises)</li></ul></li><li>פיתוח ותחזוקה של מספר רב של אפליקציות הן עבור משתמשי קצה והן עבור מחלקות אבטחה וביקורת ב-SharePoint 2019 On-Premises ו-SharePoint Online</li><li>(ניסיון לתאר את כל זה בקצרה יוביל בהכרח ל-TL;DR 🙂)</li></ul>"
             },
             {
-                "name": "Microsoft SharePoint: development webparts, timer-jobs integration with external applications",
-                "description": "The full cycle of work with MS SharePoint (2010, 2019) - the creating a farm, the development of webparts, timerjobs and console applications for the export-import of data, integrations with external applications, Office online."
-            },
-            {
-                "name": "Devops engineer",
-                "description": "Setting up the CI/CD processes with Gitlab, the automation of the creating environments with Terraform (AWS, YandexCloud) and Vagrant (VirtualBox). "
+            "name": "DevOps Engineer",
+            "description": "<ul><li>הקמה ותחזוקה של תהליכי CI/CD באמצעות Azure DevOps, GitLab ו-PowerShell</li><li>אוטומציה של הקצאת תשתיות והקמת סביבות באמצעות:<ul><li>Terraform (Azure, Yandex Cloud)</li><li>Vagrant (VirtualBox)</li></ul></li></ul>"
             }
         ]
     },

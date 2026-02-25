@@ -20,7 +20,8 @@ class Menu {
       { url: '/resume', label: 'resume' },
       { url: '/lngmngr', label: 'lngmngr' },
       { url: '/math', label: 'math' },
-      { url: '/services', label: 'services' }
+      { url: '/services', label: 'services' },
+      { url: '/registration', label: 'registration' }
 
     ]
   }

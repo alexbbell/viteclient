@@ -60,24 +60,20 @@
         "title": "Fähigkeiten",
         "content": [
             {
-                "name": "Asp.Net, C#: MVC-Anwendungen, WebForms, Konsolenanwendungen",
-                "description": "Die Entwicklung von kleinen Tools, Teilen von Microservices und Monolith-Anwendungen für Net Framework und Net Core, die Verwendung von Erweiterungen wie EntityFramework, Dapper, Nlog, NewtonSoft, OpenXML und vielen anderen."
+            "name": "ASP.NET, C#",
+            "description": "<ul><li>Entwicklung von MVC-Anwendungen, WebForms und Konsolenanwendungen</li><li>Entwurf, Entwicklung und Wartung einer breiten Palette von Systemen – von monolithischen Anwendungen bis hin zu modularen, mikroservicebasierten Architekturen</li><li>Arbeit mit .NET Framework sowie .NET Core / .NET</li><li>Wichtige Projekte:<ul><li>Wohnungsreservierungssystem für ein Immobilienunternehmen</li><li>Internes CRM-System für Logistik- und Betriebsmanagement</li></ul></li></ul>"
             },
             {
-                "name": "JavaScript und Bibliotheken (React und verbundene Bibliotheken, jQuery, NodeJS)",
-                "description": "Die Front-End-Entwicklung mit populären JS-Frameworks und Bibliotheken - React, Redux, Antd, Axios, Bootstrap, jQuery (meistens für alte Projekte). Ich verwende Webpack, um JavaScript- und TypeScript-Anwendungen zu bündeln."
+            "name": "TypeScript / JavaScript",
+            "description": "<ul><li>Frontend-Entwicklung mit React und verwandten Technologien</li><li>Umfangreiche Erfahrung mit Bibliotheken und Tools wie Material UI (MUI), Fluent UI, Redux, Zustand, Ant Design, Axios</li><li>Technologien hauptsächlich eingesetzt für SharePoint-Lösungen sowie für:<ul><li>Individuelle SharePoint-Anwendungen</li><li>Single-Page-Anwendungen (SPA) mit React und Next.js</li></ul></li><li>Hervorzuhebende Projekte:<ul><li>Genehmigungs-Workflow-System mit SharePoint als Datenspeicher und Azure-Anwendungen für Hintergrundverarbeitung</li><li>Telefonbuch-Anwendung für SharePoint mit Azure Entra ID als Mitarbeiterdatenquelle</li><li>Kauf- und Verkaufsplattform für SharePoint Online</li></ul></li></ul>"
             },
             {
-                "name": "XHTML, CSS, XML: tiefgreifende Kenntnisse von Formaten und Technologien",
-                "description": "Der moderne Einsatz von CSS und SCSS für Styles, Verwendung von Webpack zur Automatisierung der CSS-Kompilierung."
+            "name": "Microsoft SharePoint",
+            "description": "<ul><li>Entwicklung von SharePoint-Webparts, Timer Jobs und Integrationen mit externen Systemen</li><li>Erfahrung über den gesamten Lebenszyklus mit Microsoft SharePoint 2019, einschließlich:<ul><li>Einrichtung und Administration von SharePoint-Farmen</li><li>Entwicklung von Webparts, Timer Jobs und Konsolenanwendungen für Datenexport und -import (On-Premises und Online)</li><li>Integration mit externen Anwendungen, Datenbanken und Office Online (On-Premises)</li></ul></li><li>Erstellung und Wartung einer großen Anzahl von Anwendungen sowohl für Endanwender als auch für Sicherheits- und Audit-Abteilungen in SharePoint 2019 On-Premises und SharePoint Online</li><li>(Der Versuch, all dies kurz zu beschreiben, würde zu einem TL;DR führen 🙂)</li></ul>"
             },
             {
-                "name": "Microsoft SharePoint: Entwicklung von Webparts, Timer-Jobs, Integration mit externen Anwendungen",
-                "description": "Der gesamte Arbeitszyklus mit MS SharePoint (2010, 2019) - die Erstellung einer Farm, die Entwicklung von Webparts, Timerjobs und Konsolenanwendungen für den Export-Import von Daten, Integrationen mit externen Anwendungen, Office Online."
-            },
-            {
-                "name": "DevOps-Ingenieur",
-                "description": "Einrichtung der CI/CD-Prozesse mit Gitlab, Automatisierung der Erstellung von Umgebungen mit Terraform (AWS, YandexCloud) und Vagrant (VirtualBox)."
+            "name": "DevOps Engineer",
+            "description": "<ul><li>Einrichtung und Wartung von CI/CD-Pipelines mit Azure DevOps, GitLab und PowerShell</li><li>Automatisierte Bereitstellung von Infrastruktur und Umgebungen mit:<ul><li>Terraform (Azure, Yandex Cloud)</li><li>Vagrant (VirtualBox)</li></ul></li></ul>"
             }
         ]
     },
@@ -113,6 +109,12 @@
     "education": {
         "title": "Bildung",
         "content": [
+            {
+                "school": "Azure Fundamentals (AZ-900)",
+                "degree": "Microsoft-zertifiziert",
+                "graduated": "Februar 2026",
+                "description": "Grundlegende Kenntnisse über Cloud-Konzepte, zentrale Azure-Dienste sowie Azure-Verwaltungs- und Governance-Funktionen und -Tools"
+            },
             {
                 "school": "SkillBox",
                 "degree": "DevOps-Ingenieur. Grundlagen",

@@ -15,6 +15,7 @@ const LangMaster = lazy(async () => await import ('./Components/Pages/LangMaster
 const Mathema = lazy(async () => await import ('./Components/Mathema/Mathema'))
 const Admin = lazy(async () => await import ('./Components/Pages/Admin/Admin'))
 const Services = lazy(async () => await import ('./Components/Pages/Services/Services'))
+const Register = lazy(async () => await import ('./Components/Pages/Register/Register'))
 
 const App = (): React.JSX.Element => {
 
@@ -32,7 +33,8 @@ const App = (): React.JSX.Element => {
         <Route path="/:lng/skills" element={<Skills query="skills" />} />
         <Route path="/:lng/lngmngr" element={<LangMaster />} />
         <Route path="/:lng/math" element={<Mathema />} />
-        <Route path="/:lng/connectmysite" element={<Admin />} />
+        <Route path="/:lng/connectmxysite" element={<Admin />} />
+        <Route path="/:lng/registration" element={<Register />} />
         
                  {/* Redirect invalid langs to /en */}
           {/* <Route path=":lng" element={<Navigate to="/en" replace />} /> */}

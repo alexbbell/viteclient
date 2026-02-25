@@ -51,8 +51,8 @@ const ABFooter = (): JSX.Element => {
             <ul className={styles.cleanList}>
                 <li key={'mail1'}><FontAwesomeIcon icon={faEnvelope} />&nbsp; beliaeff@gmail.com</li>
                 <li key={'phone1'}><FontAwesomeIcon icon={faPhone} /> +49 157 38936214<br />(mobile, WhatsApp)</li>
-                <li key={'whats1'}><FontAwesomeIcon icon={faPhone} /> +7 9261803635 <br />(mobile, WhatsApp)</li>
-                <li key={'whats1'}><FontAwesomeIcon icon={faFileSignature} /> <Link to={`/${lang}/contacts`} >Send request</Link></li>
+                <li key={'whats2'}><FontAwesomeIcon icon={faPhone} /> +7 9261803635 <br />(mobile, WhatsApp)</li>
+                <li key={'whats3'}><FontAwesomeIcon icon={faFileSignature} /> <Link to={`/${lang}/contacts`} >Send request</Link></li>
             </ul>
 
         </Col>
