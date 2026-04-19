@@ -7,7 +7,7 @@
         "name": "Aleksei Beliaev",
         "position": "Full-stack developer (TypeScript, JavaScript, React, C#, NodeJS (no)SQL)",
         "titleAbout": "About me",
-        "description": "I work as a full-stack software developer and have a wide experience of creating and maintaining IT systems. Most of all I use C#, JavaScript, Rest API, Rabbit Mq. With C# I mean Net (.NetFramework, Net Core, EF Core, Nlog, NewtonSoft, OpenXML). JavaScript is not only a native language, but also TypeScript and the React library. I also created several simple tools with NodeJS, so JavaScript is not only for frontend.",
+        "description": "I design and build reliable software solutions that simplify complex processes and improve data consistency. With strong expertise in C#/.NET and modern JavaScript frameworks like React, I deliver scalable full-stack applications for enterprise environments. I bring extensive experience with Microsoft Azure and SharePoint, developing and integrating solutions within complex corporate ecosystems. From REST APIs and backend services to frontend applications and messaging systems such as Azure Service Bus and RabbitMQ — I create systems that are robust, maintainable, and aligned with business goals. I’m comfortable navigating large-scale corporate environments, ensuring that solutions integrate seamlessly and deliver long-term value.",
         "image": "/public/img/banner/abb.jpg",
         "bio": "I work as a software developer and eager to work in NRW area - Muelheim, Essen, Duisburg, Dusseldorf",
         "email": "beliaeff@gmail.com",
@@ -56,8 +56,7 @@
         "about": "About",
         "education": "Education",
         "math": "the game",
-        "services": "Services",
-        "registration" : "Registration"
+        "services": "Services"
     },
     "skills": {
         "title": "Skills",
@@ -113,12 +112,6 @@
     "education": {
         "title": "Education",
         "content": [
-            {
-                "school": "Azure Fundamentals (AZ-900)",
-                "degree": "Microsoft Certified",
-                "graduated": "February 2026",
-                "description": "Foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance features and tools"
-            },
             {
                 "school": "SkillBox",
                 "degree": "DevOps engineer. Basics",

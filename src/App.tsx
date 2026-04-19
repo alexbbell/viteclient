@@ -33,7 +33,7 @@ const App = (): React.JSX.Element => {
         <Route path="/:lng/skills" element={<Skills query="skills" />} />
         <Route path="/:lng/lngmngr" element={<LangMaster />} />
         <Route path="/:lng/math" element={<Mathema />} />
-        <Route path="/:lng/connectmxysite" element={<Admin />} />
+        <Route path="/:lng/connectmysite" element={<Admin />} />
         <Route path="/:lng/registration" element={<Register />} />
         
                  {/* Redirect invalid langs to /en */}
