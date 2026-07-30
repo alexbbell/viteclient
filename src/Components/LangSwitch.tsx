@@ -6,11 +6,9 @@ import { langs } from '../consts'
 import styles from './../style/style.module.scss'
 import '@ant-design/v5-patch-for-react-19'
 
-interface LangSwitchProps {
-  query?: string
-}
 
-const LangSwitch = ({ query }: LangSwitchProps): JSX.Element => {
+
+const LangSwitch = (): JSX.Element => {
   const currentLang = useLangStore((state) => state.selectedLang) || localStorage.getItem('lang') || 'en'
   const { switchLang } = useLangStore()
 

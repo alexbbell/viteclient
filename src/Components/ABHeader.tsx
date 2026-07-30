@@ -1,4 +1,4 @@
-import React, { useState, type JSX } from 'react'
+import { useState, type JSX } from 'react'
 import { useNavigate, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import LangSwitch from './LangSwitch'
@@ -11,7 +11,7 @@ const ABHeader = (): JSX.Element => {
   const navigate = useNavigate()
   
   // Reactively track current language from Zustand (or fallback to i18n current language)
-  const lang = useLangStore((state) => state.lang) || i18n.language || 'en'
+  const lang = useLangStore((state) => state.selectedLang) || i18n.language || 'en'
 
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenu = () => setMenuOpen((prev) => !prev)
@@ -53,7 +53,7 @@ const ABHeader = (): JSX.Element => {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-        <LangSwitch query={lang} />
+        <LangSwitch />
 
         <div style={{ alignItems: 'flex-end' }}>
           <div className={styles.menuWrapper}>

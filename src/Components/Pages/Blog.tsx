@@ -3,7 +3,7 @@ import parse from 'html-react-parser'
 import { useParams } from 'react-router-dom'
 import { Row, Col, Divider, Pagination } from 'antd'
 import { dateToDDmmYYYY } from '../../Middleware/Helpers'
-import Image from './Image'
+import WPImage from './Image'
 import { settings } from '../../config'
 import styles from './../../style/style.module.scss'
 
@@ -145,7 +145,7 @@ function Anonspost({ items }: AnonspostProps): JSX.Element {
           <div className={`${styles.pt10} ${styles.pb10}`}>
             {item.imageId !== 0 && (
               <div className={styles.newsImage}>
-                <Image media={item.imageId} className={styles.radius} />
+                <WPImage media={item.imageId??0} className={styles.radius} />
               </div>
             )}
             <div className={styles.newsContent}>

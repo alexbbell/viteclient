@@ -7,7 +7,7 @@
         "name": "Aleksei Beliaev",  
         "position": "Full-Stack-Entwickler (TypeScript, JavaScript, React, C#, SharePoint, (no)SQL, NodeJS)",
         "titleAbout": "Über mich",
-        "description": "Ich arbeite als Full-Stack-Softwareentwickler und habe umfassende Erfahrung in der Erstellung und Pflege von IT-Systemen. Hauptsächlich verwende ich C#, JavaScript, Rest API und Rabbit Mq. Mit C# meine ich Net (.NetFramework, Net Core, EF Core, Nlog, NewtonSoft, OpenXML). JavaScript ist nicht nur eine native Sprache, sondern auch TypeScript und die React-Bibliothek. Ich habe auch mehrere einfache Tools mit NodeJS erstellt, sodass JavaScript nicht nur für das Frontend verwendet wird.",
+        "description": "Ich entwerfe und entwickle zuverlässige Softwarelösungen, die komplexe Prozesse vereinfachen und die Datenkonsistenz verbessern. Mit fundierter Expertise in C#/.NET und modernen JavaScript-Frameworks wie React entwickle ich skalierbare Full-Stack-Anwendungen für Unternehmensumgebungen. Ich verfüge über umfangreiche Erfahrung mit Microsoft Azure und SharePoint und realisiere Lösungen sowie Integrationen innerhalb komplexer Unternehmenslandschaften. Von REST-APIs und Backend-Services bis hin zu Frontend-Anwendungen und Messaging-Systemen wie Azure Service Bus und RabbitMQ – ich entwickle robuste, wartbare Systeme, die an den Geschäftszielen ausgerichtet sind. Ich bewege mich sicher in großen Unternehmensumgebungen und stelle sicher, dass Lösungen nahtlos integriert werden und langfristigen Mehrwert bieten.",
         "image": "/public/img/banner/abb.jpg",
         "bio": "Ich arbeite als Softwareentwickler und möchte im Raum NRW - Mülheim, Essen, Duisburg, Düsseldorf - arbeiten.\n\nE-Mail: beliaeff@gmail.com\nTelefon: +972 585362546\nAdresse: Rehovot, 20293\n\nÜber mich: Ich habe angefangen, die Entwicklung in meiner High School zu lernen, es war das „Basic“. Und dann habe ich erkannt, dass ich Softwareentwickler werden möchte. Als Student habe ich viel Zeit damit verbracht, die Entwicklung zu lernen, und bald konnte ich meine erste Arbeit finden. Es war RBC (RosBusinessConsulting) - eines der besten Wirtschaftsmedien in Russland. Seitdem lerne ich immer neue Technologien, erweitere und verbessere meine Fähigkeiten, lese und höre IT-Publikationen. Ich bin seit fast 20 Jahren glücklich verheiratet und habe drei großartige Kinder. Der älteste hat ein großes Talent für Mathematik und Programmierung, er ist einer der stärksten Schüler in Moskau in diesen Fächern. Er gewinnt regelmäßig Preise bei verschiedenen Wettbewerben. Meine Tochter ist eine sehr kreative Person, die neben der Schule große Erfolge im Tanzen, Zeichnen, Design und anderen kreativen Bereichen erzielt hat. Der jüngste ist alle drei und er ist einfach der Liebling der ganzen Familie. Neben Familie und Arbeit nimmt der Sport einen bedeutenden Platz in meinem Leben ein. Ich liebe das Laufen (Joggen) und habe erfolgreich mehrere volle Marathons (42,2 km) absolviert. Ich mag auch Musik und Gartenarbeit. Ich liebe es zu reisen und mit neuen Menschen zu kommunizieren, ich finde leicht eine gemeinsame Sprache mit ihnen, wechsle gerne die Umgebung und öffne mich gerne neuen Dingen.",
         "website": "https://alexey.beliaeff.ru/",
@@ -109,12 +109,6 @@
     "education": {
         "title": "Bildung",
         "content": [
-            {
-                "school": "Azure Fundamentals (AZ-900)",
-                "degree": "Microsoft-zertifiziert",
-                "graduated": "Februar 2026",
-                "description": "Grundlegende Kenntnisse über Cloud-Konzepte, zentrale Azure-Dienste sowie Azure-Verwaltungs- und Governance-Funktionen und -Tools"
-            },
             {
                 "school": "SkillBox",
                 "degree": "DevOps-Ingenieur. Grundlagen",

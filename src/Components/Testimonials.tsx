@@ -36,7 +36,7 @@ const Testimonials = (lng: Props): React.JSX.Element => {
       <h3>{ (lang === 'ru') ? 'Отзывы' : 'Testimonials'} </h3></div>
 {
   testimonials.posts.length > 1 &&
-  <Carousel dotPosition='bottom'
+  <Carousel dotPlacement='bottom'
   dots={{ className: 'dots' }}
   autoplay autoplaySpeed={4000} fade={true} pauseOnHover pauseOnFocus pauseOnDotsHover
   className='carousel'>

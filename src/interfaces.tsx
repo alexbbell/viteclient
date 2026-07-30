@@ -1,3 +1,5 @@
+import { settings } from "./config";
+
 export interface SiteContent {
   morelink: string;
   fullname: string;
@@ -183,7 +185,7 @@ export interface IConsultForm {
     subject: string,
     question: string,
 }
-export const defaultConsultForm: IConsultForm = (process.env.NODE_ENV === 'development') ? {
+export const defaultConsultForm: IConsultForm = (settings.mode === 'development') ? {
     email: 'no@mail.ru',
     theName: 'No Name',
     subject: 'Anfrage',
@@ -193,4 +195,13 @@ export const defaultConsultForm: IConsultForm = (process.env.NODE_ENV === 'devel
     theName: '',
     subject: '',
     question: ''
+}
+
+export interface WPImageProps {
+  media?: number;
+  className?: string;
+}
+
+export interface LangSwitchProps {
+  query?: string
 }
