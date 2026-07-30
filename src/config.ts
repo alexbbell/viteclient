@@ -5,6 +5,7 @@ export interface IAppSettings {
     pubDir: string, 
     mode: string,
     apiUrl: string,
+    blogUrl: string,
 }
 
 export const settings:IAppSettings = {
@@ -13,7 +14,8 @@ export const settings:IAppSettings = {
     authUrl: "",
     apiUrl:  import.meta.env.VITE_REACT_APP_API_URL,
     pubDir: import.meta.env.VITE_PUBDIR,
-    mode: import.meta.env.MODE
+    mode: import.meta.env.MODE,
+    blogUrl: import.meta.env.VITE_BLOG_URL
 }
 
 export const siteLang = localStorage.getItem('lang') ?? 'en'

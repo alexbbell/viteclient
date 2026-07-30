@@ -66,8 +66,7 @@ const ABFooter = (): JSX.Element => {
             <h3>{t('menu.blogs')}</h3>
             <ul className={styles.cleanList}>
 
-                <li key={'s1'}><FontAwesomeIcon icon={faBlog} className='icon-sm' /> <a href="https://markimarta.ru">markimarta.ru</a></li>
-                <li key={'s2'}><FontAwesomeIcon icon={faBlog} className='icon-sm' />  <a href="https://markimarta.com">markimarta.com</a></li>
+                <li key={'s1'}><FontAwesomeIcon icon={faBlog} className='icon-sm' /> <a href="https://realdevtips.com">realdevtips.com</a></li>
                 <li key={'s3'}><FontAwesomeIcon icon={faLinkedin} className='icon-sm' />&nbsp; <a href="https://www.linkedin.com/in/aleksei-beliaev/">LinkedIn</a></li>
                 <li key={'s4'}><FontAwesomeIcon icon={faGithub} className='icon-sm' />&nbsp;<a href="https://github.com/alexbbell/">Github</a></li>
                 <li key={'s5'}><FontAwesomeIcon icon={faGitlab} className='icon-sm' />&nbsp;<a href="https://gitlab.com/alexbbell/alexeybeliaeffru/">Gitlab</a></li>

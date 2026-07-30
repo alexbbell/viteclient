@@ -1,60 +1,48 @@
-import { useEffect, type JSX } from 'react'
-import styles from './../style/style.module.scss'
+import type { JSX } from 'react'
 import { NavLink } from 'react-router-dom'
-import { type IStaticPage } from './../interfaces'
 import i18n from './../i18n'
-import '@ant-design/v5-patch-for-react-19';
 import { useLangStore } from '../zstore'
 import { langs } from '../consts'
+import styles from './../style/style.module.scss'
+import '@ant-design/v5-patch-for-react-19'
 
-
-// import { switchLang } from '../store/langSlice'
-// import { useTranslation } from 'react-i18next';
-
-const LangSwitch = (props: IStaticPage): JSX.Element => {
-  const ml = props.query
-  const siteLang =  localStorage.getItem('lang') ?? 'en'
-  // console.log('ml', ml)
-  // console.log('lang', siteLang)
-  const { switchLang } = useLangStore();
-
- const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    switchLang(lng)
-    localStorage.setItem('lang', lng); // persist choice
-  };
-
-
-
-  useEffect(() => {
-    if(ml) void i18n.changeLanguage(ml)
-  }, [ml, siteLang])
-
-  return (
-    <div className={styles.langCtrl} >
-
-    <ul>
-        {
-            langs.map((lang) => {
-              return (
-                  <li key={lang}><span >
-                      <NavLink to={`/${lang}/`} 
-                        onClick={ () => {
-                          // switchLang(lang)
-                          changeLanguage(lang)
-                        }}
-                        className={lang === siteLang ? `${styles.lng}  ${styles.selected}` : `${styles.lng}`}
-                      >{lang.toUpperCase()}</NavLink>
-                      
-                  </span></li>
-              )
-            })
-        }
-    </ul>
-    </div>
-
-  )
+interface LangSwitchProps {
+  query?: string
 }
 
+const LangSwitch = ({ query }: LangSwitchProps): JSX.Element => {
+  const currentLang = useLangStore((state) => state.selectedLang) || localStorage.getItem('lang') || 'en'
+  const { switchLang } = useLangStore()
+
+  const handleLanguageChange = (selectedLang: string) => {
+    i18n.changeLanguage(selectedLang)
+    switchLang(selectedLang)
+    localStorage.setItem('lang', selectedLang)
+  }
+
+  return (
+    <div className={styles.langCtrl}>
+      <ul>
+        {langs.map((lang) => {
+          const isActive = lang === currentLang
+
+          return (
+            <li key={lang}>
+              <span>
+                <NavLink
+                  to={`/${lang}/`}
+                  onClick={() => handleLanguageChange(lang)}
+                  className={`${styles.lng} ${isActive ? styles.selected : ''}`}
+                >
+                  {lang.toUpperCase()}
+                </NavLink>
+              </span>
+            </li>
+          )}
+        )}
+      </ul>
+    </div>
+  )
+}
 
 export default LangSwitch
