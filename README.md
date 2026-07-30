@@ -11,6 +11,11 @@ Show sys env in VITE APP
                     BaseURL: {settings.baseUrl}
 
 ## News:
+
+### 30 Juli 2026
+- Updated packages of the site
+- Optimised the page Blogs, switched to the new site for Blogs
+
 ### 20 January 2026
 Updated skills description
 
